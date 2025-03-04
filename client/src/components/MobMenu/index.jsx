@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 function MobMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +32,11 @@ function MobMenu() {
       >
         <ul className="uppercase">
           <li>
-            <Link to='/' className="sub-menu" onClick={() => setIsOpen(false)}>trang chủ</Link>
+            <Link href='/' className="sub-menu" onClick={() => setIsOpen(false)}>trang chủ</Link>
           </li>
           <li>
             <div  className="sub-menu">
-              <Link to='category' onClick={() => setIsOpen(false)}>
+              <Link href='category' onClick={() => setIsOpen(false)}>
                 <span className="">menu bánh</span>{' '}
               </Link>
               <ChevronDown onClick={() => setClicked(!clicked)} className={`ml-auto cursor-pointer ${clicked && 'rotate-180'}`} />
@@ -46,31 +46,31 @@ function MobMenu() {
             variants={toggleSubMenuItems}
             className="px-6">
               <li className="sub-menu py-2">
-                <Link to="/category?mode=birthday" onClick={() => setIsOpen(false)}>Bánh Sinh Nhật</Link>
+                <Link href="/category?mode=birthday" onClick={() => setIsOpen(false)}>Bánh Sinh Nhật</Link>
               </li>
               <li className="sub-menu py-2">
-                <Link to="/category?mode=tradition" onClick={() => setIsOpen(false)}>Bánh Truyền Thống</Link>
+                <Link href="/category?mode=tradition" onClick={() => setIsOpen(false)}>Bánh Truyền Thống</Link>
               </li>
               <li className="sub-menu py-2">
-                <Link to="/category?mode=cookie" onClick={() => setIsOpen(false)}>Cookie & Mini cake</Link>
+                <Link href="/category?mode=cookie" onClick={() => setIsOpen(false)}>Cookie & Mini cake</Link>
               </li>
               <li className="sub-menu py-2">
-                <Link to="/category?mode=bread" onClick={() => setIsOpen(false)}>Bánh Mì và Bánh mặn</Link>
+                <Link href="/category?mode=bread" onClick={() => setIsOpen(false)}>Bánh Mì và Bánh mặn</Link>
               </li>
             </motion.ul>
           </li>
           <li>
-            <Link to="/news" className="sub-menu" onClick={() => setIsOpen(false)}>
+            <Link href="/news" className="sub-menu" onClick={() => setIsOpen(false)}>
               tin tức
             </Link>
           </li>
           <li>
-            <Link to="/generator" className="sub-menu" onClick={() => setIsOpen(false)}>
+            <Link href="/generator" className="sub-menu" onClick={() => setIsOpen(false)}>
               ai
             </Link>
           </li>
           <li>
-            <Link to="/about" className="sub-menu" onClick={() => setIsOpen(false)}>
+            <Link href="/about" className="sub-menu" onClick={() => setIsOpen(false)}>
               về chúng tôi
             </Link>
           </li>

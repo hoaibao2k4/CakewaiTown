@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { updateCartItem } from '~/api/apiCart';
 import { loginSuccess } from '~/redux/authSlice';
 import { createInstance } from '~/redux/interceptors';
@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function ListItems({ list }) {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+    const router = useRouter()
     const user = useSelector(state => state.auth.login.currentUser)
     let instance = createInstance(user, dispatch, loginSuccess)
     const [originalList, setOriginalList] = useState(list);
@@ -20,7 +20,7 @@ function ListItems({ list }) {
             itemsToUpdate.map((item) => updateCartItem(user.access_token, instance, item))
           );
         }
-        navigate('/cart');
+        router('/cart');
       } catch (err) {
         console.error("Failed to update cart items", err);
       }
