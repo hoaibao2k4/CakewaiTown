@@ -1,9 +1,9 @@
+"use client"
 import { Spinner, Textarea } from 'flowbite-react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 import { Button } from 'flowbite-react';
 import { Flex, Radio } from 'antd';
-import imageCake from '~/assets/images/about_1.jpg';
-import { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -14,19 +14,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createInstance } from '~/redux/interceptors';
 import { loginSuccess } from '~/redux/authSlice';
 import { toast } from 'react-toastify';
-import ImageDownloader from '~/components/Layouts/components/ImageDownloader';
-import { AddToCartContext } from '~/components/Layouts/DefaultLayout';
+import ImageDownloader from '~/components/ImageDownloader';
+import { AddToCartContext } from '../modalwapper';
+import { SelectChangeEvent } from '@mui/material/Select';
 
 function GenImage() {
   const [selectedLabel, setSelectedLabel] = useState('');
   const [input, setInput] = useState('');
-  const handleChange = (event) => {
+  const handleChange = (event : SelectChangeEvent) => {
     setSelectedLabel(event.target.value);
   };
   const [image, setImage] = useState('');
   const [loading, setLoading] = useState(false);
-  const inputRef = useRef(null);
-  const user = useSelector((state) => state.auth.login.currentUser);
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const user = useSelector((state : any) => state.auth.login.currentUser);
   const dispatch = useDispatch();
   let instance = createInstance(user, dispatch, loginSuccess);
   const { setIsLogin } = useContext(AddToCartContext);
@@ -41,7 +42,7 @@ function GenImage() {
   const label = 'Tùy chọn phong cách';
   const items = ['Mặc định', 'Chân thực', 'Đơn giản', 'Cổ điển', 'Hoạt hình', 'Sang trọng', 'Chi tiết, cầu kì'];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!user) setIsLogin(true);
     else {
@@ -50,7 +51,7 @@ function GenImage() {
         const res = await generateImage(user.access_token, input, instance);
         console.log(res);
         setImage(res[0].tmp_url);
-        inputRef.current.focus();
+        inputRef.current?.focus();
       } catch (err) {
         console.log(err);
       } finally {
@@ -64,12 +65,12 @@ function GenImage() {
     else if (!input) {
       toast.info('Quý khách chưa nhập ý tưởng của mình', {
         position: 'bottom-right',
-        onClose: 3000,
+        autoClose: 3000,
       });
     } else if (!selectedLabel) {
       toast.info('Quý khách chưa chọn phong cách', {
         position: 'bottom-right',
-        onClose: 3000,
+        autoClose: 3000,
       });
     } else {
       setLoading(true);
@@ -78,7 +79,7 @@ function GenImage() {
         const res = await generateImage(user.access_token, inputStyle, instance);
         console.log(res);
         setImage(res[0].tmp_url);
-        inputRef.current.focus();
+        inputRef.current?.focus();
       } catch (err) {
         console.log(err);
       } finally {
@@ -92,9 +93,9 @@ function GenImage() {
       <div className="mx-auto px-6 lg:px-[5rem]">
         <div className="flex h-11 items-center px-4 text-primary sm:px-6">
           <div className="capitalize">
-            <NavLink to="/">Trang chủ </NavLink>
+            <Link href="/">Trang chủ </Link>
             <span>&gt;&gt;</span>
-            <NavLink to="/category"> AI </NavLink>
+            <Link href="/category"> AI </Link>
           </div>
         </div>
         <h1 className="text-center text-3xl font-bold leading-[48px] sm:text-4xl sm:leading-[56px] lg:text-5xl lg:leading-[72px]">
@@ -230,7 +231,7 @@ function GenImage() {
                 </ul>
               </div>
               <div>
-                <img src={imageCake} alt="Cakewai" className="mx-auto size-[20rem] rounded-full" />
+                <img src='/assets/images/about_1.jpg' alt="Cakewai" className="mx-auto size-[20rem] rounded-full" />
               </div>
             </div>
             <div className="mt-12 text-center">
