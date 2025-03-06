@@ -99,7 +99,7 @@ function Header() {
                 : "menu-navbar group"
             }
           >
-            <Link href="/category" className="relative">
+            <Link href="/category/all" className="relative">
               <span>MENU BÁNH</span>
               <i>
                 <ChevronDown className="icon mx-0.5 inline-block size-5" />
@@ -108,22 +108,22 @@ function Header() {
 
             <div className="absolute left-0 top-full h-4 w-full cursor-default bg-transparent"></div>
             <ul className="absolute left-0 top-10 z-10 hidden w-max rounded-lg bg-[#CAB6B6] text-sm uppercase group-hover:block">
-              <Link href="/category?mode=birthday">
+              <Link href="/category/birthday">
                 <li className="px-2 py-2 text-[#444444] hover:rounded-t-lg hover:bg-primary hover:text-slate-100">
                   Bánh Sinh Nhật
                 </li>
               </Link>
-              <Link href="/category?mode=tradition">
+              <Link href="/category/tradition">
                 <li className="px-2 py-2 text-[#444444] hover:bg-primary hover:text-slate-100">
                   Bánh Truyền Thống
                 </li>
               </Link>
-              <Link href="/category?mode=cookie">
+              <Link href="/category/cookie">
                 <li className="px-2 py-2 text-[#444444] hover:bg-primary hover:text-slate-100">
                   Cookie & Mini cake
                 </li>
               </Link>
-              <Link href="/category?mode=bread">
+              <Link href="/category/bread">
                 <li className="px-2 py-2 text-[#444444] hover:rounded-b-lg hover:bg-primary hover:text-slate-100">
                   Bánh Mì và Bánh mặn
                 </li>
