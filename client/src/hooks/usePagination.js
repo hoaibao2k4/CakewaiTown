@@ -1,11 +1,11 @@
+"use client"
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-
+import { useSearchParams } from "next/navigation";
 function usePagination(data) {
     const itemsPerPage = 12;
     const maxPage = Math.ceil(data.length / itemsPerPage);
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const searchParams = useSearchParams();
     const queryPage = Math.max(parseInt(searchParams.get("page"), 10) || 1, 1);
 
     const [currentPage, setCurrentPage] = useState(
@@ -19,8 +19,7 @@ function usePagination(data) {
     useEffect(() => {
         const params = Object.fromEntries(searchParams.entries());
         params.page = currentPage; 
-        setSearchParams(params);
-    }, [currentPage, searchParams, setSearchParams]);
+    }, [currentPage, searchParams]);
 
     const currentData = () => {
         const begin = (currentPage - 1) * itemsPerPage;
