@@ -3,26 +3,40 @@ import { removeCartItem, updateCartItem } from '~/api/apiCart';
 import { removeFromCart } from '~/redux/cartSlice';
 import { createInstance } from '~/redux/interceptors';
 import { loginSuccess } from '~/redux/authSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-function CartItem({ item, index }) {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.auth.login.currentUser);
-  const [quantity, setQuantity] = useState(item.buy_quantity);
-  let instance = createInstance(user, dispatch, loginSuccess);
+import { RootState } from '~/redux/store';
+import Image from 'next/image';
 
-  const handleRemoveItem = async (item) => {
+interface CartItemProps {
+  item: {
+    product_id: string;
+    variant: string;
+    buy_quantity: number;
+    image_link: string;
+    name: string;
+    price: number;
+  };
+  index: number;
+}
+
+const CartItem = ({ item, index }: CartItemProps) => {
+  const dispatch = useDispatch();
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
+  const [quantity, setQuantity] = useState(item.buy_quantity);
+  const instance = createInstance(user, dispatch, loginSuccess);
+
+  const handleRemoveItem = async (item: CartItemProps['item']) => {
     dispatch(removeFromCart(item));
     toast.success('Xóa thành công!', {
       position: 'bottom-right',
-      onClose: 3000
-    })
+      autoClose: 3000,
+    });
     await removeCartItem(user?.access_token, instance, item.product_id, item.variant);
   };
 
-  const handleUpdate = async (item) => {
+  const handleUpdate = async (item: CartItemProps['item']) => {
     if (item.buy_quantity !== quantity) {
       const updatedQuantity = quantity;
 
@@ -50,9 +64,9 @@ function CartItem({ item, index }) {
   };
 
   useEffect(() => {
-    if (quantity !== item.buy_quantity)
-      setQuantity(item.buy_quantity)
-  }, [item.buy_quantity])
+    if (quantity !== item.buy_quantity) setQuantity(item.buy_quantity);
+  }, [item.buy_quantity]);
+
   return (
     <tr key={index} className="items-center">
       <td className="text-center align-middle">
@@ -60,7 +74,7 @@ function CartItem({ item, index }) {
       </td>
       <td className="lg:m-[20px] p-5 my-1 flex lg:flex-row flex-col items-center justify-center gap-[20px] space-x-4 text-center align-middle">
         <div className="flex-shrink-0">
-          <img src={item.image_link} alt="" className='lg:w-[180px] lg:h-[180px] md:w-[120px] md:h-[120px] w-[60px] h-[60px]' />
+          <Image src={item.image_link} alt="" className="lg:w-[180px] lg:h-[180px] md:w-[120px] md:h-[120px] w-[60px] h-[60px]" />
         </div>
         <div className="flex lg:flex-col">
           <label htmlFor="name-of-cake" className="text-center lg:block hidden">
@@ -87,7 +101,7 @@ function CartItem({ item, index }) {
             type="text"
             value={quantity}
             onChange={(e) => e.target.value}
-            className=" lg:w-11 w-8 p-2 lg:p-3 border-b border-t border-primary text-center text-xs"
+            className="lg:w-11 w-8 p-2 lg:p-3 border-b border-t border-primary text-center text-xs"
             disabled
           />
           <button
@@ -104,6 +118,6 @@ function CartItem({ item, index }) {
       </td>
     </tr>
   );
-}
+};
 
 export default CartItem;
