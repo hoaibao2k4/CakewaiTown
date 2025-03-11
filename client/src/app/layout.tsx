@@ -22,12 +22,11 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReduxProvider>
           <ModalWrapper>
             <Header />
@@ -35,6 +34,7 @@ export default function RootLayout({
             <Footer />
           </ModalWrapper>
         </ReduxProvider>
+
       </body>
     </html>
   );
