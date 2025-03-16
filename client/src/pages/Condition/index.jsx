@@ -1,4 +1,4 @@
-import ClaAndCond from "~/components/Layouts/components/ClaAndCond";
+import ClaAndCond from "~/components/ClaAndCond";
 import { useLocation } from "react-router-dom";
 
 

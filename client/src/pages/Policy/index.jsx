@@ -1,8 +1,8 @@
-import PaymentPolicy from "~/components/Layouts/components/ComPolicy/PaymentPolicy";
-import GeneralPolicy from "~/components/Layouts/components/ComPolicy/GeneralPolicy";
-import DeliveryPolicy from "~/components/Layouts/components/ComPolicy/DeliveryPolicy";
-import ReturnPolicy from "~/components/Layouts/components/ComPolicy/ReturnPolicy";
-import SecurityPolicy from "~/components/Layouts/components/ComPolicy/SecurityPolicy";
+import PaymentPolicy from "~/components/ComPolicy/PaymentPolicy";
+import GeneralPolicy from "~/components/ComPolicy/GeneralPolicy";
+import DeliveryPolicy from "~/components/ComPolicy/DeliveryPolicy";
+import ReturnPolicy from "~/components/ComPolicy/ReturnPolicy";
+import SecurityPolicy from "~/components/ComPolicy/SecurityPolicy";
 import { useLocation } from "react-router-dom";
 function Policy() {
   const location = useLocation();

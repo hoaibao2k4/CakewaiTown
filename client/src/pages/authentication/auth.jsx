@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import SignInForm from "~/components/Layouts/components/SignIn";
-import SignUpForm from "~/components/Layouts/components/SignUp";
+import SignInForm from "~/components/SignIn";
+import SignUpForm from "~/components/SignUp";
 import authImage from '~/assets/images/AuthImg/authImage.png';
 import { useSelector } from "react-redux";
 import { useEffect } from "react";

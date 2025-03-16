@@ -1,10 +1,10 @@
-import Newsfeed from '~/components/Layouts/components/Newsfeed';
-import Newsfeed1 from '~/components/Layouts/components/Newsfeed/News1';
-import Newsfeed2 from '~/components/Layouts/components/Newsfeed/News2';
-import Newsfeed3 from '~/components/Layouts/components/Newsfeed/News3';
-import Newsfeed4 from '~/components/Layouts/components/Newsfeed/News4';
-import Newsfeed5 from '~/components/Layouts/components/Newsfeed/News5';
-import Newsfeed6 from '~/components/Layouts/components/Newsfeed/News6';
+import Newsfeed from '~/components/Newsfeed';
+import Newsfeed1 from '~/components/Newsfeed/News1';
+import Newsfeed2 from '~/components/Newsfeed/News2';
+import Newsfeed3 from '~/components/Newsfeed/News3';
+import Newsfeed4 from '~/components/Newsfeed/News4';
+import Newsfeed5 from '~/components/Newsfeed/News5';
+import Newsfeed6 from '~/components/Newsfeed/News6';
 import { useLocation } from 'react-router-dom';
 function News() {
   const location = useLocation();

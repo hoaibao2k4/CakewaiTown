@@ -14,8 +14,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createInstance } from '~/redux/interceptors';
 import { loginSuccess } from '~/redux/authSlice';
 import { toast } from 'react-toastify';
-import ImageDownloader from '~/components/Layouts/components/ImageDownloader';
-import { AddToCartContext } from '~/components/Layouts/DefaultLayout';
+import ImageDownloader from '~/components/ImageDownloader';
+import { AddToCartContext } from '~/DefaultLayout';
 
 function GenImage() {
   const [selectedLabel, setSelectedLabel] = useState('');

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import Categories from "~/components/Layouts/components/Categories";
+import Categories from "~/components/Categories";
 
 function Category() {
   const location = useLocation()

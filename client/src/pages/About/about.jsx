@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
-import AboutUs from '~/components/Layouts/components/AboutUs';
-import Info1 from '~/components/Layouts/components/AboutUs/Story';
-import Info2 from '~/components/Layouts/components/AboutUs/Services';
-import Info3 from '~/components/Layouts/components/AboutUs/Promise';
+import AboutUs from '~/components/AboutUs';
+import Info1 from '~/components/AboutUs/Story';
+import Info2 from '~/components/AboutUs/Services';
+import Info3 from '~/components/AboutUs/Promise';
 function About() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);

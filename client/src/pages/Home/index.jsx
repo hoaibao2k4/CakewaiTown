@@ -1,7 +1,7 @@
-import Slider from '~/components/Layouts/components/Slider';
-import Seller from '~/components/Layouts/components/Seller';
-import Blog from '~/components/Layouts/components/Blog';
-import { GoogleCallBack } from '~/components/Layouts/components/GoogleCallBack/GoogleCallBack';
+import Slider from '~/components/Slider';
+import Seller from '~/components/Seller';
+import Blog from '~/components/Blog';
+import { GoogleCallBack } from '~/components/GoogleCallBack/GoogleCallBack';
 import { useLocation } from 'react-router-dom';
 
 function Home() {

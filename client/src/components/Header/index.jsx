@@ -50,7 +50,7 @@ function Header() {
     else setOpen(false)
   };
   const handleLogin = () => {
-    router.push('/auth?mode=signin');
+    router.push('/authentic/signin');
   };
   const handleLogOut = () => {
     if (user?.refresh_token) logOutUser(dispatch, user?.refresh_token, router);

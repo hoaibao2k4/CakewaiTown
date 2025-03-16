@@ -1,11 +1,11 @@
 import { ArrowUpOutlined, QuestionOutlined } from "@ant-design/icons";
 import { Button, Col, Flex, Popover, Row, Space, Typography, Tag } from "antd";
-import RevenueCard from "~/components/Layouts/components/AdminDashboard/Card/RevenueCard";
-import Card from "~/components/Layouts/components/AdminDashboard/Card/Card";
-import CategoriesChart from "~/components/Layouts/components/AdminDashboard/CategoriesChart/CategoriesChart";
-import OrdersStatusChart from "~/components/Layouts/components/AdminDashboard/OrderStatusChart/OrderStatusChart";
+import RevenueCard from "~/components/AdminDashboard/Card/RevenueCard";
+import Card from "~/components/AdminDashboard/Card/Card";
+import CategoriesChart from "~/components/AdminDashboard/CategoriesChart/CategoriesChart";
+import OrdersStatusChart from "~/components/AdminDashboard/OrderStatusChart/OrderStatusChart";
 import CountUp from "react-countup";
-import SalesChart from "~/components/Layouts/components/AdminDashboard/SalesChart/SalesChart";
+import SalesChart from "~/components/AdminDashboard/SalesChart/SalesChart";
 
 
 
