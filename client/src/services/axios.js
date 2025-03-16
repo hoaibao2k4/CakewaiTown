@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const BE_BASE_URL = 'http://localhost:8080'
+const BE_BASE_URL = process.env.NEXT_PUBLIC_BE_BASE_URL;
 const response = axios.create({
-  baseURL: 'http://localhost:8080', // URL cho localhost
+  baseURL: BE_BASE_URL, // URL cho localhost
 });
 
 
