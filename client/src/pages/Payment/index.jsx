@@ -6,7 +6,7 @@ import { useContext, useState } from 'react';
 import { createInstance } from '~/redux/interceptors';
 import { loginSuccess } from '~/redux/authSlice';
 import { createOrder } from '~/api/apiCart';
-import { AddToCartContext } from '~/components/Layouts/DefaultLayout';
+import { AddToCartContext } from '~/DefaultLayout';
 function Payment() {
   const location = useLocation();
   const { newItem } = location.state || {};

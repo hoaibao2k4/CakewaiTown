@@ -5,20 +5,20 @@ import News from "../pages/News";
 import Category from "../pages/Categories/category";
 import Auth from "~/pages/authentication/auth";
 import Policy from "~/pages/Policy";
-import DetailedCake from "~/components/Layouts/components/DetailedCake";
+import DetailedCake from "~/components/DetailedCake";
 import Condition from "~/pages/Condition";
-import Cart from "~/components/Layouts/components/Cart";
+import Cart from "~/components/Cart";
 import AccountPage from "~/pages/Account";
 import AdminDashboard from "~/pages/AdminDashboard";
 import AdminLogin from "~/pages/AdminLogin";
-import DefaultLayout from "~/components/Layouts/DefaultLayout";
-import DashBoardLayout from "~/components/Layouts/DashboardLayout";
+import DefaultLayout from "~/DefaultLayout";
+import DashBoardLayout from "~/DashboardLayout";
 import AdminProduct from "~/pages/AdminProduct/product";
 import AdminOrder from "~/pages/AdminOrder/order";
 import AdminCustomer from "~/pages/AdminCustomer/customer";
 import Payment from "~/pages/Payment";
-import EmailRecovery from "~/components/Layouts/components/Forgot Password/EmailRecovery";
-import EmailSent from "~/components/Layouts/components/Forgot Password/EmailSent";
+import EmailRecovery from "~/components/Forgot Password/EmailRecovery";
+import EmailSent from "~/components/Forgot Password/EmailSent";
 import TextEditor from "~/pages/TextEditor";
 const publicRoute = [
   { path: "/", component: Home },

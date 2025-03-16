@@ -1,4 +1,4 @@
-import AdminOrder from "~/components/Layouts/components/AdminOrder/adminorder";
+import AdminOrder from "~/components/AdminOrder/adminorder";
 function adminOrder() {
     
     return (

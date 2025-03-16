@@ -3,7 +3,7 @@ import { notification, Popconfirm, Table } from 'antd';
 import { useEffect, useState } from 'react';
 import { deleteCake, getAllCakes } from '~/api/apiCakes';
 import AddProductModal from '~/components/Layouts/components/AdminProduct/AddProduct';
-import UpdateProductModal from '~/components/Layouts/components/AdminProduct/UpdateProduct';
+import UpdateProductModal from '~/components/AdminProduct/UpdateProduct';
 
 const AdminProduct = () => {
     const [data, setData] = useState([]); // Lưu danh sách sản phẩm
