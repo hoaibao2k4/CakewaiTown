@@ -1,7 +1,7 @@
 import about_1 from '~/assets/images/about_1.jpg';
 import about_2 from '~/assets/images/about_2.jpg';
 import about_3 from '~/assets/images/about_3.jpg';
-import { Link } from 'react-router-dom';
+import Link  from 'next/link';
 function AboutUs() {
   return (
     <div className="mx-full font-inter mt-28 w-full items-center overflow-hidden text-primary">
@@ -12,7 +12,7 @@ function AboutUs() {
       </div>
       <div
         className="img-scale mt-5 h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${about_1})` }}
+        style={{ backgroundImage: `url('/assets/images/about_1.jpg')` }}
       >
         <div
           className="flex h-full items-center justify-start"
@@ -35,7 +35,7 @@ function AboutUs() {
 
       <div
         className="img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${about_2})` }}
+        style={{ backgroundImage: `url('/assets/images/about_2.jpg')` }}
       >
         <div
           className="flex h-full items-center justify-end"
@@ -57,7 +57,7 @@ function AboutUs() {
 
       <div
         className="img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${about_3})` }}
+        style={{ backgroundImage: `url('/assets/images/about_3.jpg')` }}
       >
         <div
           className="flex h-full items-center justify-start"

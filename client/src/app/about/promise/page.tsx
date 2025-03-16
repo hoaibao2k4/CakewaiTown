@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next"
-
 export const metadata: Metadata = {
   title: 'Lời cam kết - CakeWai',
   description: 'Nụ cười của khách hàng là động lực của CakeWai',
