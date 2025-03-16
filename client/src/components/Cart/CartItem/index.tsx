@@ -1,4 +1,4 @@
-import { CloseIcon } from '~/assets/icons';
+import { CloseIcon } from '../../../../public/assets/icons';
 import { removeCartItem, updateCartItem } from '~/api/apiCart';
 import { removeFromCart } from '~/redux/cartSlice';
 import { createInstance } from '~/redux/interceptors';
