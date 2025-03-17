@@ -6,7 +6,7 @@ import { SuccessPopup } from "~/components/Modal/SuccessPopup";
 import { useDispatch, useSelector } from "react-redux";
 import { jwtDecode } from "jwt-decode";
 import ExpiryModal from "~/components/Modal/Expiry";
-import { logOutUser } from "~/redux/apiRequest";
+//import { logOutUser } from "~/redux/apiRequest";
 import { useRouter } from "next/navigation";
 import LogoutModal from "~/components/Modal/LogoutModal";
 import OrderModal from "~/components/Modal/OrderModal";
@@ -34,7 +34,7 @@ export default function ModalWrapper({children} : {children: ReactNode}) {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const user = useSelector((state : any) => state.auth.login.currentUser);
   const dispatch = useDispatch();
-  const router = useRouter();
+  //const router = useRouter();
 
   const handleAddToCartPopup = useCallback((cake :any) => {
     setCartContent(cake);

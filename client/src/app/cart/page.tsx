@@ -5,9 +5,9 @@ import { selectCartTotal } from '~/redux/selectors';
 import CartItem from '../../components/Cart/CartItem/index';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import type { RootState } from '~/redux/store';
 const Cart = () => {
-    const { list } = useSelector((state: any) => state.cart); // Ensure the correct type for state
+    const { list } = useSelector((state: RootState) => state.cart);
     const [show, setShow] = useState(false);
     const totalAmount = useSelector(selectCartTotal);
     const router = useRouter();
@@ -44,7 +44,7 @@ const Cart = () => {
                                 </tr>
                             </thead>
                             <tbody className="px-[var(--Number,] pb-[0px)] w-[1106px] items-center pt-[20px]">
-                                {list?.map((item: any, index: number) => (
+                                {list?.map((item: RootState, index: number) => (
                                     <CartItem item={item} key={index} />
                                 ))}
                             </tbody>

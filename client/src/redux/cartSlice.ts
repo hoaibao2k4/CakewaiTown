@@ -1,13 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Item } from '~/api/apiCart';
 
+interface cartState {
+  list: Item[],
+  total: number
+}
+const initialState : cartState = {
+  list: [],
+  total: 0
+}
 const cartSlice = createSlice({
   name: 'cart',
-  initialState: {
-    list: [],
-    total: 0,
-  },
+  initialState,
   reducers: {
-    addToCart: (state, action) => {
+    addToCart: (state, action : PayloadAction<Item>) => {
       if (state.list) {
       const index = state.list.findIndex(
         (cake) => cake.product_id === action.payload.product_id && cake.variant === action.payload.variant,
@@ -19,7 +25,7 @@ const cartSlice = createSlice({
       }
     }
     },
-    increaseItem: (state, action) => {
+    increaseItem: (state, action : PayloadAction<Item>) => {
       const item = state.list.find(
         (item) =>
           item.product_id === action.payload.product_id &&
@@ -27,7 +33,7 @@ const cartSlice = createSlice({
       );
       if (item) item.buy_quantity += 1;
     },
-    decreaseItem: (state, action) => {
+    decreaseItem: (state, action : PayloadAction<Item> ) => {
       const item = state.list.find(
         (item) =>
           item.product_id === action.payload.product_id &&
@@ -35,7 +41,7 @@ const cartSlice = createSlice({
       );
       if (item && item.buy_quantity > 1) item.buy_quantity -= 1;
     },
-    removeFromCart: (state, action) => {
+    removeFromCart: (state, action : PayloadAction<Item>) => {
       const { product_id, variant } = action.payload;
       state.list = state.list.filter(
         (item) => !(item.product_id === product_id && item.variant === variant),
@@ -44,14 +50,14 @@ const cartSlice = createSlice({
     setCart: (state, action) => {
       state.list = action.payload
     },
-    updateItem: (state, action) => {
-      const { product_id, variant, quantity } = action.payload;
+    updateItem: (state, action : PayloadAction<Item>) => {
+      const { product_id, variant, buy_quantity } = action.payload;
       const item = state.list.find(
         (item) =>
           item.product_id === product_id && item.variant === variant,
       );
       if (item) {
-        item.buy_quantity = quantity; 
+        item.buy_quantity = buy_quantity; 
       }
     }
   },

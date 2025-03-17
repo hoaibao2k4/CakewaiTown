@@ -1,7 +1,7 @@
 'use client'
 import { Table } from "antd";
-import { useEffect, useState } from "react";
-import { getListOrdersByUserId } from "~/api/apiOrder";
+import { useEffect } from "react";
+//import { getListOrdersByUserId } from "~/api/apiOrder";
 
 const AccountOrders = (
     // { currentUser, instance }

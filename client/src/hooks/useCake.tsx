@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { getCake } from '~/api/apiCakes';
 
-const useCake = (params) => {
+const useCake = (params: string) => {
   const [cakes, setCakes] = useState([]);
   const categories = [
     { typeId: '', name: 'Tất cả sản phẩm', title: '' },
@@ -12,7 +12,7 @@ const useCake = (params) => {
     { typeId: '672ecefe6add28a7d3c7644c', name: 'Bánh mì và bánh mặn', title: '' },
   ];
 
-  const getTypeOfCakes = (param) => {
+  const getTypeOfCakes = (param: string) => {
     switch (param) {
       case 'birthday':
         return 1;
@@ -27,7 +27,7 @@ const useCake = (params) => {
     }
   };
 
-  const fetchCakes = async (typeId) => {
+  const fetchCakes = async (typeId: string) => {
     try {
       const result = await getCake(typeId);
       setCakes(result?.data || []);

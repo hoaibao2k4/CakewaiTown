@@ -5,6 +5,8 @@ import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 import { ReduxProvider } from "./reduxprovider";
 import ModalWrapper from "./modalwapper";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +34,7 @@ export default function RootLayout({
             <Header />
             <div>{children}</div>
             <Footer />
+            <ToastContainer/>
           </ModalWrapper>
         </ReduxProvider>
 

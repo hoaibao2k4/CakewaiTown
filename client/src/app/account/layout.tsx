@@ -18,7 +18,8 @@ interface MenuMapping {
 function AccountLayout({ children }: AccountLayoutProps) {
     const pathname = usePathname();
     const [currentKey, setCurrentKey] = useState("profile");
-
+    //
+    console.log(currentKey, children);
     const [breadCrumbItems, setBreadcrumbItems] = useState([
         { title: "Trang chủ", link: "/" },
         { title: "Tài khoản" },
@@ -59,7 +60,7 @@ function AccountLayout({ children }: AccountLayoutProps) {
     }, []);
 
     useEffect(() => {
-        const pathKey = pathname.split('/').pop();
+        const pathKey = pathname!.split('/').pop();
         if (pathKey && menuMapping[pathKey]) {
             setCurrentKey(pathKey);
             const menu = menuMapping[pathKey];
