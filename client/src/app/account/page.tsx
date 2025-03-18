@@ -1,5 +1,5 @@
-import React from 'react'
-import AccountLayout from './layout'
+import AccountLayout from "./layout"
+
 interface IProps {
     children: React.ReactNode
 }

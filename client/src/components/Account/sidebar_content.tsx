@@ -1,8 +1,8 @@
-import React from 'react'
-import AccountProfile from './profile/page';
-import AccountAddress from './address/page';
-import AccountChangePassword from './change-password/page';
-import AccountOrders from './orders/page';
+import Address from "~/app/account/address/page";
+import ChangePassword from "~/app/account/change-password/page";
+import Orders from "~/app/account/orders/page";
+import Profile from "~/app/account/profile/page";
+
 
 interface IProps {
     currentKey: string | null
@@ -12,35 +12,35 @@ const AccountSidebarContent = ({ currentKey }: IProps) => {
     switch (currentKey) {
         case 'profile':
             content =
-                <AccountProfile
+                <Profile
                 // currentUser={currentUser}
                 // instance={instance}
                 />;
             break;
         case 'address':
             content =
-                <AccountAddress
+                <Address
                 // currentUser={currentUser}
                 // instance={instance}
                 />;
             break;
         case 'change-password':
             content =
-                <AccountChangePassword
+                <ChangePassword
                 // currentUser={currentUser}
                 // instance={instance}
                 />;
             break;
         case 'orders':
             content =
-                <AccountOrders
+                <Orders
                 // currentUser={currentUser}
                 // instance={instance}
                 />;
             break;
         default:
             content =
-                <AccountProfile
+                <Profile
                 // currentUser={currentUser}
                 // instance={instance}
                 />;
