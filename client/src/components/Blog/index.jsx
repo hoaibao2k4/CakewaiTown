@@ -1,4 +1,4 @@
-import tessaCake from '~/assets/images/CakeBestSeller/tessacake.png';
+"use client"
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { getBlogs } from '~/api/apiBlog';
