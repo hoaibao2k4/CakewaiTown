@@ -14,10 +14,17 @@ import { toast } from "react-toastify";
 import { AppDispatch } from "./store";
 import axios from "axios";
 import { NextRouter } from "next/router";
-import { User } from "~/api/apiUser";
+import { User } from "./authSlice";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+
+interface UserAuth {
+  name?: string,
+  email: string,
+  password: string
+}
 export const loginUser = async (
   dispatch: AppDispatch,
-  user: User,
+  user: UserAuth,
   expectedRole: number,
   navigate: NextRouter["push"],
   redirectPath = "/"
@@ -83,8 +90,8 @@ export const logOutUser = async (
 
 export const registerUser = async (
   dispatch: AppDispatch,
-  user: User,
-  navigator: NextRouter["push"]
+  user: UserAuth,
+  router: AppRouterInstance
 ) => {
   dispatch(registerStart());
   try {
@@ -93,7 +100,7 @@ export const registerUser = async (
     toast.success("Đăng kí thành công", {
       position: "bottom-right",
     });
-    navigator("/auth?mode=signin");
+    router.push("/auth?mode=signin")
   } catch (err: unknown) {
     dispatch(registerFail());
     if (axios.isAxiosError(err)) {

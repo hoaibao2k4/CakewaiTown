@@ -1,12 +1,8 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
+import { User } from "~/redux/authSlice";
 import { response } from "~/services/axios";
 
-export interface User {
-  id?: string;
-  name: string;
-  email: string;
-  phone: string;
-}
+
 export const updateUser = async (
   token: string,
   user: User,

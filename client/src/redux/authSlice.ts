@@ -1,13 +1,32 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface User {
+export interface UserWithToken {
   access_token: string;
   refresh_token: string;
+  user: User;
+}
+export interface User {
+  id: string;
+  google_id: string;
+  profile_picture: string;
+  name: string;
+  email: string;
+  phone: string;
+  is_admin: boolean;
+  address: Address;
+  create_at: string;
+}
+interface Address {
+  home_code: string;
+  street: string;
+  district: string;
+  province: string;
+  full_address: string;
 }
 
 interface AuthState {
   login: {
-    currentUser: User | null;
+    currentUser: UserWithToken | null;
     isFetching: boolean;
     error: boolean;
   };
@@ -32,13 +51,18 @@ const initialState: AuthState = {
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
     loginStart: (state) => {
       state.login.isFetching = true;
     },
-    loginSuccess: (state, action: PayloadAction<User | { code?: number; data: User }>) => {
+    loginSuccess: (
+      state,
+      action: PayloadAction<
+        UserWithToken | { code?: number; data: UserWithToken }
+      >
+    ) => {
       if ("data" in action.payload) {
         state.login.currentUser = action.payload.data;
       } else {
@@ -46,7 +70,7 @@ const authSlice = createSlice({
       }
       state.login.isFetching = false;
       state.login.error = false;
-    },    
+    },
     loginFail: (state) => {
       state.login.error = true;
       state.login.isFetching = false;
@@ -75,7 +99,7 @@ const authSlice = createSlice({
       state.register.error = true;
       state.register.isFetching = false;
     },
-    setUser: (state, action: PayloadAction<User | null>) => {
+    setUser: (state, action: PayloadAction<UserWithToken | null>) => {
       state.login.currentUser = action.payload;
     },
   },
