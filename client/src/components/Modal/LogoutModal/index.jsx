@@ -1,15 +1,15 @@
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { logOutUser } from '~/redux/apiRequest';
 import { setCart } from '~/redux/cartSlice';
 import { persistor } from '~/redux/store';
 function LogoutModal({ isLogout }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const router = useRouter();
   const user = useSelector((state) => state.auth.login.currentUser);
   const handleLogout = () => {
-    logOutUser(dispatch, user.refresh_token, navigate);
+    logOutUser(dispatch, user.refresh_token, router);
     isLogout(false);
     dispatch(setCart([]));
     persistor.purge();

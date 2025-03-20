@@ -1,9 +1,10 @@
+"use client"
 import Card from '../Card';
 import useCake from '~/hooks/useCake';
 import usePagination from '~/hooks/usePagination';
 import { Pagination } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 import { IoIosSearch } from 'react-icons/io';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -72,10 +73,10 @@ function Categories({ params }) {
             {categoryName !== 'Tất cả sản phẩm' && (
               <>
                 <span>&gt;&gt;</span>
-                <NavLink to="/" className="capitalize">
+                <Link href="/" className="capitalize">
                   {' '}
                   {categoryName}{' '}
-                </NavLink>
+                </Link>
               </>
             )}
           </div>
