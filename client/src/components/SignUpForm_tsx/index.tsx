@@ -11,7 +11,7 @@ import { BE_BASE_URL } from "~/services/axios";
 import { GoogleIcon } from "../../../public/assets/icons";
 import Link from "next/link";
 
-const signUpForm: React.FC = () => {
+const SignUpForm: React.FC = () => {
   const [hidden, setHidden] = useState({ password: true, confirm: true });
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -316,4 +316,4 @@ const signUpForm: React.FC = () => {
   );
 };
 
-export default signUpForm;
+export default SignUpForm;

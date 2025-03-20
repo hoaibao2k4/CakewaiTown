@@ -25,8 +25,8 @@ interface UserAuth {
 export const loginUser = async (
   dispatch: AppDispatch,
   user: UserAuth,
-  expectedRole: number,
-  navigate: NextRouter["push"],
+  expectedRole: boolean,
+  navigate: AppRouterInstance,
   redirectPath = "/"
 ) => {
   dispatch(loginStart());

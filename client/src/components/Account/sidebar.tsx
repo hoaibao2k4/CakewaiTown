@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, MenuProps } from 'antd';
 import Link from 'next/link';
-import AccountSidebarContent from './sidebar_content';
-import './sidebar.css';
+import AccountSidebarContent from './SidebarContent';
+import './index.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
