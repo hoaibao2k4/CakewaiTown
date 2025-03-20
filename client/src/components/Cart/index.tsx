@@ -1,15 +1,17 @@
 
-import { NavLink, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectCartTotal } from '~/redux/selectors';
 import CartItem from './CartItem';
+import { RootState } from '~/redux/store';
 
 const Cart = () => {
-  const { list } = useSelector((state) => state.cart);
+  const { list } = useSelector((state : RootState) => state.cart);
   const [show, setShow] = useState(false);
   const totalAmount = useSelector(selectCartTotal)
-  const navigate = useNavigate()
+  const router = useRouter()
 
   useEffect(() => {
     if (list.length > 0) {
@@ -24,7 +26,7 @@ const Cart = () => {
         <div className="lg:mx-[5rem] mx-0">
           <div className="flex h-11 items-center text-primary">
             <div>
-              <NavLink to="/">Trang chủ </NavLink>
+              <Link href="/">Trang chủ </Link>
               <span> &gt;&gt;</span>
               <span > Giỏ hàng </span>
             </div>
@@ -58,7 +60,7 @@ const Cart = () => {
                     <th colSpan={3}></th>
                     <th colSpan={2}>
                       <div className="float-right pr-[60px]">
-                        <button onClick={() => navigate('/payment')} className="lg:h-[56px] lg:w-[270px] md:h-[40px] md:w-[220px] h-[30px] w-[180px] rounded-[8px] lg:text-base text-sm bg-primary hover:bg-secondary hover:text-black/80 text-white">Thanh toán</button>
+                        <button onClick={() => router.push('/payment')} className="lg:h-[56px] lg:w-[270px] md:h-[40px] md:w-[220px] h-[30px] w-[180px] rounded-[8px] lg:text-base text-sm bg-primary hover:bg-secondary hover:text-black/80 text-white">Thanh toán</button>
                       </div>
                     </th>
                   </tr>

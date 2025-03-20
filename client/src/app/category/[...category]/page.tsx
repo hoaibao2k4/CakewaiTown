@@ -1,13 +1,7 @@
 import Categories from "~/components/Categories";
-
-interface CategoryPageProps {
-  params: { category?: string[] };
+type Params = Promise<{category?: string}>
+export default async function CategoryPage(props : { params : Params}) {
+  const params = await props.params
+  const category = params.category
+  return <Categories params={category} />;
 }
-
-function Category({ params} : CategoryPageProps) {
-
-  const category = params.category?.[0] || "default";
-  return <Categories params={category}/>
-}
-
-export default Category;

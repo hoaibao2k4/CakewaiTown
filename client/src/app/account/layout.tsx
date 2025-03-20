@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import AccountSideBar from '~/components/Account/sidebar';
 
 interface AccountLayoutProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 interface MenuMapping {

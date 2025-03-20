@@ -66,7 +66,7 @@ export const removeCartItem = async (
   token: string,
   instance: AxiosInstance,
   id: string,
-  size: number
+  size: string
 ) => {
   try {
     await instance.delete(

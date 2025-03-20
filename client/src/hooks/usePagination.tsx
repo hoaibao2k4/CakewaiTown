@@ -1,10 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSearchParams, usePathname, useRouter, ReadonlyURLSearchParams } from "next/navigation";
-interface Cake {
-    
-}
-function usePagination(data : Cake[]) {
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { Item } from "~/api/apiCart";
+function usePagination(data : Item[]) {
     const itemsPerPage = 12;
     const maxPage = Math.ceil(data.length / itemsPerPage);
 

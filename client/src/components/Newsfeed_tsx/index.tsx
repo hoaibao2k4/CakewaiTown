@@ -3,7 +3,7 @@
 import Link from "next/link"; 
 import Image from "next/image";
 import * as React from 'react';
-import { Typography, Pagination, Stack } from "@mui/material";
+import { Pagination, Stack } from "@mui/material";
 
 
 
