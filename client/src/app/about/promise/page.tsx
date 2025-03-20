@@ -9,9 +9,9 @@ const PromisePage = () => {
     return(
         <div className="mx-full font-inter mt-28 w-full items-center overflow-hidden text-black text-primary">
         <div className="mx-28">
-          <a href="/">Trang chủ </a>
+          <Link href="/">Trang chủ </Link>
           <span>&gt;&gt;</span>
-          <a href="/about"> Về chúng tôi </a>
+          <Link href="/about"> Về chúng tôi </Link>
           <span>&gt;&gt;</span>
           <span>Lời cam kết </span>
         </div>

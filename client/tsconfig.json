@@ -23,6 +23,6 @@
     }
   },
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/UserTooltip/index.jsx", "src/app/layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/UserTooltip/index.jsx", "src/app/layout.tsx", "src/redux/interceptors.ts"],
   "exclude": ["node_modules"]
 }
