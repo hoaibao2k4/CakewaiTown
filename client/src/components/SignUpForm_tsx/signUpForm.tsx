@@ -304,7 +304,7 @@ const signUpForm: React.FC = () => {
               </button>
               <div className="flex w-full justify-center gap-1 pt-2 text-sm font-light">
                 <p>Đã có tài khoản?</p>
-                <Link href="/authentic/signIn" className="hover:text-blue-700">
+                <Link href="/authentic/signin" className="hover:text-blue-700">
                   Đăng nhập
                 </Link>
               </div>

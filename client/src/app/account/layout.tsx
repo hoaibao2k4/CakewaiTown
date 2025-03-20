@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import BreadCrumb from '~/components/Breadcrumb';
 import { usePathname } from 'next/navigation';
-import AccountSidebar from './sidebar';
+import AccountSideBar from '~/components/Account/sidebar';
 
 interface AccountLayoutProps {
     children: React.ReactNode;
@@ -86,10 +86,10 @@ function AccountLayout({ children }: AccountLayoutProps) {
     // };
 
     return (
-        <div>
+        <div className='mt-16 mx-[5rem] sm:mx-[2rem] md:mx-[3rem] lg:mx-[4rem] xl:mx-[5rem]'>
             <BreadCrumb items={breadCrumbItems} />
             <div className="text-center text-3xl md:text-5xl font-bold leading-tight md:leading-[72px] pt-4 md:pt-8">{pageTitle}</div>
-            <AccountSidebar />
+            <AccountSideBar />
         </div>
     );
 }
