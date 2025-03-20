@@ -2,7 +2,7 @@ import { jwtDecode } from "jwt-decode";
 import { refreshToken, renewToken } from "./apiRequest";
 import { AppDispatch } from "./store";
 import { UserWithToken } from "./authSlice";
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from "axios";
+import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from "axios";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 // Định nghĩa interface cho JWT payload
@@ -36,7 +36,11 @@ export const createInstance = (
             access_token: res.access_token,
             refresh_token: res.refresh_token,
           };
-          dispatch(stateAuth(refreshUser));
+          if ("data" in refreshUser) {
+            //dispatch(stateAuth(refreshUser.data));
+          } else {
+            dispatch(stateAuth(refreshUser));
+          }
           config.headers = config.headers || {};
           config.headers.Authorization = `Bearer ${res.access_token}`;
         } catch (error) {

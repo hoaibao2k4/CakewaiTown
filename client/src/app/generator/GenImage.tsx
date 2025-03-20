@@ -17,6 +17,7 @@ import { toast } from "react-toastify";
 import ImageDownloader from "~/components/ImageDownloader";
 import { AddToCartContext } from "../modalwapper";
 import { SelectChangeEvent } from "@mui/material/Select";
+import { RootState } from "~/redux/store";
 
 function GenImage() {
   const [selectedLabel, setSelectedLabel] = useState("");
@@ -27,9 +28,12 @@ function GenImage() {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
-  const user = useSelector((state: any) => state.auth.login.currentUser);
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
   const dispatch = useDispatch();
-  let instance = createInstance(user, dispatch, loginSuccess);
+  let instance: ReturnType<typeof createInstance> | null = null;
+  if (user){
+     instance = createInstance(user, dispatch, loginSuccess);
+  }
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error(
