@@ -10,7 +10,7 @@ import { GoogleIcon } from "../../../public/assets/icons";
 import { loginUser } from "~/redux/apiRequest";
 import { BE_BASE_URL } from "~/services/axios";
 
-const signInForm = () => {
+const SignInForm = () => {
   const [hidden, setHidden] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -178,4 +178,4 @@ const signInForm = () => {
   );
 };
 
-export default signInForm;
+export default SignInForm;
