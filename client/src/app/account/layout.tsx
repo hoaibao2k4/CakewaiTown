@@ -4,9 +4,9 @@ import BreadCrumb from '~/components/Breadcrumb';
 import { usePathname } from 'next/navigation';
 import AccountSideBar from '~/components/Account/sidebar';
 
-interface AccountLayoutProps {
-    children: React.ReactNode;
-}
+// interface AccountLayoutProps {
+//     children: React.ReactNode;
+// }
 
 interface MenuMapping {
     [key: string]: {
@@ -15,11 +15,13 @@ interface MenuMapping {
     };
 }
 
-function AccountLayout({ children }: AccountLayoutProps) {
+function AccountLayout(
+    // { children }: AccountLayoutProps
+) {
     const pathname = usePathname();
     const [currentKey, setCurrentKey] = useState("profile");
     //
-    console.log(currentKey, children);
+    console.log(currentKey);
     const [breadCrumbItems, setBreadcrumbItems] = useState([
         { title: "Trang chủ", link: "/" },
         { title: "Tài khoản" },

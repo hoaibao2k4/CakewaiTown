@@ -1,15 +1,10 @@
-import AccountLayout from "./layout"
+// import React from 'react'
 
-interface IProps {
-    children: React.ReactNode
-}
-const AccountPage = ({ children }: IProps) => {
+import Account from "."
+
+const AccountPage = () => {
     return (
-        <div className="mt-16 mx-[5rem] sm:mx-[2rem] md:mx-[3rem] lg:mx-[4rem] xl:mx-[5rem] bg-white">
-            <AccountLayout>
-                {children}
-            </AccountLayout>
-        </div>
+        <Account />
     )
 }
 
