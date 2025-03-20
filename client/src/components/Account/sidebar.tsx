@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, MenuProps } from 'antd';
 import Link from 'next/link';
-import AccountSidebarContent from './sidebarContent';
-import '../../components/Account/Sidebar.css';
+import AccountSidebarContent from './sidebar_content';
+import './sidebar.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
-const App: React.FC = () => {
+const AccountSideBar = () => {
     const [currentKey, setCurrentKey] = useState(() => {
         const savedKey = localStorage.getItem("currentKey");
         return savedKey || 'profile';
@@ -65,4 +65,4 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+export default AccountSideBar;
