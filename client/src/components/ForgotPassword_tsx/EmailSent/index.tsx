@@ -1,6 +1,6 @@
+"use client"
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { url } from "inspector";
 const Sent_Email = () => {
     const router = useRouter();
     return(

@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Head from "next/head";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { registerUser } from "~/redux/apiRequest";
 import { BE_BASE_URL } from "~/services/axios";
 import { GoogleIcon } from "../../../public/assets/icons";

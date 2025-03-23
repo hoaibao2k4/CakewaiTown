@@ -17,7 +17,8 @@ import { toast } from "react-toastify";
 import ImageDownloader from "~/components/ImageDownloader";
 import { AddToCartContext } from "../modalwapper";
 import { SelectChangeEvent } from "@mui/material/Select";
-
+import { RootState } from "~/redux/store";
+import Image from "next/image";
 function GenImage() {
   const [selectedLabel, setSelectedLabel] = useState("");
   const [input, setInput] = useState("");
@@ -27,9 +28,12 @@ function GenImage() {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
-  const user = useSelector((state: any) => state.auth.login.currentUser);
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
   const dispatch = useDispatch();
-  let instance = createInstance(user, dispatch, loginSuccess);
+  let instance: ReturnType<typeof createInstance> | null = null;
+  if (user) {
+    instance = createInstance(user, dispatch, loginSuccess);
+  }
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error(
@@ -63,10 +67,12 @@ function GenImage() {
     else {
       setLoading(true);
       try {
+        if (instance){
         const res = await generateImage(user.access_token, input, instance);
         console.log(res);
         setImage(res[0].tmp_url);
         inputRef.current?.focus();
+        }
       } catch (err) {
         console.log(err);
       } finally {
@@ -74,7 +80,7 @@ function GenImage() {
       }
     }
   };
-  const handleEditImage = async (e : React.MouseEvent<HTMLButtonElement>) => {
+  const handleEditImage = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!user) setIsLogin(true);
     else if (!input) {
@@ -91,6 +97,7 @@ function GenImage() {
       setLoading(true);
       const inputStyle = input + "theo cách thiết kế" + selectedLabel;
       try {
+        if (instance){
         const res = await generateImage(
           user.access_token,
           inputStyle,
@@ -99,6 +106,7 @@ function GenImage() {
         console.log(res);
         setImage(res[0].tmp_url);
         inputRef.current?.focus();
+      }
       } catch (err) {
         console.log(err);
       } finally {
@@ -198,9 +206,11 @@ function GenImage() {
                   />
                 </div>
               ) : (
-                <img
+                <Image
                   src={image}
                   alt="Generated cake"
+                  width={520}
+                  height={400}
                   className="mx-auto h-[200px] w-full max-w-[520px] object-contain sm:h-[300px] lg:h-[400px]"
                 />
               )}
@@ -284,7 +294,7 @@ function GenImage() {
                 </ul>
               </div>
               <div>
-                <img
+                <Image
                   src="/assets/images/about_1.jpg"
                   alt="Cakewai"
                   className="mx-auto size-[20rem] rounded-full"
@@ -303,8 +313,9 @@ function GenImage() {
                   <p className="text-gray-600">
                     Hãy mô tả chiếc bánh bạn muốn tạo ra. Ví dụ:
                     <i>
-                      "Một chiếc bánh sinh nhật với hoa văn hoa hồng và ánh sáng
-                      lung linh."
+                      {
+                        '"Một chiếc bánh sinh nhật với hoa văn hoa hồng và ánh sáng lung linh."'
+                      }
                     </i>
                   </p>
                 </div>
@@ -323,7 +334,7 @@ function GenImage() {
                     3. Tải Xuống
                   </h3>
                   <p className="text-gray-600">
-                    Nhấn "Tạo Ảnh" để xem kết quả. Nếu chưa hài lòng, hãy điều
+                    Nhấn {'"Tạo Ảnh"'} để xem kết quả. Nếu chưa hài lòng, hãy điều
                     chỉnh và tạo lại. Khi hoàn tất, bạn có thể tải ảnh về hoặc
                     chia sẻ trực tiếp.
                   </p>

@@ -14,13 +14,12 @@ import { toast } from "react-toastify";
 import { AppDispatch } from "./store";
 import axios from "axios";
 import { NextRouter } from "next/router";
-import { User } from "./authSlice";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 interface UserAuth {
-  name?: string,
-  email: string,
-  password: string
+  name?: string;
+  email: string;
+  password: string;
 }
 export const loginUser = async (
   dispatch: AppDispatch,
@@ -37,8 +36,8 @@ export const loginUser = async (
       toast.success("Đăng nhập thành công", {
         position: "bottom-right",
       });
-      dispatch(loginSuccess(res));
-      navigate(redirectPath);
+      dispatch(loginSuccess(res.data.user));
+      navigate.push(redirectPath);
     } else {
       toast.error("Truy cập bị từ chối", {
         position: "bottom-right",
@@ -67,14 +66,14 @@ export const loginUser = async (
 export const logOutUser = async (
   dispatch: AppDispatch,
   token: string,
-  navigate: NextRouter["push"],
+  navigate: NextRouter,
   redirectPath = "/auth?mode=signin"
 ) => {
   dispatch(logOutStart());
   try {
     await response.post("/api/public/logout", { refresh_token: token });
     dispatch(logOutSuccess());
-    navigate(redirectPath);
+    navigate.push(redirectPath);
   } catch (err: unknown) {
     dispatch(logOutFail());
     if (axios.isAxiosError(err)) {
@@ -100,7 +99,7 @@ export const registerUser = async (
     toast.success("Đăng kí thành công", {
       position: "bottom-right",
     });
-    router.push("/auth?mode=signin")
+    router.push("/auth?mode=signin");
   } catch (err: unknown) {
     dispatch(registerFail());
     if (axios.isAxiosError(err)) {

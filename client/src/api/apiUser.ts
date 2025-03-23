@@ -2,7 +2,6 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { User } from "~/redux/authSlice";
 import { response } from "~/services/axios";
 
-
 export const updateUser = async (
   token: string,
   user: User,
@@ -50,7 +49,7 @@ export const updateImageUser = async (
   instance: AxiosInstance,
   token: string,
   file: File
-): Promise<any> => {
+) => {
   try {
     const formData = new FormData();
     formData.append("file", file);
