@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
@@ -22,7 +22,7 @@ function Header() {
   const router = useRouter();
   const dispatch = useDispatch();
   const pathname = usePathname();
-  const search = useSearchParams()
+  const search = useSearchParams();
   const user = useSelector((state) => state.auth.login.currentUser);
   const [open, setOpen] = useState(false);
   const { list } = useSelector((state) => state.cart);
@@ -38,27 +38,33 @@ function Header() {
   const onClose = async () => {
     if (list.length > 0) {
       try {
-        const itemsToUpdate = list.filter((item, index) => item?.buy_quantity !== originalList[index].buy_quantity);
+        const itemsToUpdate = list.filter(
+          (item, index) =>
+            item?.buy_quantity !== originalList[index].buy_quantity
+        );
         if (itemsToUpdate.length > 0) {
-          await Promise.all(itemsToUpdate.map((item) => updateCartItem(user.access_token, instance, item)));
+          await Promise.all(
+            itemsToUpdate.map((item) =>
+              updateCartItem(user.access_token, instance, item)
+            )
+          );
         }
         setOpen(false);
       } catch (err) {
-        console.error('Failed to update cart items', err);
+        console.error("Failed to update cart items", err);
       }
-    }
-    else setOpen(false)
+    } else setOpen(false);
   };
   const handleLogin = () => {
-    router.push('/auth?mode=signin');
+    router.push("/authentic/signin");
   };
   const handleLogOut = () => {
     if (user?.refresh_token) logOutUser(dispatch, user?.refresh_token, router);
     else {
-      const refresh_token = localStorage.getItem('refreshToken');
+      const refresh_token = localStorage.getItem("refreshToken");
       logOutUser(dispatch, refresh_token, router);
-      localStorage.removeItem('authToken');
-      localStorage.removeItem('refreshToken');
+      localStorage.removeItem("authToken");
+      localStorage.removeItem("refreshToken");
     }
     dispatch(setCart([]));
     persistor.purge();

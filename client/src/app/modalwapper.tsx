@@ -6,16 +6,17 @@ import { SuccessPopup } from "~/components/Modal/SuccessPopup";
 import { useDispatch, useSelector } from "react-redux";
 import { jwtDecode } from "jwt-decode";
 import ExpiryModal from "~/components/Modal/Expiry";
-import { logOutUser } from "~/redux/apiRequest";
-import { useRouter } from "next/navigation";
+//import { logOutUser } from "~/redux/apiRequest";
 import LogoutModal from "~/components/Modal/LogoutModal";
 import OrderModal from "~/components/Modal/OrderModal";
 import ImageAIModal from "~/components/Modal/ImageAIModal";
 import { FaArrowUp } from "react-icons/fa";
 import { Dispatch, SetStateAction } from "react";
+import { Item } from "~/api/apiCart";
+import { RootState } from "~/redux/store";
 
 interface SomeContextType {
-  handleAddToCartPopup: (cake: any) => void;
+  handleAddToCartPopup: (cake: Item) => void;
   triggerSuccessPopup: () => void;
   setIsLogout: Dispatch<SetStateAction<boolean>>;
   setIsOrder: Dispatch<SetStateAction<boolean>>;
@@ -32,12 +33,12 @@ export default function ModalWrapper({children} : {children: ReactNode}) {
   const [isOrder, setIsOrder] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const user = useSelector((state : any) => state.auth.login.currentUser);
+  const user = useSelector((state : RootState) => state.auth.login.currentUser);
   const dispatch = useDispatch();
-  const router = useRouter();
+  //const router = useRouter();
 
-  const handleAddToCartPopup = useCallback((cake :any) => {
-    setCartContent(cake);
+  const handleAddToCartPopup = useCallback(() => {
+    //setCartContent(cake);
     setShowCart(true);
   }, []);
 

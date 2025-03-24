@@ -1,8 +1,8 @@
-"use client";
+
 
 import dynamic from "next/dynamic";
 
-const SignUpForm = dynamic(() => import("~/components/SignUpForm_tsx/signUpForm"));
+const SignUpForm = dynamic(() => import("~/components/SignUpForm_tsx"));
 
 export default function SignUpPage() {
   return (
