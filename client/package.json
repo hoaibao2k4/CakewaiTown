@@ -11,13 +11,6 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-<<<<<<< HEAD
-    "@fontsource/inter": "^5.2.5",
-    "@mui/material": "^6.4.7",
-    "@reduxjs/toolkit": "^2.6.0",
-    "antd": "^5.24.3",
-    "axios": "^1.8.1",
-=======
     "@mui/material": "^6.4.6",
     "@reduxjs/toolkit": "^2.6.0",
     "antd": "^5.24.2",
@@ -26,15 +19,11 @@
     "framer-motion": "^12.4.7",
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.477.0",
->>>>>>> 2c54e0c7d556e1996656c33e20087279bd0a0d2f
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-<<<<<<< HEAD
-=======
     "react-multi-carousel": "^2.8.5",
->>>>>>> 2c54e0c7d556e1996656c33e20087279bd0a0d2f
     "react-redux": "^9.2.0",
     "react-toastify": "^11.0.5",
     "redux-persist": "^6.0.0"
