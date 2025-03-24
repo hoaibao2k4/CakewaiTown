@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Head from 'next/head';
+import type { Metadata } from "next";
 
 // Dữ liệu mẫu (tạm thời, sau này dùng API)
 const newsfeedData = [
@@ -15,7 +17,7 @@ const newsfeedData = [
             <div class="my-5">Cakewai: Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.</div>
             <div>Kính Chúc Quý Khách Hàng Năm Mới An Khang Và Thịnh Vượng.</div>
             <div> Cảm Ơn Quý Khách Hàng Đã Luôn Ủng Hộ Cakewai và đồng hành trong suốt thời gian vừa qua.</div>
-            <Image src="/images/images_new/newsfeed8.png" alt=""  class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/newsfeed8.png" alt="Thông báo nghỉ tết"  class="mx-auto my-5 block w-full max-w-[600px]" />
           </div>  
     `,
 },
@@ -53,9 +55,9 @@ const newsfeedData = [
             <h2 class="mb-3 mt-5">
               Sau đây là những mẫu bánh kem được chọn lọc đẹp nhất có tại Cakewai. Mời các bạn cùng tham khảo!
             </h2>
-            <Image src="/images/images_new/20-11_1.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
-            <Image src="/images/images_new/20-11_2.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
-            <Image src="/images/images_new/20-11_3.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/20-11_1.png" alt="Bánh kem khoai môn" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/20-11_2.png" alt="Bánh Kem Trà Bá Tước, quả Lý Chua Đen" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/20-11_3.png" alt="Bánh kem nhân dâu" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <h2 class="italic">"More than cake"</h2>
             <h2>
               Chỉ một câu nói nhỏ cũng có thể miêu tả chiếc bánh kem mang chủ đề 20/11 năm nay đến từ nhà Cakewai.
@@ -82,12 +84,12 @@ const newsfeedData = [
               Cakewai hiểu rõ được điều đó, đội ngũ thiết kế và sản xuất luôn sáng tạo không ngừng để mang đến những
               chiếc bánh kem độc đáo sánh tựa như vẻ đẹp ngọc ngà son sắc của các cô gái.
             </div>
-            <Image src="/images/images_new/20-10_1.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/20-10_1.png" alt="Bánh Red Velvet Mousse Cheesecake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div>------------</div>
             <div class="my-5">Đắn đo suy nghĩ nên tặng gì cho bà, cho mẹ hay những cô thiên thần nhỏ.</div>
             <div class="my-5">Tạo bất ngờ như thế nào là hợp lí với chị em trong công ty.</div>
             <div class="my-5">Món quà nào vừa đẹp vừa tinh tế cho dịp lễ đặc biệt này.</div>
-            <Image src="/images/images_new/20-10_2.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/20-10_2.png" alt="Bánh kem dâu và vani" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
               Nắm rõ các mưu cầu đó - Cakewai cho ra mắt bộ sưu tập bánh kem 20/10 đầy tinh tế với mong muốn giúp đỡ bạn
               bày tỏ những lời yêu thương qua những chiếc bánh ngọt dịu kì.
@@ -109,7 +111,7 @@ const newsfeedData = [
     author: "Cakewai",
     contentHtml: `
           <div class="text-black">
-            <Image src="/images/images_new/newsfeed11.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/newsfeed11.png" alt="Ra mắt Passion Mousse Cheesecake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
               Bánh Passion Mousse Cheesecake là sự kết hợp tuyệt vời giữa vị chua ngọt của chanh dây và vị béo ngậy của
               phô mai hòa cùng lớp mouse mịn màng tan chảy bên trong lớp cheesecake mềm mại và đế bánh giòn rụm.
@@ -224,14 +226,14 @@ const newsfeedData = [
               vụ thực khách thay lời yêu thương.
             </div>
             <div>Cakewai xin giới thiệu một số sản phẩm gửi đến quý khách hàng tham khảo!!!</div>
-            <Image src="/images/images_new/eur_1.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
-            <Image src="/images/images_new/eur_2.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
-            <Image src="/images/images_new/eur_3.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/eur_1.png" alt="Chocolate brownie slab cake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/eur_2.png" alt="Madeira cake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/eur_3.png" alt="Bánh Croissant Trứng Muối" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
               Với sự cập nhật mới này, Cakewai hứa hẹn sẽ mang đến một luồng gió mới về mặt trải nghiệm đến quý khách
               hàng.
             </div>
-            <Image src="/images/images_new/eur_4.png" alt="" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/eur_4.png" alt="Berry Cream Cheese Bun" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
               Bằng cả sự nhiệt huyết với nghề, nhà Cakewai rất mong nhận được sự ủng hộ và hưởng ứng vô cùng quý giá của
               Cakewai-ers.
@@ -249,15 +251,15 @@ const newsfeedData = [
                 <div class="text-black">
                     <div class="font-bold my-5">Cakewai cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư vấn: 0912476521</div>
                     <div>Tiệc teabreak là loại tiệc nhẹ thường được phục vụ trong các buổi họp, hội thảo, hội nghị hoặc sự kiện ngắn. Tiệc này tạo ra không gian thoải mái để khách mời thư giãn, giao lưu trong thời gian nghỉ giải lao. Tiệc teabreak được tổ chức với rất nhiều những loại bánh ngọt, trà, nước trái cây và hoa quả tươi. </div>
-                    <Image src="/images/images_new/newsfeed13.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/newsfeed13.png" alt="Minicakes - special sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <div class="my-5">Nếu bạn cần tìm những loại bánh ngọt phù hợp cho tiệc teabreak tại công ty hay sự kiện khai trương cửa hàng,... Bạn là đơn vị tổ chức sự kiện. Bạn cần tham khảo những dòng bánh ngọt trong bữa tiệc sắp tới.</div>
                     <div class="my-5">Cakewai xin gửi đến quý khách hàng thực đơn tiệc teabreak vô cùng đa dạng và phong phú. Mong quý khách hàng có thể lựa chọn những loại bánh phù hợp nhất cho mình.</div>
-                    <Image src="/images/images_new/mini_1.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <Image src="/images/images_new/mini_2.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <Image src="/images/images_new/mini_3.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <Image src="/images/images_new/mini_4.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <Image src="/images/images_new/mini_5.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <Image src="/images/images_new/mini_6.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_1.png" alt="Bánh Giỏ Quýt" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_2.png" alt="Su Kem Hạt Phỉ" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_3.png" alt="Bánh Tiramisu Lava" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_4.png" alt="Bánh Kisses Trà Bá Tước và Việt Quất" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_5.png" alt="Bánh Macaron Lý Chua Đen & Oải Hương" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/mini_6.png" alt="Bánh Macaron Caramen" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <div class="my-5">Nhà Cakewai cung cấp đầy đủ các loại bánh như su kem, coockie, macaron, socola, tiramisu,...</div>
                 </div>.
     `,
@@ -279,7 +281,7 @@ const newsfeedData = [
                 Chúng tôi vui mừng thông báo sự kiện <span class="font-semibold">khai trương chi nhánh mới tại Võ Văn Ngân</span>, 
                 đánh dấu một bước phát triển quan trọng trong hành trình mang đến những chiếc bánh thơm ngon và chất lượng nhất đến gần hơn với khách hàng.
             </p>
-            <Image src="/images/images_new/newsfeed7.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+            <Image src="/images/images_new/newsfeed7.png" alt="Khai trương chi nhánh Võ Văn Ngân" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
             <div class="bg-yellow-100 p-4 rounded-lg mt-6">
                 <h3 class="text-xl font-semibold text-center text-yellow-700">💖 Sự Kiện Đặc Biệt - Ưu Đãi Hấp Dẫn 💖</h3>
                 <ul class="mt-3 space-y-2">
@@ -314,7 +316,7 @@ const newsfeedData = [
             <h2 class="text-2xl font-bold text-center text-red-500 mb-4">
                 💝 Món Quà Ngọt Ngào Cho Ngày Valentine - Giảm Giá 50%! 💝
             </h2>
-            <Image src="/images/images_new/newsfeed14.png" alt="" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+            <Image src="/images/images_new/newsfeed14.png" alt="Valentine - big sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
             <p class="text-lg text-center">💌 Valentine này, gửi trọn yêu thương cùng những chiếc bánh ngọt ngào từ Cakewai!</p>
 
             <p class="mt-4">
@@ -358,6 +360,36 @@ export async function generateStaticParams() {
 }
 type Params = Promise<{id? : string}>
 
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const news = newsfeedData.find((item) => item.id === params.id);
+  
+  if (!news) {
+    return {
+      title: "Bài viết không tồn tại - CakewaiTown",
+      description: "Bài viết bạn đang tìm không tồn tại. Xem thêm tin tức tại CakewaiTown.",
+    };
+  }
+
+  return {
+    title: `${news.title} - CakewaiTown`,
+    description: news.description || news.title,
+    keywords: `Cakewai, tin tức bánh kem, ${news.title}`,
+    openGraph: {
+      title: news.title,
+      description: news.description || news.title,
+      url: `https://cakewaitown.com/news/${news.id}`,
+      images: [`https://cakewaitown.com${news.image}`],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: news.title,
+      description: news.description || news.title,
+      images: [`https://cakewaitown.com${news.image}`],
+    },
+  };
+}
 // 🟢 Server Component (thay cho getStaticProps)
 export default async function NewsDetail( props : { params: Params }) {
     const params = await props.params
@@ -367,8 +399,47 @@ export default async function NewsDetail( props : { params: Params }) {
     if (!news) {
         return <div className="text-center text-red-500">Bài viết không tồn tại.</div>;
     }
+    const newsSchema = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": news.title,
+      "datePublished": news.date,
+      "author": {
+        "@type": "Person",
+        "name": news.author
+      },
+      "image": `https://cakewaitown.com${news.image}`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "CakewaiTown",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cakewaitown.com/logo.png"
+        }
+      }
+    };
+
 
     return (
+      <>
+      <Head>
+        <title>{news.title} - CakewaiTown</title>
+        <meta name="description" content={news.description || news.title} />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content={`bánh kem, tin tức CakewaiTown, sự kiện bánh ngọt, khuyến mãi bánh sinh nhật, giảm giá, thông báo, đặt bánh,CakewaiTown, ${news.title}, bánh kem 20/11, bánh kem Nhà Giáo, quà tặng 20/11, ngày Nhà Giáo Việt Nam, CakewaiTown khai trương, khai trương chi nhánh mới, bánh kem CakewaiTown, ưu đãi khai trương`} />
+        <meta name="robots" content="all" />
+        <meta http-equiv="content-language" content="vi" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta property="og:title" content={news.title} />
+        <meta property="og:description" content={news.description || news.title} />
+        <meta property="og:image" content={`https://cakewaitown.com${news.image}`} />
+        <meta property="og:url" content={`https://cakewaitown.com/news/${news.id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={news.title} />
+        <meta name="twitter:description" content={news.description || news.title} />
+        <meta name="twitter:image" content={`https://cakewaitown.com${news.image}`} />
+        <script type="application/ld+json">{JSON.stringify(newsSchema)}</script>
+      </Head>
         <div className="mx-4 sm:mx-10 lg:mx-28 my-24 text-black">
             <div className="text-left">
                 <Link href="/">Trang chủ</Link> <span>&gt;&gt;</span> <Link href="/news">Tin tức</Link> <span>&gt;&gt;</span> <span>Nội dung</span>
@@ -387,7 +458,8 @@ export default async function NewsDetail( props : { params: Params }) {
                         </div>
                     </div>
                     <hr className="my-5 border-gray-400" />
-                    <div dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none" />
+                    {/* <div dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none" /> */}
+                    <h3 dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none"></h3>
                     <h2 className="text-2xl font-extrabold mt-5">CÁC BÀI VIẾT LIÊN QUAN</h2>
                     <ul className="ml-4 list-disc">
                         {newsfeedData.filter((item) => item.id !== news.id).map((item) => (
@@ -398,6 +470,8 @@ export default async function NewsDetail( props : { params: Params }) {
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>     
+      </>
+
     );
 }
