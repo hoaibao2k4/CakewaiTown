@@ -1,37 +1,34 @@
+"use client"
 import { useEffect, useState, useRef } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import { useNavigate } from 'react-router-dom';
-import cake4 from '~/assets/images/Slidecake/cake4.jpg';
-import cake5 from '~/assets/images/Slidecake/cake5.jpg';
-import cake6 from '~/assets/images/Slidecake/cake6.jpg';
-import cake7 from '~/assets/images/Slidecake/cake7.png';
+import { useRouter } from 'next/navigation';
 
 function Slider() {
   const sliders = [
     {
-      image: cake4,
+      image: "/assets/images/Slidecake/cake4.jpg",
       heading: 'Mang đến niềm hạnh phúc qua từng chiếc bánh kem',
       text: 'Liên hệ với chúng tôi để đặt bánh hoặc tìm hiểu thêm về thực đơn phong phú của chúng tôi. Chúng tôi sẵn sàng giúp bạn tạo nên những kỷ niệm ngọt ngào đáng nhớ.',
       buttonText: 'Khám Phá Thực Đơn',
       path: '/category?mode=cookie'
     },
     {
-      image: cake5,
+      image: "/assets/images/Slidecake/cake5.jpg",
       heading: 'Trải nghiệm sự kỳ diệu từ những chiếc bánh tươi mới',
       text: 'Những chiếc bánh của chúng tôi được làm từ những nguyên liệu tốt nhất để mang đến cho bạn một trải nghiệm khó quên.',
       buttonText: 'Đặt Hàng Ngay',
       path: '/category?mode=bread'
     },
     {
-      image: cake6,
+      image: "/assets/images/Slidecake/cake6.jpg",
       heading: 'Thưởng thức sự ngọt ngào qua từng miếng bánh',
       text: 'Mỗi miếng bánh được làm bằng tình yêu và sự tận tâm để biến khoảnh khắc của bạn trở nên đặc biệt.',
       buttonText: 'Xem Thực Đơn',
       path: '/category?mode=birthday'
     },
     {
-      image: cake7,
+      image: "/assets/images/Slidecake/cake7.png",
       heading: 'Hãy để những chiếc bánh mì làm ngọt ngào từng phút giây',
       text: 'Hoàn hảo cho sinh nhật, kỷ niệm hoặc chỉ đơn giản là một ngày bình thường – bánh mì của chúng tôi sẽ làm cho mọi khoảnh khắc trở nên ngọt ngào hơn.',
       buttonText: 'Mua Ngay',
@@ -43,7 +40,7 @@ function Slider() {
   const sliderRef = useRef(null);
   const [startX, setStartX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const navigate = useNavigate()
+  const router = useRouter()
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -87,7 +84,7 @@ function Slider() {
   };
 
   const handleNavigate = (path) => {
-    navigate(path)
+    router(path)
   }
 
   return (

@@ -1,10 +1,10 @@
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 function ImageAIModal({ isLogin }) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const handleLogin = () => {
-    navigate('/auth?mode=signin');
+    router('/auth?mode=signin');
     isLogin(false);
   };
 
