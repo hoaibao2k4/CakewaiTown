@@ -31,7 +31,8 @@ function GenImage() {
   const user = useSelector((state: RootState) => state.auth.login.currentUser);
   const dispatch = useDispatch();
   let instance: ReturnType<typeof createInstance> | null = null;
-  user && (instance = createInstance(user, dispatch, loginSuccess));
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+  user && (() => { instance = createInstance(user, dispatch, loginSuccess); })();
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error(

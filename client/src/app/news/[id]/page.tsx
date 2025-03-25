@@ -361,8 +361,10 @@ export async function generateStaticParams() {
 type Params = Promise<{id? : string}>
 
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const news = newsfeedData.find((item) => item.id === params.id);
+export async function generateMetadata(props : { params : Params}): Promise<Metadata> {
+  const params = await props.params
+  const id = params.id
+  const news = newsfeedData.find((item) => item.id === id);
   
   if (!news) {
     return {
