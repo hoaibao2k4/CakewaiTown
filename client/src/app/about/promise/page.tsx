@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Metadata } from "next"
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 export const metadata: Metadata = {
   title: 'Lời cam kết - CakeWai',
   description: 'Nụ cười của khách hàng là động lực của CakeWai',
@@ -10,9 +13,15 @@ const PromisePage = () => {
     return(
         <div className="mx-full font-inter mt-28 w-full items-center overflow-hidden text-black text-primary">
         <div className="mx-28">
+<<<<<<< HEAD
           <a href="/">Trang chủ </a>
           <span>&gt;&gt;</span>
           <a href="/about"> Về chúng tôi </a>
+=======
+          <Link href="/">Trang chủ </Link>
+          <span>&gt;&gt;</span>
+          <Link href="/about"> Về chúng tôi </Link>
+>>>>>>> dev
           <span>&gt;&gt;</span>
           <span>Lời cam kết </span>
         </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 
 import Link from "next/link"; 
@@ -143,3 +144,15 @@ export default function Newsfeed() {
     </div>
   );
 };
+=======
+import dynamic from "next/dynamic";
+
+const Newsfeed = dynamic(() => import ("~/components/Newsfeed_tsx"));
+export default function ListNewsFeed(){
+  return(
+    <div>
+      <Newsfeed/>
+    </div>
+  )
+}
+>>>>>>> dev
