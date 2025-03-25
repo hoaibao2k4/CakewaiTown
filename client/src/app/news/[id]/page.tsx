@@ -358,11 +358,19 @@ const formatDate = (dateString: string) => {
 export async function generateStaticParams() {
     return newsfeedData.map((news) => ({ id: news.id }));
 }
+<<<<<<< HEAD
+
+// 🟢 Server Component (thay cho getStaticProps)
+export default async function NewsDetail({ params }: { params: { id: string } }) {
+    const news = newsfeedData.find((item) => item.id === params.id);
+=======
 type Params = Promise<{id? : string}>
 
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const news = newsfeedData.find((item) => item.id === params.id);
+export async function generateMetadata(props : { params : Params}): Promise<Metadata> {
+  const params = await props.params
+  const id = params.id
+  const news = newsfeedData.find((item) => item.id === id);
   
   if (!news) {
     return {
@@ -395,6 +403,7 @@ export default async function NewsDetail( props : { params: Params }) {
     const params = await props.params
     const id = params.id
     const news = newsfeedData.find((item) => item.id === id);
+>>>>>>> dev
 
     if (!news) {
         return <div className="text-center text-red-500">Bài viết không tồn tại.</div>;
