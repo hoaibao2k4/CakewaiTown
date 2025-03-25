@@ -31,9 +31,7 @@ function GenImage() {
   const user = useSelector((state: RootState) => state.auth.login.currentUser);
   const dispatch = useDispatch();
   let instance: ReturnType<typeof createInstance> | null = null;
-  if (user) {
-    instance = createInstance(user, dispatch, loginSuccess);
-  }
+  user && (instance = createInstance(user, dispatch, loginSuccess));
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error(

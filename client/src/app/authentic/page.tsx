@@ -7,7 +7,7 @@ export default function AuthPage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace("/authentic/signIn"); // Chuyển hướng về trang đăng nhập
+    router.replace("/authentic/signin"); // Chuyển hướng về trang đăng nhập
   }, [router]);
 
   return null; // Không hiển thị gì cả, chỉ để chuyển hướng
