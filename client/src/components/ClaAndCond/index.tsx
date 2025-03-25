@@ -69,7 +69,7 @@ export default function ClaAndCond(){
                     <h2 className="font-bold">Điều Khoản Chung</h2>
                     <h3>
                         <ul className="list-disc ml-4 sm:ml-6 text-base sm:text-lg space-y-3 mt-3">
-                            <li>CakewaiTown có quyền thay đổi, cập nhật hoặc xóa bỏ bất kỳ điều khoản nào trong "Điều Khoản và Điều Kiện" mà không cần thông báo trước. Việc tiếp tục sử dụng trang web của bạn sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản mới.</li>
+                            <li>CakewaiTown có quyền thay đổi, cập nhật hoặc xóa bỏ bất kỳ điều khoản nào trong {'"Điều Khoản và Điều Kiện"'} mà không cần thông báo trước. Việc tiếp tục sử dụng trang web của bạn sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản mới.</li>
                             <li>Mọi tranh chấp phát sinh từ việc sử dụng dịch vụ của CakewaiTown sẽ được giải quyết thông qua thương lượng. Nếu không đạt được thỏa thuận, tranh chấp sẽ được xử lý tại tòa án có thẩm quyền.</li>
                         </ul>
                     </h3>
