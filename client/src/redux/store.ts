@@ -33,10 +33,7 @@ const store = configureStore({
 // Tạo persistor
 const persistor = persistStore(store);
 
-<<<<<<< HEAD:client/src/redux/store.js
-=======
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
->>>>>>> dev:client/src/redux/store.ts
 
 export { store, persistor };
