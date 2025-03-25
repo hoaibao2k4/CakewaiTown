@@ -2,6 +2,7 @@
 
 import Link from "next/link"; 
 import Image from "next/image";
+import Head from "next/head";
 import * as React from 'react';
 import { Pagination, Stack } from "@mui/material";
 
@@ -103,11 +104,17 @@ export default function Newsfeed() {
   };
 
   return (
-    <div className="flex flex-col px-7 md:px-10 lg:px-28 my-24 items-center justify-center text-black text-primary">
+    <>
+    <Head>
+        <title>Tin tức - CakewaiTown</title>
+        <meta name="description" content="Cập nhật tin tức mới nhất về CakewaiTown, chương trình khuyến mãi, sự kiện đặc biệt và các mẫu bánh mới nhất." />
+        <meta name="robots" content="index, follow" />
+    </Head>
+<div className="flex flex-col px-7 md:px-10 lg:px-28 my-24 items-center justify-center text-black text-primary">
       <div className="text-left w-full">
         <Link href="/">Trang chủ</Link> <span>&gt;&gt;</span> <Link href="/news">Tin tức</Link>
       </div>
-      <h1 className="font-inter mb-10 text-center  text-4xl font-extrabold leading-none text-primary">Tin tức</h1>
+      <h1 className="font-inter mb-10 text-center  text-4xl font-extrabold leading-none text-primary">TIN TỨC</h1>
       <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center place-items-center items-stretch ">
         {/* <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"> */}
           {displayedNews.map((news) => (
@@ -119,17 +126,17 @@ export default function Newsfeed() {
                 <div className="mx-3">
                   <div className="font-inter mt-3 flex items-center text-sm text-[#6D758F]">
                     <Image src="/images/images_new/Circle Avatar.svg" alt="Avatar" width={20} height={20} className="mr-1 inline-flex" />
-                    <span>{news.author}</span>
-                    <hr className="mx-4 mt-1 w-[24px] border border-gray-400" />
+                    <h3>{news.author}</h3>
+                    <hr className="mx-4 w-[24px] border border-gray-400" />
                     <Image src="/images/images_new/calendar.svg" alt="Calendar" width={20} height={20} className="mr-1 inline-flex" />
-                    <p>{formatDate(news.date)}</p>
+                    <h3>{formatDate(news.date)}</h3>
                   </div>
                   <Link href={`/news/${news.id}`}>
                     <h2 className="mb-3 mt-3 text-xl font-bold text-[#6D758F] hover:text-slate-900 min-h-[56px]">
                       {news.title}
                     </h2>
                   </Link>
-                  <p className="mb-3 mt-3 text-base text-[#6D758F] min-h-[80px]">{news.description}</p>
+                  <h3 className="mb-3 mt-3 text-base text-[#6D758F] min-h-[80px]">{news.description}</h3>
                 </div>
               </div>
             </div>
@@ -140,6 +147,8 @@ export default function Newsfeed() {
         <Stack spacing={2} className="mt-6">
           <Pagination count={totalPages} page={page} onChange={handleChange} />
         </Stack>
-    </div>
+    </div>    
+    </>
+    
   );
 };

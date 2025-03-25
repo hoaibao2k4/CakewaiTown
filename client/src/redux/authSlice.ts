@@ -61,16 +61,18 @@ const authSlice = createSlice({
       state,
       action: PayloadAction<
         UserWithToken 
-        //| { code?: number; data: UserWithToken }
+        //| 
+        // { code?: number; data: UserWithToken }
       >
     ) => {
       // if ("data" in action.payload) {
       //   state.login.currentUser = action.payload.data;
       // } else {
         state.login.currentUser = action.payload;
-      
-      state.login.isFetching = false;
-      state.login.error = false;
+
+        state.login.isFetching = false;
+        state.login.error = false;
+      //}
     },
     loginFail: (state) => {
       state.login.error = true;

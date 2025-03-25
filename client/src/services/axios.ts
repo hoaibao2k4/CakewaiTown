@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BE_BASE_URL = process.env.NEXT_PUBLIC_BE_BASE_URL;
+const BE_BASE_URL =  process.env.NEXT_PUBLIC_BE_BASE_URL;
 const response = axios.create({
   baseURL: BE_BASE_URL,
 });
