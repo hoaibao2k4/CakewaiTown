@@ -27,17 +27,17 @@ function Footer() {
         <h3 className="text-xl font-semibold text-[#664545]">Về chúng tôi</h3>
         <ul className="mt-4 space-y-4 text-base text-[#3D3D3D]">
           <li>
-            <Link href="/about?mode=info1" className="hover:text-[#9E6B6B]">
+            <Link href="/about/story" className="hover:text-[#9E6B6B]">
               Câu chuyện
             </Link>
           </li>
           <li>
-            <Link href="/about?mode=info3" className="hover:text-[#9E6B6B]">
+            <Link href="/about/promise" className="hover:text-[#9E6B6B]">
               Lời cam kết
             </Link>
           </li>
           <li>
-            <Link href="/about?mode=info2" className="hover:text-[#9E6B6B]">
+            <Link href="/about/service" className="hover:text-[#9E6B6B]">
               Dịch vụ
             </Link>
           </li>
@@ -47,27 +47,27 @@ function Footer() {
         <h3 className="text-xl font-semibold text-[#664545]">Chính sách</h3>
         <ul className="mt-4 space-y-4 text-base text-[#3D3D3D]">
           <li>
-            <Link href="/policy?mode=general" className="hover:text-[#9E6B6B]">
+            <Link href="/compolicy/general" className="hover:text-[#9E6B6B]">
               Chính sách quy định chung
             </Link>
           </li>
           <li>
-            <Link href="/policy?mode=security" className="hover:text-[#9E6B6B]">
+            <Link href="/compolicy/security" className="hover:text-[#9E6B6B]">
               Chính sách bảo mật
             </Link>
           </li>
           <li>
-            <Link href="/policy?mode=delivery" className="hover:text-[#9E6B6B]">
+            <Link href="/compolicy/delivery" className="hover:text-[#9E6B6B]">
               Chính sách vận chuyển
             </Link>
           </li>
           <li>
-            <Link href="/policy?mode=return" className="hover:text-[#9E6B6B]">
+            <Link href="/compolicy/return" className="hover:text-[#9E6B6B]">
               Chính sách đổi trả
             </Link>
           </li>
           <li>
-            <Link href="/policy?mode=payment" className="hover:text-[#9E6B6B]">
+            <Link href="/compolicy/payment" className="hover:text-[#9E6B6B]">
               Chính sách giao dịch & thanh toán
             </Link>
           </li>
@@ -112,7 +112,7 @@ function Footer() {
         </div>{" "}
         <div className="text-center">
           <Link
-            href="/condition?mode=condition"
+            href="/claandcons"
             className="ml-1 text-[#353E5C] underline hover:text-[#9E6B6B]"
           >
             Điều khoản và điều kiện
