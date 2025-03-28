@@ -1,5 +1,3 @@
-
-
 import dynamic from "next/dynamic";
 
 const SignUpForm = dynamic(() => import("~/components/SignUpForm_tsx"));

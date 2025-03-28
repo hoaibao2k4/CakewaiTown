@@ -1,5 +1,4 @@
 
-
 import dynamic from "next/dynamic";
 
 const Sent_mail = dynamic(() => import("~/components/ForgotPassword_tsx/EmailSent"));

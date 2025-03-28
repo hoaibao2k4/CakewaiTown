@@ -1,109 +1,182 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Metadata } from "next"
+import Head from "next/head";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'About CakeWai',
-  description: 'Những câu chuyện thú vị xoay quanh CakeWai và sự gắn kết; Câu chuyện - Dịch vụ - Lời cam kết',
-}
+  title: "About CakeWai - Câu chuyện, Dịch vụ, Lời cam kết",
+  description:
+    "Tìm hiểu về CakeWai Town - thương hiệu bánh ngọt hàng đầu với câu chuyện thú vị, dịch vụ tận tâm và cam kết chất lượng.",
+  keywords:
+    "bánh ngọt, CakeWai Town, bánh kem, dịch vụ bánh, câu chuyện CakeWai, cam kết chất lượng",
+  openGraph: {
+    title: "About CakeWai - Câu chuyện, Dịch vụ, Lời cam kết",
+    description:
+      "Tìm hiểu về CakeWai Town - thương hiệu bánh ngọt hàng đầu với câu chuyện thú vị, dịch vụ tận tâm và cam kết chất lượng.",
+    type: "website",
+    url: "https://cakewaitown.com/about",
+    images: [
+      {
+        url: "/images/images_aboutUs/about_1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Câu chuyện CakeWai Town",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@cakewai_town",
+    title: "About CakeWai - Câu chuyện, Dịch vụ, Lời cam kết",
+    description:
+      "Tìm hiểu về CakeWai Town - thương hiệu bánh ngọt hàng đầu với câu chuyện thú vị, dịch vụ tận tâm và cam kết chất lượng.",
+    images: ["/images/images_aboutUs/about_1.jpg"],
+  },
+};
 
 const AboutUs = () => {
-    return (
-        <div className="mx-full font-inter mt-28 w-full items-center overflow-hidden text-primary">
-        <div className="mx-4 sm:mx-10 lg:mx-28">
-          <Link href="/">Trang chủ </Link>
-          <span>&gt;&gt;</span>
-          <Link href="/about"> Về chúng tôi </Link>
-        </div>
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CakeWai Town",
+    "url": "https://cakewaitown.com",
+    "logo": "https://cakewaitown.com/logo.png",
+    "description": "CakeWai Town - thương hiệu bánh ngọt hàng đầu với dịch vụ tận tâm và cam kết chất lượng.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "371 Đ.Đoàn Kết, P.Bình Thọ",
+      "addressLocality": "Thủ Đức",
+      "addressCountry": "Vietnam"
+    },
+    "telephone": "+84-91-247-65-21",
+    "email": "cakewaitown@gmail.com",
+    "sameAs": [
+      "https://www.facebook.com/cakewai.town/",
+      "https://www.instagram.com/cakewai_town/",
+      "https://www.tiktok.com/@cakewai_town",
+      "https://www.youtube.com/@CakewaiTown"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84-91-247-65-21",
+      "contactType": "customer service",
+      "areaServed": "VN",
+      "availableLanguage": ["Vietnamese", "English"]
+    }
+  };
 
+  return (
+    <>
+      <Head>
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="CakeWai Town" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:site_name" content="CakeWai Town" />
+        <meta property="article:published_time" content="2024-01-01T00:00:00Z" />
+        <meta
+          name="google-site-verification"
+          content="your-google-verification-code"
+        />
+        <link rel="canonical" href="https://cakewaitown.com/about" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </Head>
+
+      <div className="mx-full font-inter w-full items-center overflow-hidden text-primary">
         {/* Câu chuyện */}
-        <div className="group img-scale mt-5 h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
+        <section className="group img-scale mt-5 h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
           <Image
             src="/images/images_aboutUs/about_1.jpg"
-            alt="Câu chuyện"
-            width={500} 
-            height={300} 
-            className="hidden" 
+            alt="Câu chuyện thương hiệu CakeWai Town - Bánh ngọt từ năm 2024"
+            width={500}
+            height={300}
+            className="hidden"
             aria-hidden="true"
-          />
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
-            style={{ backgroundImage: `url('/images/images_aboutUs/about_1.jpg')` }} 
+            priority
           />
           <div
-            className="relative flex h-full items-center justify-start bg-gradient-to-r from-black to-transparent"
-          >
-            <div className="ml-8 sm:lm-12 lg:ml-20 max-w-lg text-left transition-transform duration-500 ease-out group-hover:scale-110">
-              <Link href="/about/story" className="text-4xl sm:text-5xl font-bold text-white hover:text-yellow-500">
-                Câu chuyện
-              </Link>
-              <div className="my-5 text-xs sm:text-sm text-white">
-              Cakewai được thành lập vào năm 2024, bắt nguồn từ tình yêu dành cho đất Việt cùng với bánh ngọt và cộng
-              đồng nơi đây. Ngay từ những ngày đầu tiên, mục tiêu của chúng mình là có thể phục vụ và góp phần phát
-              triển cộng đồng bằng cách siết chặt thêm sự kết nối và sự gắn bó giữa người với người.
-              </div>
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+            style={{ backgroundImage: `url('/images/images_aboutUs/about_1.jpg')` }}
+          />
+          <div className="relative flex h-full items-center justify-start bg-gradient-to-r from-black to-transparent">
+            <div className="ml-8 sm:ml-12 lg:ml-20 max-w-lg text-left transition-transform duration-500 ease-out group-hover:scale-110">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white">
+                <Link href="/about/story" className="hover:text-yellow-500">
+                  Câu chuyện
+                </Link>
+              </h2>
+              <p className="my-5 text-xs sm:text-sm text-white">
+                Cakewai Town được thành lập vào năm 2024, bắt nguồn từ tình yêu dành
+                cho đất Việt cùng với bánh ngọt và cộng đồng nơi đây.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Dịch vụ */}
-        <div className="group img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
+        <section className="group img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
           <Image
             src="/images/images_aboutUs/about_2.jpg"
-            alt="Dịch vụ"
-            width={500} 
-            height={300} 
-            className="hidden" 
+            alt="Dịch vụ tận tâm của CakeWai Town"
+            width={500}
+            height={300}
+            className="hidden"
             aria-hidden="true"
-          />
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
-            style={{ backgroundImage: `url('/images/images_aboutUs/about_2.jpg')` }} 
+            loading="lazy"
           />
           <div
-            className="relative flex h-full items-center justify-end bg-gradient-to-l from-transparent to-black"
-          >
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+            style={{ backgroundImage: `url('/images/images_aboutUs/about_2.jpg')` }}
+          />
+          <div className="relative flex h-full items-center justify-end bg-gradient-to-l from-transparent to-black">
             <div className="mr-8 sm:mr-12 lg:mr-20 max-w-lg text-right transition-transform duration-500 ease-out group-hover:scale-110">
-              <Link href="/about/service" className="text-4xl sm:text-5xl font-bold text-white hover:text-yellow-500">
-                Dịch vụ
-              </Link>
-              <div className="my-5 text-xs sm:text-sm text-white">
-              Cakewai là không gian của chúng mình nên mọi thứ ở đây đều vì sự thoải mái của chúng mình. Đừng giữ trong
-              lòng, hãy chia sẻ với chúng mình điều bạn mong muốn để cùng nhau giúp Cakewai trở nên tuyệt vời hơn.              </div>
+              <h2 className="text-4xl sm:text-5xl font-bold text-white">
+                <Link href="/about/service" className="hover:text-yellow-500">
+                  Dịch vụ
+                </Link>
+              </h2>
+              <p className="my-5 text-xs sm:text-sm text-white">
+                Cakewai Town là không gian của chúng mình, nơi mọi thứ đều vì
+                sự thoải mái và trải nghiệm tuyệt vời của bạn.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Lời cam kết */}
-        <div className="group img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
+        <section className="group img-scale h-[200px] sm:h-[300px] w-full overflow-hidden bg-cover bg-center relative">
           <Image
             src="/images/images_aboutUs/about_3.jpg"
-            alt="Lời cam kết"
-            width={500} 
-            height={300} 
-            className="hidden" 
+            alt="Lời cam kết chất lượng từ CakeWai Town"
+            width={500}
+            height={300}
+            className="hidden"
             aria-hidden="true"
-          />
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
-            style={{ backgroundImage: `url('/images/images_aboutUs/about_3.jpg')` }} 
+            loading="lazy"
           />
           <div
-            className="relative flex h-full items-center justify-start bg-gradient-to-r from-black to-transparent"
-          >
-            <div className="ml-8 sm:lm-12 lg:ml-20 max-w-lg text-left transition-transform duration-500 ease-out group-hover:scale-110">
-              <Link href="/about/promise" className="text-4xl sm:text-5xl font-bold text-white hover:text-yellow-500">
-                Lời cam kết
-              </Link>
-              <div className="my-5 text-xs sm:text-sm text-white">
-              Cakewai cam kết mang đến cho khách hàng những chiếc bánh ngọt tinh tế, tươi ngon và chất lượng nhất. Chúng
-              tôi hiểu rằng mỗi chiếc bánh không chỉ là món ăn mà còn là tâm tư, tình cảm gửi gắm đến người nhận.              </div>
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+            style={{ backgroundImage: `url('/images/images_aboutUs/about_3.jpg')` }}
+          />
+          <div className="relative flex h-full items-center justify-start bg-gradient-to-r from-black to-transparent">
+            <div className="ml-8 sm:ml-12 lg:ml-20 max-w-lg text-left transition-transform duration-500 ease-out group-hover:scale-110">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white">
+                <Link href="/about/promise" className="hover:text-yellow-500">
+                  Lời cam kết
+                </Link>
+              </h2>
+              <p className="my-5 text-xs sm:text-sm text-white">
+                Cakewai cam kết mang đến những chiếc bánh ngọt tinh tế, tươi ngon
+                và chất lượng nhất, thể hiện tâm huyết của chúng tôi với từng khách hàng.
+              </p>
             </div>
           </div>
-        </div>
-
+        </section>
       </div>
-    );
-}
+    </>
+  );
+};
 
 export default AboutUs;
