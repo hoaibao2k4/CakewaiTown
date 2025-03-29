@@ -12,7 +12,7 @@ import { Pagination, Stack } from "@mui/material";
 const newsfeedData_onpage = [
       {
         id: "news7",
-        image: "/images/images_new/newsfeed7.png",
+        image: "/images/images_new/news7.png",
         date: "2025-03-06",
         title: "Cakewai - Tưng bừng khai trương chi nhán...",
         description: "CaKewai xin chân thành cảm ơn sự quan tâm và ủng hộ từ quý khách hàng trong thời gian qua, đó là động lực to lớn thúc đẩy đội ngũ Cakewai...",
@@ -20,7 +20,7 @@ const newsfeedData_onpage = [
     },
     {
       id: "news8",
-      image: "/images/images_new/newsfeed10.png",
+      image: "/images/images_new/news10.png",
       date: "2025-02-01",
       title: "Valentine Ngọt Ngào - Giảm Giá 50% Mừng Lễ Tình Nh...",
       description: "Ngày 14/02 - ngày của tình yêu, hãy dành tặng cho người thương những chiếc bánh thơm ngon như một lời yêu thương n...",
@@ -28,7 +28,7 @@ const newsfeedData_onpage = [
     },
     {
         id: "news1",
-        image: "/images/images_new/newsfeed8.png",
+        image: "/images/images_new/news8.png",
         date: "2025-01-05",
         title: "Cakewai Thông Báo Lịch Nghỉ Tết Nguyên Đán...",
         description: "Cakewai: Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025. Kính Chúc Quý Khách Hàng Năm Mới An Khang...",
@@ -36,7 +36,7 @@ const newsfeedData_onpage = [
     },
     {
         id: "news2",
-        image: "/images/images_new/newsfeed9.png",
+        image: "/images/images_new/news9.png",
         date: "2024-11-02",
         title: "Mẫu bánh kem mừng 20/11 ngày Nhà Giáo...",
         description: "Ngày 20/11 được xem là ngày lễ lớn trọng đại nhằm tôn vinh vẻ đẹp và sự cống hiến...",
@@ -44,7 +44,7 @@ const newsfeedData_onpage = [
     },
     {
       id: "news3",
-      image: "/images/images_new/newsfeed14.png",
+      image: "/images/images_new/news14.png",
       date: "2024-10-20",
       title: "Women day - 20/10 Dành tặng cho những đóa hoa hồn...",
       description: "Happy Women day - 20/10. Dành tặng cho người phụ nữ tôi yêu----- Vẻ đẹp hút hồn của những quý cô được so sánh như bông hoa hồng nở rộ...",
@@ -52,7 +52,7 @@ const newsfeedData_onpage = [
   },
     {
         id: "news4",
-        image: "/images/images_new/newsfeed11.png",
+        image: "/images/images_new/news11.png",
         date: "2024-07-29",
         title: "Tưng bừng đắm chìm vào không gian huyền ảo cùng...",
         description: "Bánh Passion Mousse Cheesecake là sự kết hợp tuyệt vời giữa vị chua ngọt của chanh dây và vị béo ngậy của...",
@@ -60,7 +60,7 @@ const newsfeedData_onpage = [
     },
     {
         id: "news5",
-        image: "/images/images_new/newsfeed12.png",
+        image: "/images/images_new/news12.png",
         date: "2024-04-12",
         title: "Bầu trời châu âu được ra mắt hoành tráng với...",
         description: "Nhà Cakewai đã vô cùng tâm đắc và trau chuốt khi đã chính thức cho ra mắt bộ sưu tập mới đầy màu sắc và mang tính biểu tượng đến...",
@@ -68,7 +68,7 @@ const newsfeedData_onpage = [
     },
     {
         id: "news6",
-        image: "/images/images_new/newsfeed13.png",
+        image: "/images/images_new/news13.png",
         date: "2024-01-03",
         title: "Cakewai - Đặt bánh teabreak cho sự kiện, hội thảo,...",
         description: "Cakewai cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư...",
