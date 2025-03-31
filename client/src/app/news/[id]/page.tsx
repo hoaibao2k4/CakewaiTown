@@ -8,16 +8,16 @@ const newsfeedData = [
   {
     id: "news1",
     date: "2025-01-05",
-    title: "Cakewai Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.",
+    title: "CakewaiTown Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.",
     description: "",
-    author: "CakeWai",
+    author: "CakeWaiTown",
     contentHtml: 
     `
           <div class="text-center text-black ">
-            <div class="my-5">Cakewai: Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.</div>
+            <div class="my-5">CakewaiTown: Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.</div>
             <div>Kính Chúc Quý Khách Hàng Năm Mới An Khang Và Thịnh Vượng.</div>
             <div> Cảm Ơn Quý Khách Hàng Đã Luôn Ủng Hộ Cakewai và đồng hành trong suốt thời gian vừa qua.</div>
-            <Image src="/images/images_new/newsfeed8.png" alt="Thông báo nghỉ tết"  class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/news8.png" alt="Thông báo nghỉ tết"  class="mx-auto my-5 block w-full max-w-[600px]" />
           </div>  
     `,
 },
@@ -26,7 +26,7 @@ const newsfeedData = [
     date: "2024-11-02",
     title: "Mẫu bánh kem mừng 20/11 ngày Nhà Giáo Việt Nam.",
     description: "",
-    author: "Cakewai",
+    author: "CakewaiTown",
     contentHtml: 
     `   
           <div class="text-black">
@@ -53,14 +53,14 @@ const newsfeedData = [
               Mẫu bánh kem 20/11 mừng ngày Nhà giáo Việt Nam
             </h1>
             <h2 class="mb-3 mt-5">
-              Sau đây là những mẫu bánh kem được chọn lọc đẹp nhất có tại Cakewai. Mời các bạn cùng tham khảo!
+              Sau đây là những mẫu bánh kem được chọn lọc đẹp nhất có tại CakewaiTown. Mời các bạn cùng tham khảo!
             </h2>
             <Image src="/images/images_new/20-11_1.png" alt="Bánh kem khoai môn" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <Image src="/images/images_new/20-11_2.png" alt="Bánh Kem Trà Bá Tước, quả Lý Chua Đen" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <Image src="/images/images_new/20-11_3.png" alt="Bánh kem nhân dâu" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <h2 class="italic">"More than cake"</h2>
             <h2>
-              Chỉ một câu nói nhỏ cũng có thể miêu tả chiếc bánh kem mang chủ đề 20/11 năm nay đến từ nhà Cakewai.
+              Chỉ một câu nói nhỏ cũng có thể miêu tả chiếc bánh kem mang chủ đề 20/11 năm nay đến từ nhà CakewaiTown.
             </h2>
           </div>
     `,
@@ -81,7 +81,7 @@ const newsfeedData = [
               ngọt.
             </div>
             <div class="my-2">
-              Cakewai hiểu rõ được điều đó, đội ngũ thiết kế và sản xuất luôn sáng tạo không ngừng để mang đến những
+              CakewaiTown hiểu rõ được điều đó, đội ngũ thiết kế và sản xuất luôn sáng tạo không ngừng để mang đến những
               chiếc bánh kem độc đáo sánh tựa như vẻ đẹp ngọc ngà son sắc của các cô gái.
             </div>
             <Image src="/images/images_new/20-10_1.png" alt="Bánh Red Velvet Mousse Cheesecake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
@@ -91,13 +91,13 @@ const newsfeedData = [
             <div class="my-5">Món quà nào vừa đẹp vừa tinh tế cho dịp lễ đặc biệt này.</div>
             <Image src="/images/images_new/20-10_2.png" alt="Bánh kem dâu và vani" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
-              Nắm rõ các mưu cầu đó - Cakewai cho ra mắt bộ sưu tập bánh kem 20/10 đầy tinh tế với mong muốn giúp đỡ bạn
+              Nắm rõ các mưu cầu đó - CakewaiTown cho ra mắt bộ sưu tập bánh kem 20/10 đầy tinh tế với mong muốn giúp đỡ bạn
               bày tỏ những lời yêu thương qua những chiếc bánh ngọt dịu kì.
             </div>
             <div>------------</div>
             <div class="my-5 italic">Nhân ngày Phụ Nữ Việt Nam </div>
             <div>
-              Nhà Cakewai xin gửi lời chúc yêu thương và sức khỏe đến với chị, em phụ nữ thành công trong công việc,
+              Nhà CakewaiTown xin gửi lời chúc yêu thương và sức khỏe đến với chị, em phụ nữ thành công trong công việc,
               hạnh phúc trong tình yêu và trọn vẹn trong cuộc sống.
             </div>
           </div>
@@ -108,10 +108,10 @@ const newsfeedData = [
     date: "2024-07-29",
     title: "Tưng bừng đắm chìm vào không gian huyền ảo cùng Passion Mousse Cheesecake.",
     description: "",
-    author: "Cakewai",
+    author: "CakewaiTown",
     contentHtml: `
           <div class="text-black">
-            <Image src="/images/images_new/newsfeed11.png" alt="Ra mắt Passion Mousse Cheesecake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
+            <Image src="/images/images_new/news11.png" alt="Ra mắt Passion Mousse Cheesecake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
               Bánh Passion Mousse Cheesecake là sự kết hợp tuyệt vời giữa vị chua ngọt của chanh dây và vị béo ngậy của
               phô mai hòa cùng lớp mouse mịn màng tan chảy bên trong lớp cheesecake mềm mại và đế bánh giòn rụm.
@@ -206,13 +206,13 @@ const newsfeedData = [
 {
     id: "news5",
     date: "2024-04-12",
-    title: "Bầu trời châu âu được ra mắt hoành tráng với sự kết hợp đa văn hòa từ nhà Cakewai.",
+    title: "Bầu trời châu âu được ra mắt hoành tráng với sự kết hợp đa văn hòa từ nhà CakewaiTown.",
     description: "",
     author: "Gia Mẫn",
     contentHtml: `
           <div class="text-black">
             <div class="my-5">
-              Nhà Cakewai đã vô cùng tâm đắc và trau chuốt khi đã chính thức cho ra mắt bộ sưu tập mới đầy màu sắc và
+              Nhà CakewaiTown đã vô cùng tâm đắc và trau chuốt khi đã chính thức cho ra mắt bộ sưu tập mới đầy màu sắc và
               mang tính biểu tượng đến từ Châu Âu và La Tinh.
             </div>
             <div class="my-2">
@@ -225,18 +225,18 @@ const newsfeedData = [
               hằng ngày. Đồng thời trong các dịp lễ lớn hoặc các buổi tiệc thì những chiếc bánh sẽ được bày biện để phục
               vụ thực khách thay lời yêu thương.
             </div>
-            <div>Cakewai xin giới thiệu một số sản phẩm gửi đến quý khách hàng tham khảo!!!</div>
+            <div>CakewaiTown xin giới thiệu một số sản phẩm gửi đến quý khách hàng tham khảo!!!</div>
             <Image src="/images/images_new/eur_1.png" alt="Chocolate brownie slab cake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <Image src="/images/images_new/eur_2.png" alt="Madeira cake" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <Image src="/images/images_new/eur_3.png" alt="Bánh Croissant Trứng Muối" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
-              Với sự cập nhật mới này, Cakewai hứa hẹn sẽ mang đến một luồng gió mới về mặt trải nghiệm đến quý khách
+              Với sự cập nhật mới này, CakewaiTown hứa hẹn sẽ mang đến một luồng gió mới về mặt trải nghiệm đến quý khách
               hàng.
             </div>
             <Image src="/images/images_new/eur_4.png" alt="Berry Cream Cheese Bun" width="600px" class="mx-auto my-5 block w-full max-w-[600px]" />
             <div class="my-5">
-              Bằng cả sự nhiệt huyết với nghề, nhà Cakewai rất mong nhận được sự ủng hộ và hưởng ứng vô cùng quý giá của
-              Cakewai-ers.
+              Bằng cả sự nhiệt huyết với nghề, nhà CakewaiTown rất mong nhận được sự ủng hộ và hưởng ứng vô cùng quý giá của
+              CakewaiTown-ers.
             </div>
           </div>
     `,
@@ -244,44 +244,44 @@ const newsfeedData = [
 {
     id: "news6",
     date: "2024-01-03",
-    title: "Cakewai - Đặt bánh teabreak cho sự kiện, hội thảo, hội nghị... Tại TP.Hồ Chí Minh.",
+    title: "CakewaiTown - Đặt bánh teabreak cho sự kiện, hội thảo, hội nghị... Tại TP.Hồ Chí Minh.",
     description: "",
     author: "Gia Mẫn",
     contentHtml: `
                 <div class="text-black">
-                    <div class="font-bold my-5">Cakewai cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư vấn: 0912476521</div>
+                    <div class="font-bold my-5">CakewaiTown cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư vấn: 0912476521</div>
                     <div>Tiệc teabreak là loại tiệc nhẹ thường được phục vụ trong các buổi họp, hội thảo, hội nghị hoặc sự kiện ngắn. Tiệc này tạo ra không gian thoải mái để khách mời thư giãn, giao lưu trong thời gian nghỉ giải lao. Tiệc teabreak được tổ chức với rất nhiều những loại bánh ngọt, trà, nước trái cây và hoa quả tươi. </div>
-                    <Image src="/images/images_new/newsfeed13.png" alt="Minicakes - special sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+                    <Image src="/images/images_new/news13.png" alt="Minicakes - special sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <div class="my-5">Nếu bạn cần tìm những loại bánh ngọt phù hợp cho tiệc teabreak tại công ty hay sự kiện khai trương cửa hàng,... Bạn là đơn vị tổ chức sự kiện. Bạn cần tham khảo những dòng bánh ngọt trong bữa tiệc sắp tới.</div>
-                    <div class="my-5">Cakewai xin gửi đến quý khách hàng thực đơn tiệc teabreak vô cùng đa dạng và phong phú. Mong quý khách hàng có thể lựa chọn những loại bánh phù hợp nhất cho mình.</div>
+                    <div class="my-5">CakewaiTown xin gửi đến quý khách hàng thực đơn tiệc teabreak vô cùng đa dạng và phong phú. Mong quý khách hàng có thể lựa chọn những loại bánh phù hợp nhất cho mình.</div>
                     <Image src="/images/images_new/mini_1.png" alt="Bánh Giỏ Quýt" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <Image src="/images/images_new/mini_2.png" alt="Su Kem Hạt Phỉ" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <Image src="/images/images_new/mini_3.png" alt="Bánh Tiramisu Lava" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <Image src="/images/images_new/mini_4.png" alt="Bánh Kisses Trà Bá Tước và Việt Quất" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <Image src="/images/images_new/mini_5.png" alt="Bánh Macaron Lý Chua Đen & Oải Hương" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
                     <Image src="/images/images_new/mini_6.png" alt="Bánh Macaron Caramen" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-                    <div class="my-5">Nhà Cakewai cung cấp đầy đủ các loại bánh như su kem, coockie, macaron, socola, tiramisu,...</div>
+                    <div class="my-5">Nhà CakewaiTown cung cấp đầy đủ các loại bánh như su kem, coockie, macaron, socola, tiramisu,...</div>
                 </div>.
     `,
 },
 {
     id: "news7",
-    image: "/images/images_new/newsfeed7.png",
+    image: "/images/images_new/news7.png",
     date: "2025-03-06",
-    title: "Cakewai - Tưng bừng khai trương chi nhánh Võ Văn Ngân.",
+    title: "CakewaiTown - Tưng bừng khai trương chi nhánh Võ Văn Ngân.",
     description: "",
-    author: "Cakewai",
+    author: "CakewaiTown",
     contentHtml: `
         <div class="text-black">
             <h2 class="text-2xl font-bold text-center text-red-600 mb-4">
-                🎉 Cakewai - Tưng Bừng Khai Trương Chi Nhánh Võ Văn Ngân! 🎉
+                🎉 CakewaiTown - Tưng Bừng Khai Trương Chi Nhánh Võ Văn Ngân! 🎉
             </h2>
             <p class="text-lg text-center">📍 <span class="font-semibold">Địa điểm mới - Trải nghiệm mới!</span></p>
             <p class="mt-4">
                 Chúng tôi vui mừng thông báo sự kiện <span class="font-semibold">khai trương chi nhánh mới tại Võ Văn Ngân</span>, 
                 đánh dấu một bước phát triển quan trọng trong hành trình mang đến những chiếc bánh thơm ngon và chất lượng nhất đến gần hơn với khách hàng.
             </p>
-            <Image src="/images/images_new/newsfeed7.png" alt="Khai trương chi nhánh Võ Văn Ngân" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+            <Image src="/images/images_new/news7.png" alt="Khai trương chi nhánh Võ Văn Ngân" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
             <div class="bg-yellow-100 p-4 rounded-lg mt-6">
                 <h3 class="text-xl font-semibold text-center text-yellow-700">💖 Sự Kiện Đặc Biệt - Ưu Đãi Hấp Dẫn 💖</h3>
                 <ul class="mt-3 space-y-2">
@@ -292,7 +292,7 @@ const newsfeedData = [
             </div>
 
             <p class="mt-6 text-center font-semibold text-lg">
-                🎈 Đừng bỏ lỡ cơ hội trải nghiệm không gian mới, hương vị mới và những ưu đãi tuyệt vời từ Cakewai!
+                🎈 Đừng bỏ lỡ cơ hội trải nghiệm không gian mới, hương vị mới và những ưu đãi tuyệt vời từ CakewaiTown!
             </p>
 
             <div class="mt-6 text-center">
@@ -306,7 +306,7 @@ const newsfeedData = [
 },
 {
     id: "news8",
-    image: "/images/images_new/newsfeed14.png",
+    image: "/images/images_new/news14.png",
     date: "2025-02-01",
     title: " Valentine Ngọt Ngào - Giảm Giá 50% Mừng Lễ Tình Nhân! ",
     description: "",
@@ -316,12 +316,12 @@ const newsfeedData = [
             <h2 class="text-2xl font-bold text-center text-red-500 mb-4">
                 💝 Món Quà Ngọt Ngào Cho Ngày Valentine - Giảm Giá 50%! 💝
             </h2>
-            <Image src="/images/images_new/newsfeed14.png" alt="Valentine - big sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
-            <p class="text-lg text-center">💌 Valentine này, gửi trọn yêu thương cùng những chiếc bánh ngọt ngào từ Cakewai!</p>
+            <Image src="/images/images_new/news14.png" alt="Valentine - big sales" width="600px" class="mx-auto block my-5 w-full max-w-[600px]"/>
+            <p class="text-lg text-center">💌 Valentine này, gửi trọn yêu thương cùng những chiếc bánh ngọt ngào từ CakewaiTown!</p>
 
             <p class="mt-4">
                 Ngày 14/02 - ngày của tình yêu, hãy dành tặng cho người thương những chiếc bánh thơm ngon như một lời yêu thương ngọt ngào.
-                Cakewai hân hạnh mang đến chương trình ưu đãi hấp dẫn:
+                CakewaiTown hân hạnh mang đến chương trình ưu đãi hấp dẫn:
             </p>
 
             <div class="bg-pink-100 p-4 rounded-lg mt-6">
@@ -334,15 +334,15 @@ const newsfeedData = [
             </div>
 
             <p class="mt-6 text-center font-semibold text-lg">
-                🎀 Đừng bỏ lỡ cơ hội thể hiện tình cảm với nửa kia của bạn bằng những chiếc bánh tình yêu từ Cakewai!
+                🎀 Đừng bỏ lỡ cơ hội thể hiện tình cảm với nửa kia của bạn bằng những chiếc bánh tình yêu từ CakewaiTown!
             </p>
 
             <div class="mt-6 text-center">
                 <p class="text-lg font-semibold">📅 Thời gian: <span class="text-red-600">Từ 10/02 - 14/02</span></p>
-                <p class="text-lg font-semibold">📍 Địa điểm: <span class="text-red-600">Tất cả cửa hàng Cakewai & đặt hàng online</span></p>
+                <p class="text-lg font-semibold">📍 Địa điểm: <span class="text-red-600">Tất cả cửa hàng CakewaiTown & đặt hàng online</span></p>
             </div>
 
-            <p class="mt-6 text-center text-red-500 font-bold text-xl">❤️ Hãy để Cakewai cùng bạn tạo nên những khoảnh khắc ngọt ngào trong mùa Valentine này! ❤️ </p>
+            <p class="mt-6 text-center text-red-500 font-bold text-xl">❤️ Hãy để CakewaiTown cùng bạn tạo nên những khoảnh khắc ngọt ngào trong mùa Valentine này! ❤️ </p>
     </div>
 `,
 },
@@ -376,7 +376,7 @@ export async function generateMetadata(props : { params : Params}): Promise<Meta
   return {
     title: `${news.title} - CakewaiTown`,
     description: news.description || news.title,
-    keywords: `Cakewai, tin tức bánh kem, ${news.title}`,
+    keywords: `CakewaiTown, tin tức bánh kem, cakewaitown tin tức, tin tức, ${news.title}`,
     openGraph: {
       title: news.title,
       description: news.description || news.title,

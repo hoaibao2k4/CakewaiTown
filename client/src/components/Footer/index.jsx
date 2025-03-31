@@ -89,16 +89,16 @@ function Footer() {
             0966.888888
           </li>
           <li className="inline-flex space-x-2">
-            <a href="">
+            <Link href="https://www.facebook.com/cakewai.town">
               <Facebook />
-            </a>
-            <a href="">
+            </Link>
+            <Link href="https://www.instagram.com/cakewai_town">
               <Instagram />
-            </a>
-            <a href="">
+            </Link>
+            <Link href="https://www.tiktok.com/@cakewai_town">
               <Tiktok />
-            </a>
-            <a href="">
+            </Link>
+            <a href="https://www.youtube.com/@CakewaiTown">
               <Youtube />
             </a>
           </li>
