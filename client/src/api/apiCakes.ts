@@ -1,19 +1,7 @@
 import axios from "axios";
 import { response } from "~/services/axios";
 
-export interface ProductVariant {
-  size: string;
-  price: number;
-  discount: number;
-}
-interface CreateCake {
-  _id?: string;
-  product_name: string;
-  image_link: string;
-  description: string;
-  product_type_id: string;
-  product_variant: ProductVariant[];
-}
+import { ProductVariant, CreateCake } from "~/types";
 export const getCake = (typeId: string) => {
   return response.get(`/api/public/products/${typeId}`);
 };

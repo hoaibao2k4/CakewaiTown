@@ -1,25 +1,6 @@
 import axios, { AxiosInstance } from "axios";
-
-export interface Item {
-  product_id: string;
-  type_id: string;
-  name: string;
-  variant: string;
-  discount: number;
-  price: number;
-  image_link: string;
-  buy_quantity: number;
-}
-
-interface Invoice {
-  name: string;
-  email: string;
-  address: string;
-  phone: string;
-  notes: string;
-  order_items: Item[] | Item;
-  service_type: number;
-}
+import { Item } from "~/types";
+import { Invoice } from "~/types";
 
 export const getCart = async (token: string, instance: AxiosInstance) => {
   try {

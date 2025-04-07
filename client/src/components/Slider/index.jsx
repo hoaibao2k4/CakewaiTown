@@ -11,28 +11,28 @@ function Slider() {
       heading: 'Mang đến niềm hạnh phúc qua từng chiếc bánh kem',
       text: 'Liên hệ với chúng tôi để đặt bánh hoặc tìm hiểu thêm về thực đơn phong phú của chúng tôi. Chúng tôi sẵn sàng giúp bạn tạo nên những kỷ niệm ngọt ngào đáng nhớ.',
       buttonText: 'Khám Phá Thực Đơn',
-      path: '/category?mode=cookie'
+      path: '/category/cookie'
     },
     {
       image: "/assets/images/Slidecake/cake5.jpg",
       heading: 'Trải nghiệm sự kỳ diệu từ những chiếc bánh tươi mới',
       text: 'Những chiếc bánh của chúng tôi được làm từ những nguyên liệu tốt nhất để mang đến cho bạn một trải nghiệm khó quên.',
       buttonText: 'Đặt Hàng Ngay',
-      path: '/category?mode=bread'
+      path: '/category/bread'
     },
     {
       image: "/assets/images/Slidecake/cake6.jpg",
       heading: 'Thưởng thức sự ngọt ngào qua từng miếng bánh',
       text: 'Mỗi miếng bánh được làm bằng tình yêu và sự tận tâm để biến khoảnh khắc của bạn trở nên đặc biệt.',
       buttonText: 'Xem Thực Đơn',
-      path: '/category?mode=birthday'
+      path: '/category/birthday'
     },
     {
       image: "/assets/images/Slidecake/cake7.png",
       heading: 'Hãy để những chiếc bánh mì làm ngọt ngào từng phút giây',
       text: 'Hoàn hảo cho sinh nhật, kỷ niệm hoặc chỉ đơn giản là một ngày bình thường – bánh mì của chúng tôi sẽ làm cho mọi khoảnh khắc trở nên ngọt ngào hơn.',
       buttonText: 'Mua Ngay',
-      path: '/category?mode=tradition'
+      path: '/category/tradition'
     },
   ];
 
@@ -84,7 +84,7 @@ function Slider() {
   };
 
   const handleNavigate = (path) => {
-    router(path)
+    router.push(path)
   }
 
   return (

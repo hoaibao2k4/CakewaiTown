@@ -12,7 +12,7 @@ import OrderModal from "~/components/Modal/OrderModal";
 import ImageAIModal from "~/components/Modal/ImageAIModal";
 import { FaArrowUp } from "react-icons/fa";
 import { Dispatch, SetStateAction } from "react";
-import { Item } from "~/api/apiCart";
+import { Item } from "~/types";
 import { RootState } from "~/redux/store";
 
 interface SomeContextType {

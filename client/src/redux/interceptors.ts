@@ -1,7 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { refreshToken, renewToken } from "./apiRequest";
 import { AppDispatch } from "./store";
-import { UserWithToken } from "./authSlice";
+import { UserWithToken } from "~/types";
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from "axios";
 import { PayloadAction } from "@reduxjs/toolkit";
 

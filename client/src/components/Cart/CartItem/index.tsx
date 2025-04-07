@@ -1,5 +1,5 @@
 import { CloseIcon } from "../../../../public/assets/icons";
-import { Item, removeCartItem, updateCartItem } from "~/api/apiCart";
+import { removeCartItem, updateCartItem } from "~/api/apiCart";
 import { removeFromCart } from "~/redux/cartSlice";
 import { createInstance } from "~/redux/interceptors";
 import { loginSuccess } from "~/redux/authSlice";
@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { RootState } from "~/redux/store";
 import Image from "next/image";
-
+import { Item } from "~/types";
 interface CartItemProps {
   // item: {
   //   product_id: string;

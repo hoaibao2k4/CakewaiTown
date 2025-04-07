@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Item } from '~/api/apiCart';
-
+import { Item } from '~/types';
 interface cartState {
   list: Item[],
   total: number

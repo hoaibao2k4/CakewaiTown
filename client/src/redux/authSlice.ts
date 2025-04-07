@@ -1,29 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-export interface UserWithToken {
-  access_token: string;
-  refresh_token: string;
-  user: User;
-}
-export interface User {
-  id: string;
-  google_id: string;
-  profile_picture: string;
-  name: string;
-  email: string;
-  phone: string;
-  is_admin: boolean;
-  address: Address;
-  create_at: string;
-}
-interface Address {
-  home_code: string;
-  street: string;
-  district: string;
-  province: string;
-  full_address: string;
-}
-
+import { UserWithToken } from "~/types";
 interface AuthState {
   login: {
     currentUser: UserWithToken | null;
@@ -57,22 +33,11 @@ const authSlice = createSlice({
     loginStart: (state) => {
       state.login.isFetching = true;
     },
-    loginSuccess: (
-      state,
-      action: PayloadAction<
-        UserWithToken 
-        //| 
-        // { code?: number; data: UserWithToken }
-      >
-    ) => {
-      // if ("data" in action.payload) {
-      //   state.login.currentUser = action.payload.data;
-      // } else {
-        state.login.currentUser = action.payload;
+    loginSuccess: (state, action: PayloadAction<UserWithToken>) => {
+      state.login.currentUser = action.payload;
 
-        state.login.isFetching = false;
-        state.login.error = false;
-      //}
+      state.login.isFetching = false;
+      state.login.error = false;
     },
     loginFail: (state) => {
       state.login.error = true;

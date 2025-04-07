@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 import { response } from "~/services/axios";
-import { ProductVariant } from "./apiCakes";
+import { ProductVariant } from "~/types";
 
 export const getListOrders = async (token: string, instance: AxiosInstance) => {
   try {
