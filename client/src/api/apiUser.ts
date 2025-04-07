@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
-import { User } from "~/redux/authSlice";
+import { User } from "~/types";
 import { response } from "~/services/axios";
 
 export const updateUser = async (

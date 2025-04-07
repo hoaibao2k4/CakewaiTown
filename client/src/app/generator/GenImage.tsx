@@ -149,6 +149,7 @@ function GenImage() {
                     onChange={(e) => setInput(e.target.value)}
                     ref={inputRef}
                     className="mt-2 w-full"
+                    color="info"
                   />
                   <Button type="submit" color="blue" className="mt-4 w-full">
                     Tạo bánh
@@ -297,6 +298,8 @@ function GenImage() {
                   src="/assets/images/about_1.jpg"
                   alt="Cakewai"
                   className="mx-auto size-[20rem] rounded-full"
+                  width={320}
+                  height={320}
                 />
               </div>
             </div>

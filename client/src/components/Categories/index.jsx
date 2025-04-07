@@ -1,30 +1,36 @@
-"use client"
-import Card from '../Card';
-import useCake from '~/hooks/useCake';
-import usePagination from '~/hooks/usePagination';
-import { Pagination } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Link from 'next/link';
-import { IoIosSearch } from 'react-icons/io';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import { useRef, useState } from 'react';
-import { getCake, searchCakes, sortCakes } from '~/api/apiCakes';
-import { toast } from 'react-toastify';
+"use client";
+import Card from "../Card";
+import useCake from "~/hooks/useCake";
+import usePagination from "~/hooks/usePagination";
+import { Pagination } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Link from "next/link";
+import { IoIosSearch } from "react-icons/io";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { useRef, useState } from "react";
+import { getCake, searchCakes, sortCakes } from "~/api/apiCakes";
+import { toast } from "react-toastify";
 function Categories({ params }) {
-  const { cakes, categoryName, setCakes, getTypeOfCakes, categories } = useCake(params);
+  const { cakes, categoryName, setCakes, getTypeOfCakes, categories } =
+    useCake(params);
   const cakesPerPage = usePagination(cakes);
   const [selectedLabel, setSelectedLabel] = useState(3);
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState("");
   const ref = useRef(null);
   const handleChange = async (event) => {
     setSelectedLabel(event.target.value);
-    const order = event.target.value === 1 ? 'asc' : event.target.value === 2 ? 'desc' : 'default';
+    const order =
+      event.target.value === 1
+        ? "asc"
+        : event.target.value === 2
+        ? "desc"
+        : "default";
     try {
-      if (order === 'default') {
+      if (order === "default") {
         const index = getTypeOfCakes(params);
         const res = await getCake(categories[index].typeId);
         setCakes(res.data);
@@ -41,22 +47,25 @@ function Categories({ params }) {
     const res = await searchCakes(prompt);
     if (res) setCakes(res);
     else {
-      toast.info('Không tìm thấy nội dung', { position: 'bottom-right', onClose: 3000 });
+      toast.info("Không tìm thấy nội dung", {
+        position: "bottom-right",
+        onClose: 3000,
+      });
     }
     ref.current.blur();
   };
   const handleEnterPress = async (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       const res = await searchCakes(prompt);
       setCakes(res);
       ref.current.blur();
     }
   };
-  const label = 'Bộ lọc';
+  const label = "Bộ lọc";
   const items = [
-    { id: 1, value: 'Giá từ thấp đến cao' },
-    { id: 2, value: 'Giá từ cao đến thấp' },
-    { id: 3, value: 'Mặc định' },
+    { id: 1, value: "Giá từ thấp đến cao" },
+    { id: 2, value: "Giá từ cao đến thấp" },
+    { id: 3, value: "Mặc định" },
   ];
   const handleChangePage = (e, value) => {
     cakesPerPage.jump(value);
@@ -70,12 +79,12 @@ function Categories({ params }) {
             <a href="/">Trang chủ </a>
             <span>&gt;&gt;</span>
             <a href="/category"> Menu Bánh </a>
-            {categoryName !== 'Tất cả sản phẩm' && (
+            {categoryName !== "Tất cả sản phẩm" && (
               <>
                 <span>&gt;&gt;</span>
                 <Link href="/" className="capitalize">
-                  {' '}
-                  {categoryName}{' '}
+                  {" "}
+                  {categoryName}{" "}
                 </Link>
               </>
             )}
@@ -85,14 +94,17 @@ function Categories({ params }) {
           {categoryName}
         </h1>
         <p className="py-5 text-center text-sm font-bold leading-4">
-          Bánh truyền thống là một trong những loại bánh đã đưa tên tuổi chúng tôi có được ngày hôm nay, đây là một
-          trong <br />
+          Bánh truyền thống là một trong những loại bánh đã đưa tên tuổi chúng
+          tôi có được ngày hôm nay, đây là một trong <br />
           số nhiều loại bán chạy nhất hiện nay
         </p>
         <div className="">
           <div className="mx-16 flex lg:flex-row flex-col items-center lg:gap-[22rem] gap-10">
             <div className="lg:w-3/5 md:w-2/4 w-full">
-              <label htmlFor="search" className="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              <label
+                htmlFor="search"
+                className="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
                 Search
               </label>
               <div className="relative">
@@ -102,7 +114,9 @@ function Categories({ params }) {
                 <input
                   type="text"
                   id="search"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  className="block w-full rounded-lg border border-blue-500 p-4 pl-10 text-sm text-gray-900 
+             focus:border-blue-500 focus:ring-blue-500 
+             dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   placeholder="Tìm kiếm bánh..."
                   onChange={(e) => setPrompt(e.target.value)}
                   onKeyDown={handleEnterPress}
@@ -175,7 +189,7 @@ export default Categories;
 const theme = createTheme({
   palette: {
     secondary: {
-      main: '#CDB0A9',
+      main: "#CDB0A9",
     },
   },
 });

@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { Item } from '~/api/apiCart';
+import { Item } from '~/types';
 export const selectCartItems = (state : RootState) => state.cart.list;
 
 export const selectCartTotal = createSelector(

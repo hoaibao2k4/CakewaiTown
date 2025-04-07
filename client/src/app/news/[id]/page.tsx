@@ -381,14 +381,14 @@ export async function generateMetadata(props : { params : Params}): Promise<Meta
       title: news.title,
       description: news.description || news.title,
       url: `https://cakewaitown.com/news/${news.id}`,
-      images: [`https://cakewaitown.com${news.image}`],
+      images: [`${news.image}`],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: news.title,
       description: news.description || news.title,
-      images: [`https://cakewaitown.com${news.image}`],
+      images: [`${news.image}`],
     },
   };
 }
@@ -405,18 +405,40 @@ export default async function NewsDetail( props : { params: Params }) {
       "@type": "NewsArticle",
       "headline": news.title,
       "datePublished": news.date,
+      "url": `https://cakewaitown.com/news/${news.id}`,
       "author": {
         "@type": "Person",
         "name": news.author
       },
-      "image": `https://cakewaitown.com${news.image}`,
+      "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "371 Đ.Đoàn Kết, P.Bình Thọ",
+      "addressLocality": "Thủ Đức",
+      "addressCountry": "Vietnam"
+    },
+      "image": `${news.image}`,
       "publisher": {
         "@type": "Organization",
         "name": "CakewaiTown",
         "logo": {
           "@type": "ImageObject",
           "url": "https://cakewaitown.com/logo.png"
-        }
+        },
+        "telephone": "+84-91-247-65-21",
+    "email": "cakewaitown@gmail.com",
+    "sameAs": [
+      "https://www.facebook.com/cakewai.town/",
+      "https://www.instagram.com/cakewai_town/",
+      "https://www.tiktok.com/@cakewai_town",
+      "https://www.youtube.com/@CakewaiTown"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84-91-247-65-21",
+      "contactType": "customer service",
+      "areaServed": "VN",
+      "availableLanguage": ["Vietnamese", "English"]
+    }
       }
     };
 
@@ -433,12 +455,20 @@ export default async function NewsDetail( props : { params: Params }) {
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description || news.title} />
-        <meta property="og:image" content={`https://cakewaitown.com${news.image}`} />
+        <meta property="og:image" content={`${news.image}`} />
         <meta property="og:url" content={`https://cakewaitown.com/news/${news.id}`} />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:site_name" content="CakeWai Town" />
+        <meta property="article:published_time" content="2024-01-01T00:00:00Z" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={news.title} />
         <meta name="twitter:description" content={news.description || news.title} />
-        <meta name="twitter:image" content={`https://cakewaitown.com${news.image}`} />
+        <meta name="twitter:image" content={`${news.image}`} />
+        <meta
+          name="google-site-verification"
+          content="your-google-verification-code"
+        />
+        <link rel="canonical" href="https://cakewaitown.com/news" />
         <script type="application/ld+json">{JSON.stringify(newsSchema)}</script>
       </Head>
         <div className="mx-4 sm:mx-10 lg:mx-28 my-24 text-black">

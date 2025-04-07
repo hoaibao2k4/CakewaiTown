@@ -36,7 +36,7 @@ export const loginUser = async (
       toast.success("Đăng nhập thành công", {
         position: "bottom-right",
       });
-      dispatch(loginSuccess(res.data.user));
+      dispatch(loginSuccess(res.data));
       navigate.push(redirectPath);
     } else {
       toast.error("Truy cập bị từ chối", {

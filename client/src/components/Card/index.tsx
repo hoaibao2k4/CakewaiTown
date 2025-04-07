@@ -10,6 +10,19 @@ import { useRouter } from "next/navigation";
 import { addCartItem } from "~/api/apiCart";
 import { createInstance } from "~/redux/interceptors";
 import { loginSuccess } from "~/redux/authSlice";
+import { RootState } from "~/redux/store";
+import Image from "next/image";
+import { CreateCake } from "~/types";
+interface CardProps {
+  cake: CreateCake
+  index: number
+  image_link: string
+  product_name: string
+  description: string
+  price: number
+  id: string
+  categoryName: string
+}
 function Card({
   image_link,
   product_name,
@@ -19,13 +32,18 @@ function Card({
   id,
   categoryName,
   cake,
-}) {
-  const { handleAddToCartPopup, triggerSuccessPopup } =
-    useContext(AddToCartContext);
+} : CardProps) {
+ const context = useContext(AddToCartContext);
+  if (!context) {
+    throw new Error("useContext must be used within AddToCartProvider");
+  }
+  const { triggerSuccessPopup, handleAddToCartPopup } = context;
   const dispatch = useDispatch();
   const router = useRouter();
-  const user = useSelector((state) => state.auth.login.currentUser);
-  let instance = createInstance(user, dispatch, loginSuccess);
+  const user = useSelector((state : RootState) => state.auth.login.currentUser);
+  let instance : ReturnType<typeof createInstance> | null = null
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+  user && (() => instance = createInstance(user, dispatch, loginSuccess))() 
 
   const handleAddToCart = async (cake) => {
     if (user) {
@@ -43,26 +61,29 @@ function Card({
           buy_quantity: 1,
         };
         dispatch(addToCart(newItem));
-        await addCartItem(user.access_token, instance, newItem);
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        instance && await addCartItem(user.access_token, instance, newItem);
         triggerSuccessPopup();
       }
     } else {
-      router("/auth?mode=signin");
+      router.push("/authentic/signin");
     }
   };
 
   return (
     <div key={index} className="img-scale m-5 h-[480px] w-[280px]">
-      <Link href={`/detailed/${id}`} state={{ categoryName }}>
-        <img
+      <Link href={{pathname:`/detailed/${id}`, query: {category: categoryName}}}>
+        <Image
           src={image_link}
           alt=""
           className="h-[280px] w-[280px] object-cover"
+          height={280}
+          width={280}
         />
       </Link>
       <div className="h-[200px] rounded-b-xl bg-secondary pb-4 pt-2">
         <div className="mx-3">
-          <Link href={`/detailed/${id}`} state={{ categoryName }}>
+          <Link href={{pathname: `/detailed/${id}`, query: {category: categoryName}}}>
             <h3 className="h-[56px] text-xl font-semibold hover:text-slate-200">
               {product_name}
             </h3>
@@ -86,8 +107,7 @@ function Card({
           </span>
           <div className="mt-2 flex justify-between gap-2 text-xs font-semibold">
             <Link
-              href={`/detailed/${id}`}
-              state={{ categoryName }}
+              href={{pathname: `/detailed/${id}`, query: {category: categoryName}}}
               className="basis-2/5 rounded bg-primary px-4 py-[6px] text-center text-slate-100"
             >
               Xem chi tiết
