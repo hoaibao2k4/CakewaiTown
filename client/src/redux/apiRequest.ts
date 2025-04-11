@@ -99,7 +99,7 @@ export const registerUser = async (
     toast.success("Đăng kí thành công", {
       position: "bottom-right",
     });
-    router.push("/auth?mode=signin");
+    router.push("/authentic/signin");
   } catch (err: unknown) {
     dispatch(registerFail());
     if (axios.isAxiosError(err)) {

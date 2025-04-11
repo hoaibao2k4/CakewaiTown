@@ -7,6 +7,8 @@ import { ReduxProvider } from "./reduxprovider";
 import ModalWrapper from "./modalwapper";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Suspense } from 'react';
+import Loading from '~/components/animation';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -54,7 +56,9 @@ export default function RootLayout({
         <ReduxProvider>
           <ModalWrapper>
             <Header />
+            <Suspense fallback={<Loading/>}>
             <div>{children}</div>
+            </Suspense>
             <Footer />
             <ToastContainer />
           </ModalWrapper>

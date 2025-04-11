@@ -109,7 +109,7 @@ function Footer() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5050863197785!2d106.76619197485807!3d10.849135689304111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527cc16f6524b%3A0x1fabc1bf1967e238!2sCakewaiTown!5e0!3m2!1sen!2s!4v1744094896953!5m2!1sen!2s"
           className="w-full rounded-2xl"
           height={200}
-          allowfullscreen
+          allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
