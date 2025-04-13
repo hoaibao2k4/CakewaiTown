@@ -1,13 +1,13 @@
 import { RiErrorWarningLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import { useRouter, usePathName } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import { logOutUser } from "~/redux/apiRequest";
 import { setCart } from "~/redux/cartSlice";
 import { IoClose } from 'react-icons/io5';
 function ExpiryModal({isExpiry}) {
     const dispatch = useDispatch()
     const router = useRouter()
-    const pathname = usePathName()
+    const pathname = usePathname()
     console.log(pathname)
     const user = useSelector(state => state.auth.login.currentUser)
     const handleLogout = () => {
