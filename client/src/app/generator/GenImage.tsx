@@ -68,8 +68,8 @@ function GenImage() {
       try {
         if (instance){
         const res = await generateImage(user.access_token, input, instance);
-        console.log(res);
-        setImage(res[0].tmp_url);
+        console.log("Res: ",res);
+        setImage(res);
         inputRef.current?.focus();
         }
       } catch (err) {
@@ -102,8 +102,8 @@ function GenImage() {
           inputStyle,
           instance
         );
-        console.log(res);
-        setImage(res[0].tmp_url);
+        //console.log(res);
+        setImage(res);
         inputRef.current?.focus();
       }
       } catch (err) {
@@ -113,7 +113,7 @@ function GenImage() {
       }
     }
   };
-  console.log("image: ", image);
+  //console.log("image: ", image);
   return (
     <div className="mt-16 h-fit w-full bg-white/70 pb-5">
       <div className="mx-auto px-6 lg:px-[5rem]">

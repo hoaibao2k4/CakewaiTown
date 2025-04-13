@@ -1,6 +1,6 @@
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { logOutUser } from '~/redux/apiRequest';
 import { setCart } from '~/redux/cartSlice';
 import { persistor } from '~/redux/store';

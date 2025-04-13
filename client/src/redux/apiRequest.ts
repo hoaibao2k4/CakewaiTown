@@ -67,7 +67,7 @@ export const logOutUser = async (
   dispatch: AppDispatch,
   token: string,
   navigate: NextRouter,
-  redirectPath = "/auth?mode=signin"
+  redirectPath = "/authentic/signin"
 ) => {
   dispatch(logOutStart());
   try {

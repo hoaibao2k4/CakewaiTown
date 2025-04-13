@@ -103,7 +103,7 @@ function Header() {
           gtag('config', 'G-CMNJ5664ZY');
         `}
       </Script>
-      <header className="fixed top-0 z-[100] h-16 w-full bg-fifth">
+      <header className="fixed top-0 z-[1001] h-16 w-full bg-fifth">
         <div className="mx-10 flex h-full items-center justify-between gap-4 text-primary lg:mx-20">
           <Link href="/">
             <Cakewai className="mt-2" />
