@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   
   const allRoutes = [...staticRoutes, ...newsRoutes, ...categoryRoutes];
   return allRoutes.map((route) => ({
-    url: `https://cakewaitown.com/${route}`,
+    url: `https://cakewaitown.com${route}`,
     lastModified: new Date(),
   }));
 }
