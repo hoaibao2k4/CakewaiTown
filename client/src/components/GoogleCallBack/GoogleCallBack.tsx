@@ -11,7 +11,8 @@ export const GoogleCallBack = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get('token'); // JWT token
-    const refreshToken = params.get('refreshToken'); // Refresh token
+    const refreshToken = params.get('refreshToken');
+    console.log(token, refreshToken)
     if (token && refreshToken) {
       //localStorage.setItem('authToken', token);
       //localStorage.setItem('refreshToken', refreshToken);

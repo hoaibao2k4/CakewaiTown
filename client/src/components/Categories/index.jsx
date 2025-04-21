@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useRef, useState } from "react";
-import { getCake, searchCakes, sortCakes } from "~/api/apiCakes";
+import { getAllCakes, getCake, searchCakes, sortCakes } from "~/api/apiCakes";
 import { toast } from "react-toastify";
 function Categories({ params }) {
   const { cakes, categoryName, setCakes, getTypeOfCakes, categories } =

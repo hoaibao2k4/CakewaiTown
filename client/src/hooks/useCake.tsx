@@ -11,7 +11,7 @@ const useCake = (params: string) => {
     { typeId: '672ecede6add28a7d3c7644b', name: 'Cookies and Mini Cakes', title: '' },
     { typeId: '672ecefe6add28a7d3c7644c', name: 'Bánh mì và bánh mặn', title: '' },
   ];
-
+  
   const getTypeOfCakes = (param: string) => {
     switch (param) {
       case 'birthday':
