@@ -4,7 +4,7 @@ import Head from 'next/head';
 import type { Metadata } from "next";
 
 // Dữ liệu mẫu (tạm thời, sau này dùng API)
-const newsfeedData = [
+export const newsfeedData = [
   {
     id: "news1",
     date: "2025-01-05",
