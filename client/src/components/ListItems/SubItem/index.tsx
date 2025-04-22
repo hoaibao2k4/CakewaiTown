@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
-function SubItem({item, index}) {
-    const [quantity, setQuantity] = useState(item.buy_quantity)
+import { Item } from "~/types";
+import Image from "next/image";
+interface SubItemProps {
+  item: Item
+  index: number
+}
+function SubItem({item, index} : SubItemProps) {
+    const [quantity, setQuantity] = useState<number>(item.buy_quantity)
     const dispatch = useDispatch()
 
   return (
     <div key={index}>
       <div className="flex gap-6">
-        <img src={item.image_link} alt="" className="h-16 w-16" />
+        <Image src={item.image_link} alt="Banh ngot Sai Thanh" className="h-16 w-16" width={16} height={16} />
         <div className="flex flex-col justify-center">
           <h3 className="text-xl">{item.name}</h3>
           <span className="text-lg">{item.variant !== 'one-variant' ? item.variant : ''}</span>

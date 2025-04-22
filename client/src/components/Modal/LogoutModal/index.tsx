@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { logOutUser } from '~/redux/apiRequest';
 import { setCart } from '~/redux/cartSlice';
-import { persistor } from '~/redux/store';
+import { persistor, RootState } from '~/redux/store';
 import { logOutSuccess } from '~/redux/authSlice';
 function LogoutModal({ isLogout }) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const user = useSelector((state) => state.auth.login.currentUser);
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
+  if (!user) {
+    throw new Error("User not found")
+  }
   const handleLogout = () => {
     if (user.refresh_token) {
       logOutUser(dispatch, user.refresh_token, router);

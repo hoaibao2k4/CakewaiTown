@@ -9,6 +9,7 @@ import {
   Tiktok,
   Youtube,
 } from "../../../public/assets/icons";
+
 function Footer() {
   return (
     <footer className="relative grid grid-custom-4 lg:h-[660px] h-[920px] w-full justify-evenly border-t-2 bg-fifth text-black">

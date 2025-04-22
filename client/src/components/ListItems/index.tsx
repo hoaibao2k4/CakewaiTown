@@ -5,22 +5,28 @@ import { loginSuccess } from '~/redux/authSlice';
 import { createInstance } from '~/redux/interceptors';
 import SubItem from './SubItem';
 import { useState } from 'react';
+import { RootState } from '~/redux/store';
+import { Item } from '~/types';
 
 function ListItems({ list }) {
     const dispatch = useDispatch()
     const router = useRouter()
-    const user = useSelector(state => state.auth.login.currentUser)
-    let instance = createInstance(user, dispatch, loginSuccess)
+    const user = useSelector((state: RootState) => state.auth.login.currentUser)
+    if (!user) {
+      throw new Error("User not found")
+    }
+    const instance = createInstance(user, dispatch, loginSuccess)
     const [originalList, setOriginalList] = useState(list);
     const handleViewCart = async () => {
       try {
-        const itemsToUpdate = list.filter((item, index) => item.buy_quantity !== originalList[index].buy_quantity);
+        const itemsToUpdate = list.filter((item: Item, index: number) => item.buy_quantity !== originalList[index].buy_quantity);
+        setOriginalList(originalList)
         if (itemsToUpdate.length > 0) {
           await Promise.all(
             itemsToUpdate.map((item) => updateCartItem(user.access_token, instance, item))
           );
         }
-        router('/cart');
+        router.push('/cart');
       } catch (err) {
         console.error("Failed to update cart items", err);
       }
@@ -28,7 +34,7 @@ function ListItems({ list }) {
   return (
     <div>
       {list?.map((item, index) => (
-        <SubItem item={item} key={index}/>
+        <SubItem item={item} key={index} index={index}/>
       ))}
       <div className='pb-10'>
           <button onClick={handleViewCart} className="float-right mx-2 h-10 w-28 rounded-xl bg-third hover:text-slate-50">Xem giỏ hàng</button>

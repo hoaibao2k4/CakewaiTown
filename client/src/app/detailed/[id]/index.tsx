@@ -155,9 +155,7 @@ function DetailedCake({id}) {
           <div className="text-sm capitalize lg:text-base">
             <Link href="/">Trang chủ </Link>
             <span>&gt;&gt;</span>
-            <Link href="/category"> Menu Bánh </Link>
-            <span>&gt;&gt;</span>
-            <Link href="/birthday-cake"> {categoryName} </Link>
+            <Link href="/category/all"> Menu Bánh </Link>
             <span>&gt;&gt;</span>
             <Link href="/detailed"> {cake && cake.product_name} </Link>
           </div>

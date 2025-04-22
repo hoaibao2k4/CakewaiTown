@@ -1,9 +1,10 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { getCake } from '~/api/apiCakes';
+import { CreateCake } from '~/types';
 
 const useCake = (params: string) => {
-  const [cakes, setCakes] = useState([]);
+  const [cakes, setCakes] = useState<CreateCake[]>([]);
   const categories = [
     { typeId: '', name: 'Tất cả sản phẩm', title: '' },
     { typeId: '672ece906add28a7d3c76449', name: 'Bánh sinh nhật', title: '' },

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const SignInForm = dynamic(() => import("~/components/SignInForm_tsx"));
+const SignInForm = dynamic(() => import("~/components/SignInForm"));
 
 export default function SignInPage() {
   return (

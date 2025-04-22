@@ -206,7 +206,7 @@ function GenImage() {
                     color="info"
                     aria-label="Success spinner example"
                     size="xl"
-                    className="text-gray-200 fill-blue-500"
+                    className="text-gray-200 fill-blue-500 animate-spin"
                   />
                 </div>
               ) : (

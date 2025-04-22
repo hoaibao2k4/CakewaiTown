@@ -4,13 +4,16 @@ import { useRouter, usePathname } from "next/navigation";
 import { logOutUser } from "~/redux/apiRequest";
 import { setCart } from "~/redux/cartSlice";
 import { IoClose } from 'react-icons/io5';
-import { persistor } from "~/redux/store";
+import { persistor, RootState } from "~/redux/store";
 function ExpiryModal({isExpiry}) {
     const dispatch = useDispatch()
     const router = useRouter()
     const pathname = usePathname()
     console.log(pathname)
-    const user = useSelector(state => state.auth.login.currentUser)
+    const user = useSelector((state: RootState) => state.auth.login.currentUser)
+    if (!user) {
+      throw new Error("User not found")
+    }
     const handleLogout = () => {
         logOutUser(dispatch, user.refresh_token, router)
         isExpiry(false)

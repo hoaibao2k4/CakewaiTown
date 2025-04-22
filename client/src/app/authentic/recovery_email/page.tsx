@@ -1,12 +1,9 @@
-
-
-
 import dynamic from "next/dynamic";
 
-const Recovery_mail = dynamic(() => import("~/components/ForgotPassword_tsx/EmailRecovery"));
+const Recovery_mail = dynamic(
+  () => import("~/components/ForgotPassword/EmailRecovery")
+);
 
-export default function Recovery_page (){
-    return (
-          <Recovery_mail />
-      );
+export default function Recovery_page() {
+  return <Recovery_mail />;
 }

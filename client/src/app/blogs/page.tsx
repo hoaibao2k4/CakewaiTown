@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 // import Newsfeed from "~/components/Newsfeed_tsx";
-const Newsfeed = dynamic(() => import ("~/components/Newsfeed_tsx"));
+const Newsfeed = dynamic(() => import ("~/components/Newsfeed"));
 
 export default function ListNewsFeed(){
   return(
