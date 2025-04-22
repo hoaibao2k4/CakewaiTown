@@ -4,6 +4,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "../Card";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
 function Seller({ params }) {
   const responsive = {
     desktop: {
@@ -72,11 +74,12 @@ function Seller({ params }) {
         </Carousel>
       </div>
       <div className="Introduce mx-10 my-10 lg:mx-24 lg:flex">
-        <img
+        <Image
           src="/assets/images/CakeBestSeller/tessacake.png"
           alt=""
-          width="100%"
-          height="100%"
+          width={500}
+          height={500}
+          layout="responsive"
           className="mx-auto h-auto max-w-[300px] rounded-br-[5rem] rounded-tl-[5rem] shadow-2xl lg:max-w-[500px]"
         />
         <div className="my-8 justify-center gap-4 text-primary lg:my-0 lg:ml-20 lg:flex lg:flex-col">
@@ -89,10 +92,10 @@ function Seller({ params }) {
             bánh sừng bò giòn tan, mỗi miếng bánh đều tràn đầy sự ấm áp và hương
             vị. Hãy đến và trải nghiệm sự kỳ diệu tại tiệm bánh của chúng tôi.
           </p>
-          <a href="/category" className="ml-4 flex items-center gap-2">
+          <Link href="/category/all" className="ml-4 flex items-center gap-2">
             <span>Xem thêm</span>
             <FaLongArrowAltRight className=" translate-y-1/6" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

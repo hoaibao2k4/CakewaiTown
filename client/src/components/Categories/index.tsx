@@ -54,13 +54,13 @@ function Categories({ params }) {
     }
     ref.current?.blur();
   };
-  const handleEnterPress = async (e) => {
-    if (e.key === "Enter") {
-      const res = await searchCakes(prompt);
-      setCakes(res);
-      ref.current?.blur();
-    }
-  };
+  // const handleEnterPress = async (e) => {
+  //   if (e.key === "Enter") {
+  //     const res = await searchCakes(prompt);
+  //     setCakes(res);
+  //     ref.current?.blur();
+  //   }
+  // };
   const label = "Bộ lọc";
   const items = [
     { id: 1, value: "Giá từ thấp đến cao" },
@@ -76,9 +76,9 @@ function Categories({ params }) {
       <div className="mx-[2rem] lg:mx-[5rem]">
         <div className="my-3 ml-[32px] flex h-11 items-center pt-[43px] text-primary">
           <div className="text-sm lg:text-base">
-            <a href="/">Trang chủ </a>
+            <Link href="/">Trang chủ </Link>
             <span>&gt;&gt;</span>
-            <a href="/category"> Menu Bánh </a>
+            <Link href="/category"> Menu Bánh </Link>
             {categoryName !== "Tất cả sản phẩm" && (
               <>
                 <span>&gt;&gt;</span>

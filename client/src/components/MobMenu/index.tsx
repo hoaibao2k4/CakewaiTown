@@ -5,10 +5,12 @@ import { motion } from 'framer-motion';
 function MobMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
-   isOpen ? "" : setClicked(false);
-   setIsOpen(!isOpen);
-
+    if (!isOpen) {
+      setClicked(false);
+    }
+    setIsOpen(!isOpen);
   };
+  
   const [clicked, setClicked] = useState(false);
   const toggleSubMenuItems = {
     enter: {

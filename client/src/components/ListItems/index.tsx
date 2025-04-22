@@ -6,6 +6,7 @@ import { createInstance } from '~/redux/interceptors';
 import SubItem from './SubItem';
 import { useState } from 'react';
 import { RootState } from '~/redux/store';
+import { Item } from '~/types';
 
 function ListItems({ list }) {
     const dispatch = useDispatch()
@@ -14,11 +15,12 @@ function ListItems({ list }) {
     if (!user) {
       throw new Error("User not found")
     }
-    let instance = createInstance(user, dispatch, loginSuccess)
+    const instance = createInstance(user, dispatch, loginSuccess)
     const [originalList, setOriginalList] = useState(list);
     const handleViewCart = async () => {
       try {
-        const itemsToUpdate = list.filter((item, index) => item.buy_quantity !== originalList[index].buy_quantity);
+        const itemsToUpdate = list.filter((item: Item, index: number) => item.buy_quantity !== originalList[index].buy_quantity);
+        setOriginalList(originalList)
         if (itemsToUpdate.length > 0) {
           await Promise.all(
             itemsToUpdate.map((item) => updateCartItem(user.access_token, instance, item))

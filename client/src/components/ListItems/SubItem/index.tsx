@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Item } from "~/types";
+import Image from "next/image";
 interface SubItemProps {
   item: Item
   index: number
@@ -12,7 +13,7 @@ function SubItem({item, index} : SubItemProps) {
   return (
     <div key={index}>
       <div className="flex gap-6">
-        <img src={item.image_link} alt="" className="h-16 w-16" />
+        <Image src={item.image_link} alt="Banh ngot Sai Thanh" className="h-16 w-16" width={16} height={16} />
         <div className="flex flex-col justify-center">
           <h3 className="text-xl">{item.name}</h3>
           <span className="text-lg">{item.variant !== 'one-variant' ? item.variant : ''}</span>

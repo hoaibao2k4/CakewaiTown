@@ -9,6 +9,7 @@ import { addCartItem } from "~/api/apiCart";
 import { toast } from "react-toastify";
 import { RootState } from "~/redux/store";
 import { Item, ProductVariant } from "~/types";
+import Image from "next/image";
 function AddToCart({ content, close }) {
   const [selected, setSelected] = useState<ProductVariant | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -17,7 +18,7 @@ function AddToCart({ content, close }) {
   if (!user) {
     throw new Error("User not found")
   }
-  let instance = createInstance(user, dispatch, loginSuccess);
+  const instance = createInstance(user, dispatch, loginSuccess);
 
   const selectVariant = (value) => {
     setSelected(value);
@@ -47,10 +48,12 @@ function AddToCart({ content, close }) {
   return (
     <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black bg-opacity-40">
       <div className="relative flex h-[300px] w-[450px] lg:w-[680px] rounded-xl bg-slate-50">
-        <img
+        <Image
           src={content.image_link}
-          alt=""
+          alt="Banh ngot Sai Thanh"
           className="m-4 lg:h-[200px] lg:w-[200px] h-[150px] w-[150px] rounded-xl"
+          width={200}
+          height={200}
         />
         <div className="flex flex-col justify-center">
           <h2 className="pb-1 lg:text-2xl text-lg font-semibold capitalize">
@@ -85,10 +88,10 @@ function AddToCart({ content, close }) {
                 <button
                   className="lg:size-10 size-8  rounded-bl-lg rounded-tl-lg border border-primary"
                   onClick={() => {
-                    quantity === 1
-                      ? setQuantity(quantity)
-                      : setQuantity(quantity - 1);
-                  }}
+                    if (quantity > 1) {
+                      setQuantity(quantity - 1);
+                    }
+                  }}                  
                 >
                   -
                 </button>

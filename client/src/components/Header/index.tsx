@@ -36,7 +36,7 @@ function Header() {
     throw new Error("User Not Found")
 
   }
-  let instance = createInstance(user, dispatch, loginSuccess);
+  const instance = createInstance(user, dispatch, loginSuccess);
 
   const viewCart = async () => {
     setOpen(true);
