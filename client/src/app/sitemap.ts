@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { newsfeedData } from "./blogs/[slug]/page";
+import { newsfeedData, toSlug } from "./blogs/[slug]/page";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/generator",
   ];
   const category = ["all", "birthday", "tradition", "cookie", "bread"];
-  const newsRoutes = newsfeedData.map((news) => `/news/${news.id}`);
+  const newsRoutes = newsfeedData.map((news) => `/news/${toSlug(news.title)}`);
   const categoryRoutes = category.map((type) => `/category/${type}`);
 
 

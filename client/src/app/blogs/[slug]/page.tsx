@@ -538,7 +538,7 @@ export const newsfeedData = [
 //     const date = new Date(dateString);
 //     return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
 // };
-const toSlug = (title: string) =>
+export const toSlug = (title: string) =>
   title
     .toLowerCase()
     .normalize("NFD")
