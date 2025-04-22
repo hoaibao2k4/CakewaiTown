@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/generator",
   ];
   const category = ["all", "birthday", "tradition", "cookie", "bread"];
-  const newsRoutes = newsfeedData.map((news) => `/news/${toSlug(news.title)}`);
+  const newsRoutes = newsfeedData.map((news) => `/blogs/${toSlug(news.title)}`);
   const categoryRoutes = category.map((type) => `/category/${type}`);
 
 

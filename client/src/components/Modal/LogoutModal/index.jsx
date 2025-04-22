@@ -4,15 +4,25 @@ import { useRouter } from 'next/navigation';
 import { logOutUser } from '~/redux/apiRequest';
 import { setCart } from '~/redux/cartSlice';
 import { persistor } from '~/redux/store';
+import { logOutSuccess } from '~/redux/authSlice';
 function LogoutModal({ isLogout }) {
   const dispatch = useDispatch();
   const router = useRouter();
   const user = useSelector((state) => state.auth.login.currentUser);
   const handleLogout = () => {
-    logOutUser(dispatch, user.refresh_token, router);
-    isLogout(false);
-    dispatch(setCart([]));
-    persistor.purge();
+    if (user.refresh_token) {
+      logOutUser(dispatch, user.refresh_token, router);
+      isLogout(false);
+      dispatch(setCart([]));
+      persistor.purge();
+    }
+    else {
+      dispatch(logOutSuccess())
+      router.push('/authentic/signin')
+      isLogout(false);
+      dispatch(setCart([]));
+      persistor.purge();
+    }
   };
   return (
     <div className="fixed inset-0 z-[102] flex items-center justify-center bg-black/20 bg-opacity-10">

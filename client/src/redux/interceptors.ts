@@ -8,8 +8,8 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { BE_BASE_URL } from '~/services/axios';
-
+import { BE_BASE_URL } from "~/services/axios";
+import { persistor } from "./store";
 interface JwtPayload {
   exp?: number;
 }
@@ -20,7 +20,7 @@ export const createInstance = (
   stateAuth: (payload: UserWithToken) => PayloadAction<UserWithToken>
 ) => {
   const newInstance = axios.create({
-    baseURL: BE_BASE_URL
+    baseURL: BE_BASE_URL,
   });
 
   // Interceptor cho request
@@ -33,8 +33,11 @@ export const createInstance = (
       const decodedToken = jwtDecode<JwtPayload>(user.access_token);
       const decodedRefresh = jwtDecode<JwtPayload>(user.refresh_token);
       console.log("Before checking");
-      // Kiểm tra nếu refresh token sắp hết hạn (còn dưới 60 giây)
-      if (decodedRefresh.exp && decodedRefresh.exp < currentTime + 60) {
+      if (decodedRefresh.exp && decodedRefresh.exp < currentTime) {
+        persistor.purge();
+      }
+      // Kiểm tra nếu refresh token sắp hết hạn
+      else if (decodedRefresh.exp && decodedRefresh.exp < currentTime + 300) {
         try {
           console.log("After checking");
           const res = await refreshToken(user.refresh_token);
@@ -74,8 +77,8 @@ export const createInstance = (
   // Interceptor cho response
   newInstance.interceptors.response.use(
     (response: AxiosResponse) => {
-      console.log("Response", response.data)
-      return response.data
+      console.log("Response", response.data);
+      return response.data;
     },
     (error: AxiosError) => {
       if (error.response) {

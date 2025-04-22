@@ -68,9 +68,10 @@ export default function ModalWrapper({children} : {children: ReactNode}) {
         if (timeRemaining > 0) {
           setTimeout(() => {
             setIsExpiry(true);
+            console.log("is exprire: ", isExpiry)
           }, timeRemaining);
         } else {
-          //dispatch(logOutUser(dispatch, user?.refresh_token, router));
+          setIsExpiry(true);
         }
       }
     }
