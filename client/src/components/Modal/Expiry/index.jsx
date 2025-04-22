@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { logOutUser } from "~/redux/apiRequest";
 import { setCart } from "~/redux/cartSlice";
 import { IoClose } from 'react-icons/io5';
+import { persistor } from "~/redux/store";
 function ExpiryModal({isExpiry}) {
     const dispatch = useDispatch()
     const router = useRouter()

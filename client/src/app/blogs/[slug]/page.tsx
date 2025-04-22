@@ -447,7 +447,7 @@ export const newsfeedData = [
   id: "news17",
   image: "/images/images_new/news17.png",
   date: "2025-04-23",
-  title: "Su Kem Hạt Phỉ – Ngọt Ngào Và Bùi Bùi Đến Từ Sự Tinh Tế",
+  title: "Su Kem Hạt Phỉ – Ngọt Ngọt Và Bùi Bùi Đến Từ Sự Tinh Tế",
   description: "Su kem hạt phỉ là món bánh quyến rũ với lớp vỏ su giòn và phần nhân kem hạt phỉ thơm bùi, béo ngậy. Một lựa chọn hoàn hảo cho những ai yêu thích vị bánh truyền thống nhưng đầy tinh tế.",
   author: "CakewaiTown",
   contentHtml: `
@@ -538,7 +538,7 @@ export const newsfeedData = [
 //     const date = new Date(dateString);
 //     return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
 // };
-const toSlug = (title: string) =>
+export const toSlug = (title: string) =>
   title
     .toLowerCase()
     .normalize("NFD")

@@ -32,7 +32,10 @@ function GenImage() {
   const dispatch = useDispatch();
   let instance: ReturnType<typeof createInstance> | null = null;
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  user && (() => { instance = createInstance(user, dispatch, loginSuccess); })();
+  user &&
+    (() => {
+      instance = createInstance(user, dispatch, loginSuccess);
+    })();
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error(
@@ -66,11 +69,11 @@ function GenImage() {
     else {
       setLoading(true);
       try {
-        if (instance){
-        const res = await generateImage(user.access_token, input, instance);
-        console.log("Res: ",res);
-        setImage(res);
-        inputRef.current?.focus();
+        if (instance) {
+          const res = await generateImage(user.access_token, input, instance);
+          console.log("Res: ", res);
+          setImage(res);
+          inputRef.current?.focus();
         }
       } catch (err) {
         console.log(err);
@@ -96,16 +99,16 @@ function GenImage() {
       setLoading(true);
       const inputStyle = input + "theo cách thiết kế" + selectedLabel;
       try {
-        if (instance){
-        const res = await generateImage(
-          user.access_token,
-          inputStyle,
-          instance
-        );
-        //console.log(res);
-        setImage(res);
-        inputRef.current?.focus();
-      }
+        if (instance) {
+          const res = await generateImage(
+            user.access_token,
+            inputStyle,
+            instance
+          );
+          //console.log(res);
+          setImage(res);
+          inputRef.current?.focus();
+        }
       } catch (err) {
         console.log(err);
       } finally {
@@ -148,8 +151,8 @@ function GenImage() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     ref={inputRef}
-                    className="mt-2 w-full"
-                    color="info"
+                    className="mt-2 w-full p-2 text-sm border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none focus:shadow-none"
+                    color="success"
                   />
                   <Button type="submit" color="blue" className="mt-4 w-full">
                     Tạo bánh
@@ -203,6 +206,7 @@ function GenImage() {
                     color="info"
                     aria-label="Success spinner example"
                     size="xl"
+                    className="text-gray-200 fill-blue-500"
                   />
                 </div>
               ) : (
@@ -336,9 +340,9 @@ function GenImage() {
                     3. Tải Xuống
                   </h3>
                   <p className="text-gray-600">
-                    Nhấn {'"Tạo Ảnh"'} để xem kết quả. Nếu chưa hài lòng, hãy điều
-                    chỉnh và tạo lại. Khi hoàn tất, bạn có thể tải ảnh về hoặc
-                    chia sẻ trực tiếp.
+                    Nhấn {'"Tạo Ảnh"'} để xem kết quả. Nếu chưa hài lòng, hãy
+                    điều chỉnh và tạo lại. Khi hoàn tất, bạn có thể tải ảnh về
+                    hoặc chia sẻ trực tiếp.
                   </p>
                 </div>
               </div>
