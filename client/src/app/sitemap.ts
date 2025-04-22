@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { newsfeedData } from "./news/[id]/page";
+import { newsfeedData } from "./blogs/[slug]/page";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [

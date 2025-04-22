@@ -28,14 +28,14 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title:
-    "CakewaiTown (Tận tụy - Chất lượng - Phụng sự) nơi chiếc bánh vẽ nên câu chuyện",
+    "CakewaiTown - Bánh ngọt Sài Thành",
   description:
     "CakewaiTown một trang web trực tuyến về thương hiệu bánh ngọt uy tín được xây dựng dựa trên sự giao thoa giữa phong cách Á - Âu. Phục vụ đa dạng mẫu mã, hỗ trợ chuyên nghiệp tận tâm",
   robots: "index, follow",
   keywords:
     "CakewaiTown, Cakewai, Cakewai Town, bánh ngọt, bakery, bánh mềm mịn, đặt bánh online, khuyến mãi, bánh sinh nhật, minicakes, bánh mì, bánh mặn, bữa ăn nhẹ",
   openGraph: {
-    title: "CakewaiTown (Tận tụy - Chất lượng - Phụng sự)",
+    title: "CakewaiTown - Bánh ngọt Sài Thành",
     description:
       "CakewaiTown một trang web trực tuyến về thương hiệu bánh ngọt uy tín được xây dựng dựa trên sự giao thoa giữa phong cách Á - Âu. Phục vụ đa dạng mẫu mã, hỗ trợ chuyên nghiệp tận tâm",
     url: "https://cakewaitown.com/",
