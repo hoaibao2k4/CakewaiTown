@@ -151,9 +151,9 @@ function Header() {
               </ul>
             </li>
             <li
-              className={pathname === "/news" ? "menu-active" : "menu-navbar"}
+              className={pathname === "/blogs" ? "menu-active" : "menu-navbar"}
             >
-              <Link href="/news">TIN TỨC</Link>
+              <Link href="/blogs">TIN TỨC</Link>
             </li>
             <li
               className={
