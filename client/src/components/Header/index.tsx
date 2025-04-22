@@ -28,11 +28,11 @@ function Header() {
   const { list } = useSelector((state: RootState) => state.cart);
   const [originalList, setOriginalList] = useState<Item[]>([]);
   const context = useContext(AddToCartContext);
-  if (!context){
-    throw new Error("AddToCartContext Not Found")
+  if (!context) {
+    throw new Error("AddToCartContext Not Found");
   }
-  const { setIsLogout } = context
-  
+  const { setIsLogout } = context;
+
   let instance: ReturnType<typeof createInstance> | null = null;
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   user &&
@@ -51,12 +51,14 @@ function Header() {
           (item, index) =>
             item?.buy_quantity !== originalList[index].buy_quantity
         );
-        if (itemsToUpdate.length > 0) {
-          await Promise.all(
-            itemsToUpdate.map((item) =>
-              updateCartItem(user.access_token, instance, item)
-            )
-          );
+        if (user && instance) {
+          if (itemsToUpdate.length > 0) {
+            await Promise.all(
+              itemsToUpdate.map((item) =>
+                updateCartItem(user.access_token, instance!, item)
+              )
+            );
+          }
         }
         setOpen(false);
       } catch (err) {
@@ -70,7 +72,7 @@ function Header() {
 
   useEffect(() => {
     const fetchCart = async () => {
-      if (user) {
+      if (user && instance) {
         const res = await getCart(user?.access_token, instance);
         if (res) {
           dispatch(setCart(res?.items));
