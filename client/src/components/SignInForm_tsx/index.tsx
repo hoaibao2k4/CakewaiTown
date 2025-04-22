@@ -158,7 +158,7 @@ const SignInForm = () => {
               </div>
               <button
                 onClick={() =>
-                  (window.location.href = `${BE_BASE_URL}api/public/google/login`)
+                  (window.location.href = `${BE_BASE_URL}/api/public/google/login`)
                 }
                 className="my-2 flex w-full items-center justify-center rounded-xl border bg-white py-2"
               >

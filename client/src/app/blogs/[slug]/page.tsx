@@ -4,7 +4,7 @@ import Head from 'next/head';
 import type { Metadata } from "next";
 
 
-const newsfeedData = [
+export const newsfeedData = [
   {
     id: "news1",
     date: "2025-01-05",
@@ -683,3 +683,4 @@ export default async function NewsDetail({ params }: { params: Promise<Params>  
     </>
   );
 }
+
