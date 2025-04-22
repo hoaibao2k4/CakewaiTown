@@ -12,10 +12,12 @@ function ListItems({ list }) {
     const dispatch = useDispatch()
     const router = useRouter()
     const user = useSelector((state: RootState) => state.auth.login.currentUser)
-    if (!user) {
-      throw new Error("User not found")
-    }
-    const instance = createInstance(user, dispatch, loginSuccess)
+    let instance: ReturnType<typeof createInstance> | null = null;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    user &&
+      (() => {
+        instance = createInstance(user, dispatch, loginSuccess);
+      })();
     const [originalList, setOriginalList] = useState(list);
     const handleViewCart = async () => {
       try {
