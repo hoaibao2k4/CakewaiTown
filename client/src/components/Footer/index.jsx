@@ -92,7 +92,7 @@ function Footer() {
             <Link href="https://www.facebook.com/cakewai.town">
               <Facebook />
             </Link>
-            <Link href="https://www.instagram.com/cakewai_town">
+            <Link href="https://www.instagram.com/cakewaitown">
               <Instagram />
             </Link>
             <Link href="https://www.tiktok.com/@cakewai_town">

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-
+// import Newsfeed from "~/components/Newsfeed_tsx";
 const Newsfeed = dynamic(() => import ("~/components/Newsfeed_tsx"));
 
 export default function ListNewsFeed(){
@@ -16,12 +16,16 @@ export default function ListNewsFeed(){
         <meta property="og:title" content="Tin tức - CakewaiTown" />
         <meta property="og:description" content="Khám phá những tin tức mới nhất về các chương trình khuyến mãi, sự kiện và bộ sưu tập bánh mới nhất tại CakewaiTown." />
         {/* <meta property="og:image" content="" /> */}
-        <meta property="og:url" content="https://cakewaitown.com/news" />
+        <meta property="og:url" content="https://cakewaitown.com/blogs" />
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
         <meta name="twitter:title" content="Tin tức - CakewaiTown" />
         <meta name="twitter:description" content="Cập nhật tin tức mới nhất về CakewaiTown, chương trình khuyến mãi, sự kiện đặc biệt và các mẫu bánh mới nhất." />
         {/* <meta name="twitter:image" content="/images/newsfeed-cover.jpg" /> */}
-        <link rel="canonical" href="https://cakewaitown.com/news" />
+        <link rel="canonical" href="https://cakewaitown.com/blogs" />
+        <meta name="author" content="CakewaiTown" />
+        <meta name="publisher" content="CakewaiTown" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div>
         <Newsfeed/>

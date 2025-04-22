@@ -3,13 +3,13 @@ import Link from "next/link";
 import Head from 'next/head';
 import type { Metadata } from "next";
 
-// Dữ liệu mẫu (tạm thời, sau này dùng API)
+
 const newsfeedData = [
   {
     id: "news1",
     date: "2025-01-05",
     title: "CakewaiTown Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.",
-    description: "",
+    description: "CakewaiTown Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025",
     author: "CakeWaiTown",
     contentHtml: 
     `
@@ -25,7 +25,7 @@ const newsfeedData = [
     id: "news2",
     date: "2024-11-02",
     title: "Mẫu bánh kem mừng 20/11 ngày Nhà Giáo Việt Nam.",
-    description: "",
+    description: "Mẫu bánh kem 20/11 mừng ngày Nhà giáo Việt Nam được chọn lọc đẹp nhất có tại CakewaiTown. Mời các bạn cùng tham khảo!",
     author: "CakewaiTown",
     contentHtml: 
     `   
@@ -69,7 +69,7 @@ const newsfeedData = [
     id: "news3",
     date: "2024-10-20",
     title: "Happy women day - 20/10 Dành tặng cho những đóa hoa hồng rực rỡ - rạng ngời - quý phái.",
-    description: "",
+    description: "CakewaiTown cho ra mắt bộ sưu tập bánh kem 20/10 đầy tinh tế với mong muốn giúp đỡ bạn bày tỏ những lời yêu thương qua những chiếc bánh ngọt dịu kì.",
     author: "Gia Mẫn",
     contentHtml: `
           <div class="text-black">
@@ -107,7 +107,7 @@ const newsfeedData = [
     id: "news4",
     date: "2024-07-29",
     title: "Tưng bừng đắm chìm vào không gian huyền ảo cùng Passion Mousse Cheesecake.",
-    description: "",
+    description: "Bánh Passion Mousse Cheesecake là sự kết hợp tuyệt vời giữa vị chua ngọt của chanh dây và vị béo ngậy của phô mai hòa cùng lớp mouse mịn màng tan chảy bên trong lớp cheesecake mềm mại và đế bánh giòn rụm.",
     author: "CakewaiTown",
     contentHtml: `
           <div class="text-black">
@@ -206,14 +206,14 @@ const newsfeedData = [
 {
     id: "news5",
     date: "2024-04-12",
-    title: "Bầu trời châu âu được ra mắt hoành tráng với sự kết hợp đa văn hòa từ nhà CakewaiTown.",
-    description: "",
+    title: "Bầu trời châu âu được ra mắt hoành tráng với sự kết hợp đa văn hòa từ nhà CakewaiTown - Hương vị trời tây.",
+    description: "Nhà CakewaiTown đã vô cùng tâm đắc và trau chuốt khi đã chính thức cho ra mắt bộ sưu tập mới đầy màu sắc và mang tính biểu tượng đến từ Châu Âu và La Tinh mang tên Hương vị trời tây.",
     author: "Gia Mẫn",
     contentHtml: `
           <div class="text-black">
             <div class="my-5">
               Nhà CakewaiTown đã vô cùng tâm đắc và trau chuốt khi đã chính thức cho ra mắt bộ sưu tập mới đầy màu sắc và
-              mang tính biểu tượng đến từ Châu Âu và La Tinh.
+              mang tính biểu tượng đến từ Châu Âu và La Tinh mang tên "Hương vị trời tây".
             </div>
             <div class="my-2">
               
@@ -222,7 +222,7 @@ const newsfeedData = [
             </div>
             <div class="my-2">
               Traditional cakes được xem như tính biểu tượng và được người dân bản địa tiêu thụ như các món ăn chính
-              hằng ngày. Đồng thời trong các dịp lễ lớn hoặc các buổi tiệc thì những chiếc bánh sẽ được bày biện để phục
+              hằng ngày cũng như là linh hồn của "Hương vị trời tây" mà CakewaiTown mang đến. Đồng thời trong các dịp lễ lớn hoặc các buổi tiệc thì những chiếc bánh sẽ được bày biện để phục
               vụ thực khách thay lời yêu thương.
             </div>
             <div>CakewaiTown xin giới thiệu một số sản phẩm gửi đến quý khách hàng tham khảo!!!</div>
@@ -245,7 +245,7 @@ const newsfeedData = [
     id: "news6",
     date: "2024-01-03",
     title: "CakewaiTown - Đặt bánh teabreak cho sự kiện, hội thảo, hội nghị... Tại TP.Hồ Chí Minh.",
-    description: "",
+    description: "CakewaiTown cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư vấn",
     author: "Gia Mẫn",
     contentHtml: `
                 <div class="text-black">
@@ -269,7 +269,7 @@ const newsfeedData = [
     image: "/images/images_new/news7.png",
     date: "2025-03-06",
     title: "CakewaiTown - Tưng bừng khai trương chi nhánh Võ Văn Ngân.",
-    description: "",
+    description: "CakewaiTown hân hạnh giới thiệu chi nhánh mới được đặt tại trung tâm Thủ Đức, cụ thể là con đường sầm uất Võ Văn Ngân.",
     author: "CakewaiTown",
     contentHtml: `
         <div class="text-black">
@@ -309,7 +309,7 @@ const newsfeedData = [
     image: "/images/images_new/news14.png",
     date: "2025-02-01",
     title: " Valentine Ngọt Ngào - Giảm Giá 50% Mừng Lễ Tình Nhân! ",
-    description: "",
+    description: "Ngày 14/02 - ngày của tình yêu, hãy dành tặng cho người thương những chiếc bánh thơm ngon như một lời yêu thương ngọt ngào. CakewaiTown hân hạnh mang đến chương trình ưu đãi hấp dẫn giảm shock 50%",
     author: "Gia Mẫn",
     contentHtml: `
     <div class = 'text-black'>
@@ -346,163 +346,340 @@ const newsfeedData = [
     </div>
 `,
 },
+{
+  id: "news15",
+  image: "/images/images_new/news15.png",
+  date: "2025-04-21",
+  title: " Núng Na Núng Nính Cùng Entremet – Tinh Hoa Bánh Mousse Pháp Tại CakewaiTown ",
+  description: "Entremet là một dòng bánh mousse nhiều lớp có nguồn gốc từ nền ẩm thực Pháp. Loại bánh này nổi bật với cấu trúc mềm mịn, từng lớp mousse được kết hợp hài hòa cùng lớp gương bóng bên ngoài. Tất cả hòa quyện thành một trải nghiệm tan chảy ngay khi chạm lưỡi – đầy quyến rũ và khó quên.",
+  author: "CakewaiTown",
+  contentHtml: `
+  <div class='text-black'>
+    <h2 class="text-2xl font-bold text-center text-amber-600 mb-4">
+      🎊 Núng Na Núng Nính Cùng Entremet
+    </h2>
+    <Image src="/images/images_new/news15.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    
+    <p class="text-lg">
+      Nếu bạn là tín đồ của những chiếc bánh vừa đẹp mắt vừa tinh tế, chắc chắn <strong>Entremet</strong> sẽ khiến bạn mê mẩn!
+      Xuất phát từ nền ẩm thực Pháp, Entremet là dòng bánh mousse nhiều lớp, kết hợp khéo léo giữa kết cấu mềm mịn, lớp gương bóng bẩy và hương vị tinh tế,
+      mang đến trải nghiệm tan chảy ngay khi chạm lưỡi.
+    </p>
+
+    <p class="mt-4 text-lg">
+      💖 Tại <strong>CakewaiTown</strong>, dòng Entremet luôn được cập nhật đa dạng với nhiều hương vị độc đáo, mang đến trải nghiệm mới lạ và đầy hấp dẫn.
+      Có thể kể đến các dòng Entremet nổi bật như: Trà xanh dâu latte, hạt phỉ, chuối 9 lớp, trà bá tước,...
+    </p>
+    <Image src="/images/images_new/entre_1.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    <Image src="/images/images_new/entre_2.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    <Image src="/images/images_new/entre_3.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    <Image src="/images/images_new/entre_4.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    <Image src="/images/images_new/entre_5.png" alt="Entremet CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+    <p class="mt-4 text-lg">
+      💫 Không chỉ là một món tráng miệng, <strong>Entremet</strong> còn là sự kết tinh của nghệ thuật làm bánh,
+      giúp bạn tận hưởng trọn vẹn từng khoảnh khắc ngọt ngào.
+    </p>
+
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-6">
+      <h3 class="text-lg font-semibold text-amber-700">📍 Thưởng thức ngay tại:</h3>
+      <p class="mt-2">✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+      <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    </div>
+
+    <div class="mt-6 text-center text-base">
+      <p class="font-semibold">CakewaiTown</p>
+      <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+      <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+      <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
+    </div>
+  </div>
+`,
+},
+{
+  id: "news16",
+  image: "/images/images_new/news16.png",
+  date: "2025-04-22",
+  title: "Bánh Giỏ Quýt – Hương Vị Truyền Thống Đầy Tươi Mát",
+  description: "Mang trong mình hương vị đặc trưng từ quả quýt tươi, bánh giỏ quýt là sự kết hợp tinh tế giữa lớp vỏ mềm mịn và nhân quýt ngọt thanh, tạo nên món bánh đậm chất truyền thống nhưng vẫn đầy cuốn hút.",
+  author: "CakewaiTown",
+  contentHtml: `
+  <div class='text-black'>
+    <h2 class="text-2xl font-bold text-center text-orange-500 mb-4">
+      🍊 Bánh Giỏ Quýt – Món Quà Nhỏ Gói Trọn Hương Xuân 🍊
+    </h2>
+    <Image src="/images/images_new/mini_1.png" alt="Bánh Giỏ Quýt CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    <p class="text-lg text-center">
+      Nếu bạn đang tìm kiếm một món bánh truyền thống nhưng vẫn mang nét tươi mới, thì bánh giỏ quýt chắc chắn là lựa chọn không thể bỏ qua!
+    </p>
+
+    <p class="mt-4">
+      Bánh giỏ quýt là một loại bánh ngọt mang đậm hương vị của quả quýt – tươi mát, dịu nhẹ nhưng đầy cuốn hút. Với phần vỏ bánh mềm mịn được làm từ bột mì chất lượng cao, nhân bên trong là sự hòa quyện giữa nước cốt quýt, đường và một chút bơ béo ngậy, tạo nên lớp nhân thơm lừng, tan chảy trong miệng.
+    </p>
+
+    <p class="mt-4">
+      Không chỉ là món bánh ngon miệng, bánh giỏ quýt còn gợi nhắc về nét đẹp của những ngày đầu xuân – khi quýt chín rộ, mang theo vị ngọt lành và sự sum vầy. Đây cũng là món quà được nhiều người lựa chọn để biếu tặng trong dịp lễ Tết.
+    </p>
+
+    <div class="bg-orange-100 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold text-center text-orange-600">🎁 Tại sao nên thử ngay bánh giỏ quýt tại CakewaiTown?</h3>
+      <ul class="mt-3 space-y-2 list-disc list-inside">
+        <li>🍊 Nguyên liệu tự nhiên, không phẩm màu.</li>
+        <li>🍊 Nhân quýt tươi được chế biến thủ công theo công thức riêng.</li>
+        <li>🍊 Hình thức nhỏ gọn, đẹp mắt – thích hợp làm quà tặng.</li>
+      </ul>
+    </div>
+
+    <p class="mt-6 text-center font-semibold text-lg">
+      ✨ Thưởng thức ngay bánh giỏ quýt tại CakewaiTown và cảm nhận vị ngọt lành lan tỏa!
+    </p>
+
+    <div class="mt-6 text-center text-base">
+      <p class="font-semibold">CakewaiTown</p>
+      <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+      <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+      <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
+    </div>
+  </div>
+  `
+},
+{
+  id: "news17",
+  image: "/images/images_new/news17.png",
+  date: "2025-04-23",
+  title: "Su Kem Hạt Phỉ – Ngọt Ngào Và Bùi Bùi Đến Từ Sự Tinh Tế",
+  description: "Su kem hạt phỉ là món bánh quyến rũ với lớp vỏ su giòn và phần nhân kem hạt phỉ thơm bùi, béo ngậy. Một lựa chọn hoàn hảo cho những ai yêu thích vị bánh truyền thống nhưng đầy tinh tế.",
+  author: "CakewaiTown",
+  contentHtml: `
+  <div class='text-black'>
+    <h2 class="text-2xl font-bold text-center text-amber-500 mb-4">
+      🌰 Su Kem Hạt Phỉ – Ngọt Béo Tinh Tế Cho Mọi Khoảnh Khắc
+    </h2>
+    <Image src="/images/images_new/mini_2.png" alt="Su kem hạt phỉ CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    
+    <p class="text-lg text-center">
+      Một chiếc su kem giòn tan, thơm phức vị bơ, ẩn chứa bên trong phần nhân kem hạt phỉ béo ngậy – đó chính là Su Kem Hạt Phỉ tại CakewaiTown!
+    </p>
+
+    <p class="mt-4">
+      Lớp vỏ su được làm từ bột mì, trứng và bơ, nướng đến khi vàng ruộm, giòn tan ngay khi cắn vào. Bên trong là nhân kem mịn mượt, kết hợp giữa kem phô mai và hạt phỉ nghiền mịn, tạo nên vị bùi ngọt tự nhiên, không gắt, không ngấy.
+    </p>
+
+    <div class="bg-amber-100 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold text-center text-amber-600">💛 Lý do nên thử su kem hạt phỉ tại CakewaiTown:</h3>
+      <ul class="mt-3 list-disc list-inside space-y-2">
+        <li>🌰 Hạt phỉ nguyên chất, nhập khẩu, rang thơm giòn.</li>
+        <li>🧁 Kem tươi béo ngậy, mềm mịn không ngấy.</li>
+        <li>✨ Hình thức đẹp mắt – thích hợp tiệc trà, quà biếu.</li>
+      </ul>
+    </div>
+
+    <p class="mt-6 text-center font-semibold text-lg">
+      Hãy để vị su kem hạt phỉ lan tỏa niềm vui trong từng khoảnh khắc ngọt ngào!
+    </p>
+        <div class="mt-6 text-center text-base">
+      <p class="font-semibold">CakewaiTown</p>
+      <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+      <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+      <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
+    </div>
+  </div>
+  `
+},
+{
+  id: "news18",
+  image: "/images/images_new/news18.png",
+  date: "2025-04-24",
+  title: "Bánh Kisses Trà Bá Tước & Việt Quất – Khi Thanh Mát Gặp Ngọt Ngào",
+  description: "Bánh Kisses là sự hòa quyện tinh tế giữa hương trà Bá Tước dịu nhẹ và vị chua ngọt của kem việt quất. Một chiếc bánh quyến rũ từ hình thức đến hương vị, dành cho người yêu phong cách thanh lịch.",
+  author: "CakewaiTown",
+  contentHtml: `
+  <div class='text-black'>
+    <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+      🫐 Kisses Trà Bá Tước & Việt Quất – Hương Vị Thanh Lịch Khó Cưỡng
+    </h2>
+    <Image src="/images/images_new/mini_4.png" alt="Bánh Kisses Trà Bá Tước CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+    
+    <p class="text-lg text-center">
+      Mang vẻ ngoài dịu dàng nhưng ẩn chứa bên trong là sự bùng nổ hương vị – bánh Kisses trà Bá Tước & việt quất chắc chắn sẽ chạm đến trái tim những ai yêu vị bánh thanh mát.
+    </p>
+
+    <p class="mt-4">
+      Lớp cốt bánh mềm mịn, thơm hương trà Bá Tước sang trọng. Nhân kem bên trong là việt quất tươi xay nhuyễn, kết hợp kem phô mai tươi – tạo nên sự cân bằng hoàn hảo giữa vị chát nhẹ và ngọt thanh.
+    </p>
+
+    <div class="bg-purple-100 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold text-center text-purple-600">💜 Vì sao bạn sẽ yêu Kisses Trà & Việt Quất?</h3>
+      <ul class="mt-3 list-disc list-inside space-y-2">
+        <li>🫖 Hương trà Bá Tước tự nhiên, không đắng gắt.</li>
+        <li>🫐 Nhân kem việt quất nguyên trái – vị chua ngọt dịu nhẹ.</li>
+        <li>💝 Thiết kế hình “nụ hôn” đáng yêu – món quà cực kỳ tinh tế.</li>
+      </ul>
+    </div>
+
+    <p class="mt-6 text-center font-semibold text-lg">
+      Một chiếc bánh nhỏ – một trải nghiệm vị giác đầy cảm hứng!
+    </p>
+            <div class="mt-6 text-center text-base">
+      <p class="font-semibold">CakewaiTown</p>
+      <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+      <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+      <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
+    </div>
+  </div>
+  `
+},
+
+
 ];
 
 // Format ngày tháng
-const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
-};
-
+// const formatDate = (dateString: string) => {
+//     const date = new Date(dateString);
+//     return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
+// };
+const toSlug = (title: string) =>
+  title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9 ]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+$/, "");
 // 🟢 Hàm tạo danh sách đường dẫn tĩnh
 export async function generateStaticParams() {
-    return newsfeedData.map((news) => ({ id: news.id }));
+  return newsfeedData.map((news) => ({
+    slug: toSlug(news.title),
+  }));
 }
-type Params = Promise<{id? : string}>
 
+type Params = { slug: string };
 
-export async function generateMetadata(props : { params : Params}): Promise<Metadata> {
-  const params = await props.params
-  const id = params.id
-  const news = newsfeedData.find((item) => item.id === id);
-  
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params; // Đảm bảo params được xử lý đồng bộ
+  const news = newsfeedData.find((item) => toSlug(item.title) === slug);
+  const metadataBase = new URL("https://cakewaitown.com");
+
   if (!news) {
     return {
       title: "Bài viết không tồn tại - CakewaiTown",
       description: "Bài viết bạn đang tìm không tồn tại. Xem thêm tin tức tại CakewaiTown.",
+      metadataBase,
     };
   }
 
   return {
     title: `${news.title} - CakewaiTown`,
-    description: news.description || news.title,
-    keywords: `CakewaiTown, tin tức bánh kem, cakewaitown tin tức, tin tức, ${news.title}`,
+    description: news.description,
     openGraph: {
       title: news.title,
-      description: news.description || news.title,
-      url: `https://cakewaitown.com/news/${news.id}`,
+      description: news.description,
+      url: `https://cakewaitown.com/blogs/${slug}`,
       images: [`${news.image}`],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: news.title,
-      description: news.description || news.title,
+      description: news.description,
       images: [`${news.image}`],
     },
+    metadataBase,
   };
 }
+
 // 🟢 Server Component (thay cho getStaticProps)
-export default async function NewsDetail( props : { params: Params }) {
-    const params = await props.params
-    const id = params.id
-    const news = newsfeedData.find((item) => item.id === id);
-    if (!news) {
-        return <div className="text-center text-red-500">Bài viết không tồn tại.</div>;
-    }
-    const newsSchema = {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": news.title,
-      "datePublished": news.date,
-      "url": `https://cakewaitown.com/news/${news.id}`,
-      "author": {
-        "@type": "Person",
-        "name": news.author
-      },
-      "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "371 Đ.Đoàn Kết, P.Bình Thọ",
-      "addressLocality": "Thủ Đức",
-      "addressCountry": "Vietnam"
+export default async function NewsDetail({ params }: { params: Promise<Params>  }) {
+  const { slug } = await params; // Đảm bảo params được xử lý đồng bộ
+  const news = newsfeedData.find((item) => toSlug(item.title) === slug);
+
+  if (!news) {
+    return <div className="text-center text-red-500 my-10">Bài viết không tồn tại.</div>;
+  }
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
+  };
+
+  const newsSchema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": news.title,
+    "datePublished": news.date,
+    "url": `https://cakewaitown.com/blogs/${slug}`,
+    "image": news.image,
+    "author": {
+      "@type": "Person",
+      "name": news.author,
     },
-      "image": `${news.image}`,
-      "publisher": {
-        "@type": "Organization",
-        "name": "CakewaiTown",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://cakewaitown.com/logo.png"
-        },
-        "telephone": "+84-91-247-65-21",
-    "email": "cakewaitown@gmail.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CakewaiTown",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cakewaitown.com/logo.png",
+      },
+    },
     "sameAs": [
-      "https://www.facebook.com/cakewai.town/",
-      "https://www.instagram.com/cakewai_town/",
-      "https://www.tiktok.com/@cakewai_town",
-      "https://www.youtube.com/@CakewaiTown"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+84-91-247-65-21",
-      "contactType": "customer service",
-      "areaServed": "VN",
-      "availableLanguage": ["Vietnamese", "English"]
-    }
-      }
-    };
+  "https://www.facebook.com/cakewai.town/",
+  "https://www.instagram.com/cakewaitown",
+  "https://www.tiktok.com/@cakewai_town",
+  "https://www.youtube.com/@CakewaiTown"
+],
+"address": {
+  "@type": "PostalAddress",
+  "streetAddress": "371 Đ.Đoàn Kết, P.Bình Thọ",
+  "addressLocality": "Thủ Đức",
+  "addressCountry": "Vietnam"
+},
+
+  };
 
 
-    return (
-      <>
+  return (
+    <>
       <Head>
+        <link rel="canonical" href={`https://cakewaitown.com/blogs/${slug}`} />
         <title>{news.title} - CakewaiTown</title>
-        <meta name="description" content={news.description || news.title} />
-        <meta name="robots" content="index, follow" />
-        <meta name="keywords" content={`bánh kem, tin tức CakewaiTown, sự kiện bánh ngọt, khuyến mãi bánh sinh nhật, giảm giá, thông báo, đặt bánh,CakewaiTown, ${news.title}, bánh kem 20/11, bánh kem Nhà Giáo, quà tặng 20/11, ngày Nhà Giáo Việt Nam, CakewaiTown khai trương, khai trương chi nhánh mới, bánh kem CakewaiTown, ưu đãi khai trương`} />
-        <meta name="robots" content="all" />
-        <meta http-equiv="content-language" content="vi" />
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta property="og:title" content={news.title} />
-        <meta property="og:description" content={news.description || news.title} />
-        <meta property="og:image" content={`${news.image}`} />
-        <meta property="og:url" content={`https://cakewaitown.com/news/${news.id}`} />
-        <meta property="og:locale" content="vi_VN" />
-        <meta property="og:site_name" content="CakeWai Town" />
-        <meta property="article:published_time" content="2024-01-01T00:00:00Z" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={news.title} />
-        <meta name="twitter:description" content={news.description || news.title} />
-        <meta name="twitter:image" content={`${news.image}`} />
-        <meta
-          name="google-site-verification"
-          content="your-google-verification-code"
-        />
-        <link rel="canonical" href="https://cakewaitown.com/news" />
-        <script type="application/ld+json">{JSON.stringify(newsSchema)}</script>
       </Head>
-        <div className="mx-4 sm:mx-10 lg:mx-28 my-24 text-black">
-            <div className="text-left">
-                <Link href="/">Trang chủ</Link> <span>&gt;&gt;</span> <Link href="/news">Tin tức</Link> <span>&gt;&gt;</span> <span>Nội dung</span>
-            </div>
-            <div className="flex justify-center text-lg">
-                <div className="my-5 max-w-[900px] rounded-xl border-2 bg-[#E8E1E1] p-5">
-                    <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-extrabold">{news.title}</h1>
-                    <div className="flex items-center space-x-4 sm:space-x-8 mt-4">
-                        <div className="flex items-center">
-                            <Image src="/images/images_new/Circle Avatar.svg" alt="Avatar" width={24} height={24} className="mr-1" />
-                            <span>{news.author}</span>
-                        </div>
-                        <div className="flex items-center">
-                            <Image src="/images/images_new/calendar.svg" alt="Calendar" width={24} height={24} className="mr-1" />
-                            <p>{formatDate(news.date)}</p>
-                        </div>
-                    </div>
-                    <hr className="my-5 border-gray-400" />
-                    {/* <div dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none" /> */}
-                    <h3 dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none"></h3>
-                    <h2 className="text-2xl font-extrabold mt-5">CÁC BÀI VIẾT LIÊN QUAN</h2>
-                    <ul className="ml-4 list-disc">
-                        {newsfeedData.filter((item) => item.id !== news.id).map((item) => (
-                            <li key={item.id} className="hover:underline hover:text-slate-900">
-                                <Link href={`/news/${item.id}`}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </div>     
-      </>
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(newsSchema) }} />
+      <div className="mx-4 sm:mx-10 lg:mx-28 my-24 text-black">
+        <div className="text-left">
+          <Link href="/">Trang chủ</Link> <span>&gt;&gt;</span> <Link href="/blogs">Tin tức</Link>
+        </div>
 
-    );
+        <div className="flex justify-center text-lg">
+          <div className="my-5 max-w-[900px] rounded-xl border-2 bg-[#E8E1E1] p-5">
+            <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-extrabold">{news.title}</h1>
+            <div className="flex items-center space-x-4 sm:space-x-8 mt-4">
+              <div className="flex items-center">
+                <Image src="/images/images_new/Circle Avatar.svg" alt="Avatar" width={24} height={24} className="mr-1" />
+                <span>{news.author}</span>
+              </div>
+              <div className="flex items-center">
+                <Image src="/images/images_new/calendar.svg" alt="Calendar" width={24} height={24} className="mr-1" />
+                <p>{formatDate(news.date)}</p>
+              </div>
+            </div>
+            <hr className="my-5 border-gray-400" />
+            {news.contentHtml ? (
+              <div dangerouslySetInnerHTML={{ __html: news.contentHtml }} className="prose max-w-none" />
+            ) : (
+              <p className="italic text-gray-500">Nội dung sẽ được cập nhật.</p>
+            )}            <h2 className="text-2xl font-extrabold mt-5">CÁC BÀI VIẾT LIÊN QUAN</h2>
+            <ul className="ml-4 list-disc">
+              {newsfeedData.filter((item) => item.id !== news.id).map((item) => (
+                <li key={item.id}>
+                  <Link href={`/blogs/${toSlug(item.title)}`} className="hover:text-blue-700 underline">
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

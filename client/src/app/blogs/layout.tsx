@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cakewaitown.com"),
   title: "Tin tức - CakewaiTown",
   description:
     "CakewaiTown cập nhật liên tục các thông tin nổi bật cùng với các sự kiện hấp dẫn mang đến cho khách hàng những trải nghiệm thú vị nhất",
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
     title: "Tin tức - CakewaiTown",
     description: "CakewaiTown cập nhật liên tục các thông tin nổi bật cùng với các sự kiện hấp dẫn mang đến cho khách hàng những trải nghiệm thú vị nhất",
     type: "website",
-    url: "https://cakewaitown.com/news",
+    url: "https://cakewaitown.com/blogs",
     images: [{
-        url: "/public/images/images_new/news7.png",
+        url: "https://cakewaitown.com/images/images_new/news7.png",
         width: 1200,
         height: 630,
         alt: "CakewaiTown tưng bừng khai trương chi nhánh Võ Văn Ngân",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     site: "@cakewai_town",
     title: "Tin tức - CakewaiTown",
     description: "CakewaiTown cập nhật liên tục các thông tin nổi bật cùng với các sự kiện hấp dẫn mang đến cho khách hàng những trải nghiệm thú vị nhất",
-    images: ["/public/images/images_new/news7.png"],
+    images: ["https://cakewaitown.com/images/images_new/news7.png"],
   },
 };
 
