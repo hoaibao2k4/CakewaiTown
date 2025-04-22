@@ -59,10 +59,11 @@ function Seller({ params }) {
           {cakes.map((cake, index) => (
             <Card
               key={index}
+              index={index}
               image_link={cake.image_link}
               product_name={cake.product_name}
               description={cake.description}
-              id={cake._id}
+              id={cake._id ?? ""}
               price={cake.product_variant[0].price}
               categoryName={categoryName}
               cake={cake}

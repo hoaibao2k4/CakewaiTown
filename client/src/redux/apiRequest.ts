@@ -13,7 +13,6 @@ import { response } from "~/services/axios";
 import { toast } from "react-toastify";
 import { AppDispatch } from "./store";
 import axios from "axios";
-import { NextRouter } from "next/router";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 interface UserAuth {
@@ -66,7 +65,7 @@ export const loginUser = async (
 export const logOutUser = async (
   dispatch: AppDispatch,
   token: string,
-  navigate: NextRouter,
+  navigate: AppRouterInstance,
   redirectPath = "/authentic/signin"
 ) => {
   dispatch(logOutStart());

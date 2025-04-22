@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
-function SubItem({item, index}) {
-    const [quantity, setQuantity] = useState(item.buy_quantity)
+import { Item } from "~/types";
+interface SubItemProps {
+  item: Item
+  index: number
+}
+function SubItem({item, index} : SubItemProps) {
+    const [quantity, setQuantity] = useState<number>(item.buy_quantity)
     const dispatch = useDispatch()
 
   return (

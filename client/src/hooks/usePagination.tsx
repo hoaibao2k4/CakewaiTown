@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { Item } from "~/types";
-function usePagination(data : Item[]) {
+import { CreateCake } from "~/types";
+function usePagination(data : CreateCake[]) {
     const itemsPerPage = 12;
     const maxPage = Math.ceil(data.length / itemsPerPage);
 

@@ -1,7 +1,7 @@
 export const Star = (props) => {
   return (
     <svg
-      className="h-4 w-4 text-yellow-300"
+      className="h-4 w-4 text-yellow-400"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"

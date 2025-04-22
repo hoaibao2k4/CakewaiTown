@@ -7,11 +7,16 @@ import { createInstance } from "~/redux/interceptors";
 import { loginSuccess } from "~/redux/authSlice";
 import { addCartItem } from "~/api/apiCart";
 import { toast } from "react-toastify";
+import { RootState } from "~/redux/store";
+import { Item, ProductVariant } from "~/types";
 function AddToCart({ content, close }) {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<ProductVariant | null>(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.auth.login.currentUser);
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
+  if (!user) {
+    throw new Error("User not found")
+  }
   let instance = createInstance(user, dispatch, loginSuccess);
 
   const selectVariant = (value) => {
@@ -21,11 +26,11 @@ function AddToCart({ content, close }) {
     if (!selected) {
       toast.info("Vui lòng chọn kích thước", {
         position: "bottom-left",
-        onClose: 3000,
+        autoClose: 3000,
       });
       return;
     }
-    const newItem = {
+    const newItem : Item = {
       product_id: content._id,
       type_id: content.product_type_id,
       name: content.product_name,
@@ -90,7 +95,7 @@ function AddToCart({ content, close }) {
                 <input
                   type="text"
                   value={quantity}
-                  onChange={(e) => e.target.quantity}
+                  onChange={(e) => e.target.value}
                   className="lg:size-10 size-8 p-2 text-sm  border-b border-t border-primary text-center bg-slate-50"
                 />
                 <button

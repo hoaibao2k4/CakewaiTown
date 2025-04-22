@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/UserTooltip/index.jsx",
+    "src/components/UserTooltip/index.tsx",
     "src/app/layout.tsx",
     "src/redux/interceptors.ts"
   ],

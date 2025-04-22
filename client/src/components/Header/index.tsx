@@ -9,8 +9,7 @@ import { Drawer } from "antd";
 import { ChevronDown } from "lucide-react";
 import { Cakewai, Cart, UserProfile } from "../../../public/assets/icons";
 import ListItems from "~/components/ListItems";
-import { logOutUser } from "~/redux/apiRequest";
-import { persistor } from "~/redux/store";
+import { RootState } from "~/redux/store";
 import { getCart } from "~/api/apiCart";
 import { createInstance } from "~/redux/interceptors";
 import { loginSuccess } from "~/redux/authSlice";
@@ -18,17 +17,25 @@ import { setCart } from "~/redux/cartSlice";
 import { updateCartItem } from "~/api/apiCart";
 import { AddToCartContext } from "~/app/modalwapper";
 import Script from "next/script";
+import { Item } from "~/types";
 function Header() {
   const router = useRouter();
   const dispatch = useDispatch();
   const pathname = usePathname();
   const search = useSearchParams();
-  const user = useSelector((state) => state.auth.login.currentUser);
-  const [open, setOpen] = useState(false);
-  const { list } = useSelector((state) => state.cart);
-  const [originalList, setOriginalList] = useState([]);
-  const { setIsLogout } = useContext(AddToCartContext);
+  const user = useSelector((state: RootState) => state.auth.login.currentUser);
+  const [open, setOpen] = useState<boolean>(false);
+  const { list } = useSelector((state: RootState) => state.cart);
+  const [originalList, setOriginalList] = useState<Item[]>([]);
+  const context = useContext(AddToCartContext);
+  if (!context){
+    throw new Error("AddToCartContext Not Found")
+  }
+  const { setIsLogout } = context
+  if (!user) {
+    throw new Error("User Not Found")
 
+  }
   let instance = createInstance(user, dispatch, loginSuccess);
 
   const viewCart = async () => {
@@ -58,17 +65,6 @@ function Header() {
   const handleLogin = () => {
     router.push("/authentic/signin");
   };
-  const handleLogOut = () => {
-    if (user?.refresh_token) logOutUser(dispatch, user?.refresh_token, router);
-    else {
-      const refresh_token = localStorage.getItem("refreshToken");
-      logOutUser(dispatch, refresh_token, router);
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("refreshToken");
-    }
-    dispatch(setCart([]));
-    persistor.purge();
-  };
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -80,7 +76,7 @@ function Header() {
         }
       }
     };
-    fetchCart(user, instance);
+    fetchCart();
   }, [user, open]);
 
   useEffect(() => {

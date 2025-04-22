@@ -10,23 +10,23 @@ import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useRef, useState } from "react";
-import { getAllCakes, getCake, searchCakes, sortCakes } from "~/api/apiCakes";
+import { getCake, searchCakes, sortCakes } from "~/api/apiCakes";
 import { toast } from "react-toastify";
 function Categories({ params }) {
   const { cakes, categoryName, setCakes, getTypeOfCakes, categories } =
     useCake(params);
   const cakesPerPage = usePagination(cakes);
-  const [selectedLabel, setSelectedLabel] = useState(3);
+  const [selectedLabel, setSelectedLabel] = useState<string>("3");
   const [prompt, setPrompt] = useState("");
-  const ref = useRef(null);
-  const handleChange = async (event) => {
+  const ref = useRef<HTMLInputElement>(null);
+  const handleChange = async (event : SelectChangeEvent<string>) => {
     setSelectedLabel(event.target.value);
     const order =
-      event.target.value === 1
+      event.target.value === "1"
         ? "asc"
-        : event.target.value === 2
+        : event.target.value === "2"
         ? "desc"
         : "default";
     try {
@@ -52,13 +52,13 @@ function Categories({ params }) {
         autoClose: 3000,
       });
     }
-    ref.current.blur();
+    ref.current?.blur();
   };
   const handleEnterPress = async (e) => {
     if (e.key === "Enter") {
       const res = await searchCakes(prompt);
       setCakes(res);
-      ref.current.blur();
+      ref.current?.blur();
     }
   };
   const label = "Bộ lọc";
@@ -163,7 +163,8 @@ function Categories({ params }) {
             {cakesPerPage.currentData().map((cake, index) => (
               <Card
                 key={index}
-                id={cake._id}
+                index={index}
+                id={cake._id ?? ""}
                 image_link={cake.image_link}
                 description={cake.description}
                 product_name={cake.product_name}

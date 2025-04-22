@@ -1,15 +1,21 @@
-"use client"
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { useEffect, useState } from 'react';
-import { getBlogs } from '~/api/apiBlog';
-
+"use client";
+//import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { useEffect, useState } from "react";
+import { getBlogs } from "~/api/apiBlog";
+interface Blog {
+  image_link: string;
+  author: string;
+  created_at: string;
+  title: string;
+  short_description: string;
+}
 function Blog() {
-  const handleDate = (field) => {
+  const handleDate = (field: string) => {
     const date = new Date(field);
-    const formattedDate = date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
+    const formattedDate = date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
     });
     return formattedDate;
   };
@@ -27,12 +33,20 @@ function Blog() {
   }, []);
   return (
     <div className="Hot-event pb-[20rem] pt-4">
-      <h1 className="text-center text-3xl font-bold text-primary lg:text-5xl">Sự kiện nổi bật</h1>
+      <h1 className="text-center text-3xl font-bold text-primary lg:text-5xl">
+        Sự kiện nổi bật
+      </h1>
       <div className="Our-product lg:grid-custom-3 md:grid-custom-2 grid-custom-1 relative grid w-full justify-center gap-16 lg:gap-4">
-        {blogs?.map((blog, index) => (
+        {blogs?.map((blog: Blog, index) => (
           <div className="img-scale my-10 h-[400px] w-[340px]" key={index}>
-            <a href={`/news?mode=news${index+1}`}>
-              <img src={blog.image_link} alt="" width="100%" height="100%" className="h-auto w-full rounded-t-xl" />
+            <a href={`/news?mode=news${index + 1}`}>
+              <img
+                src={blog.image_link}
+                alt=""
+                width="100%"
+                height="100%"
+                className="h-auto w-full rounded-t-xl"
+              />
             </a>
             <div className="rounded-b-xl bg-slate-100">
               <div className="mx-6 py-5">
@@ -53,19 +67,23 @@ function Blog() {
                   <hr className="mx-4 w-[24px] border border-gray-400" />
                   <p>{handleDate(blog.created_at)}</p>
                 </div>
-                <h3 className="line-clamp-2 text-xl font-semibold leading-6">{blog.title}</h3>
-                <p className="line-clamp-3 text-lg font-normal leading-6">{blog.short_description}</p>
+                <h3 className="line-clamp-2 text-xl font-semibold leading-6">
+                  {blog.title}
+                </h3>
+                <p className="line-clamp-3 text-lg font-normal leading-6">
+                  {blog.short_description}
+                </p>
               </div>
             </div>
           </div>
         ))}
 
-        <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white">
+        {/* <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white">
           <BsChevronCompactLeft size={30} onClick={() => prevSlide()} />
         </div>
         <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white">
           <BsChevronCompactRight size={30} onClick={() => nextSlide()} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

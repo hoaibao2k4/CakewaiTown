@@ -1,14 +1,14 @@
 import { FaCheckCircle } from "react-icons/fa";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 function OrderModal({isOrder}) {
     const router = useRouter()
     const backToHome = () => {
         isOrder(false)
-        router('/')
+        router.push('/')
     }
     const continuetoShopping = () => {
         isOrder(false)
-        router('/category?page=1')
+        router.push('/category/all')
     }
     return (
         <div className="fixed inset-0 z-[102] flex items-center justify-center bg-black/20 bg-opacity-10">
