@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { updateCartItem } from '~/api/apiCart';
 import { loginSuccess } from '~/redux/authSlice';
 import { createInstance } from '~/redux/interceptors';

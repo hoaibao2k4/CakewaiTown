@@ -17,7 +17,7 @@ const customThemeTooltip = {
   arrow: {
     base: "absolute z-10 h-2 w-2 rotate-45 group",
     style: {
-      dark: "bg-slate-50 dark:bg-gray-700",
+      dark: "bg-slate-50 dark:bg-white",
       light: "bg-white",
       auto: "bg-white dark:bg-gray-700",
     },
@@ -26,7 +26,7 @@ const customThemeTooltip = {
   base: "absolute z-10 inline-block rounded-lg  text-sm font-medium shadow-sm",
   hidden: "invisible opacity-0",
   style: {
-    dark: "bg-slate-50 text-black dark:bg-gray-700",
+    dark: "bg-slate-50 text-black dark:bg-white",
     light: "border border-gray-200 bg-white text-gray-900",
     auto: "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
   },

@@ -49,7 +49,7 @@ function Categories({ params }) {
     else {
       toast.info("Không tìm thấy nội dung", {
         position: "bottom-right",
-        onClose: 3000,
+        autoClose: 3000,
       });
     }
     ref.current.blur();
@@ -100,7 +100,13 @@ function Categories({ params }) {
         </p>
         <div className="">
           <div className="mx-16 flex lg:flex-row flex-col items-center lg:gap-[22rem] gap-10">
-            <div className="lg:w-3/5 md:w-2/4 w-full">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault(); // Chặn reload trang
+                handleSearch();
+              }}
+              className="lg:w-3/5 md:w-2/4 w-full"
+            >
               <label
                 htmlFor="search"
                 className="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -114,24 +120,24 @@ function Categories({ params }) {
                 <input
                   type="text"
                   id="search"
-                  className="block w-full rounded-lg border border-blue-500 p-4 pl-10 text-sm text-gray-900 
-             focus:border-blue-500 focus:ring-blue-500 
+                  className="block w-full rounded-lg border border-gray-300 p-4 pl-10 text-sm text-gray-900 
+             focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring-2 
+             dark:border-gray-600 dark:bg-white dark:text-slate-900 
              dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   placeholder="Tìm kiếm bánh..."
                   onChange={(e) => setPrompt(e.target.value)}
-                  onKeyDown={handleEnterPress}
                   ref={ref}
                   value={prompt}
                 />
                 <button
                   type="submit"
-                  onClick={handleSearch}
                   className="absolute right-2.5 top-2.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Search
                 </button>
               </div>
-            </div>
+            </form>
+
             <div className="">
               <Box sx={{ minWidth: 200 }}>
                 <FormControl fullWidth size="small">
