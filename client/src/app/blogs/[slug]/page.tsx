@@ -308,7 +308,7 @@ export const newsfeedData = [
     id: "news8",
     image: "/images/images_new/news14.png",
     date: "2025-02-01",
-    title: " Valentine Ngọt Ngào - Giảm Giá 50% Mừng Lễ Tình Nhân! ",
+    title: "Valentine Ngọt Ngào - Giảm Giá 50% Mừng Lễ Tình Nhân!",
     description: "Ngày 14/02 - ngày của tình yêu, hãy dành tặng cho người thương những chiếc bánh thơm ngon như một lời yêu thương ngọt ngào. CakewaiTown hân hạnh mang đến chương trình ưu đãi hấp dẫn giảm shock 50%",
     author: "Gia Mẫn",
     contentHtml: `
@@ -350,7 +350,7 @@ export const newsfeedData = [
   id: "news15",
   image: "/images/images_new/news15.png",
   date: "2025-04-21",
-  title: " Núng Na Núng Nính Cùng Entremet – Tinh Hoa Bánh Mousse Pháp Tại CakewaiTown ",
+  title: "Núng Na Núng Nính Cùng Entremet – Tinh Hoa Bánh Mousse Pháp Tại CakewaiTown",
   description: "Entremet là một dòng bánh mousse nhiều lớp có nguồn gốc từ nền ẩm thực Pháp. Loại bánh này nổi bật với cấu trúc mềm mịn, từng lớp mousse được kết hợp hài hòa cùng lớp gương bóng bên ngoài. Tất cả hòa quyện thành một trải nghiệm tan chảy ngay khi chạm lưỡi – đầy quyến rũ và khó quên.",
   author: "CakewaiTown",
   contentHtml: `
