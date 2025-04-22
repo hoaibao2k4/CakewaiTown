@@ -32,11 +32,13 @@ function Header() {
     throw new Error("AddToCartContext Not Found")
   }
   const { setIsLogout } = context
-  if (!user) {
-    throw new Error("User Not Found")
-
-  }
-  const instance = createInstance(user, dispatch, loginSuccess);
+  
+  let instance: ReturnType<typeof createInstance> | null = null;
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+  user &&
+    (() => {
+      instance = createInstance(user, dispatch, loginSuccess);
+    })();
 
   const viewCart = async () => {
     setOpen(true);

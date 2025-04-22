@@ -15,10 +15,12 @@ function AddToCart({ content, close }) {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.auth.login.currentUser);
-  if (!user) {
-    throw new Error("User not found")
-  }
-  const instance = createInstance(user, dispatch, loginSuccess);
+  let instance: ReturnType<typeof createInstance> | null = null;
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+  user &&
+    (() => {
+      instance = createInstance(user, dispatch, loginSuccess);
+    })();
 
   const selectVariant = (value) => {
     setSelected(value);
