@@ -44,7 +44,7 @@ function AddToCart({ content, close }) {
       buy_quantity: quantity,
     };
     dispatch(addToCart(newItem));
-    await addCartItem(user.access_token, instance, newItem);
+    await addCartItem(user!.access_token, instance!, newItem);
     close(false);
   };
   return (

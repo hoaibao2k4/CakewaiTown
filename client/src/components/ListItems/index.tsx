@@ -25,7 +25,7 @@ function ListItems({ list }) {
         setOriginalList(originalList)
         if (itemsToUpdate.length > 0) {
           await Promise.all(
-            itemsToUpdate.map((item) => updateCartItem(user.access_token, instance, item))
+            itemsToUpdate.map((item) => updateCartItem(user!.access_token, instance!, item))
           );
         }
         router.push('/cart');
