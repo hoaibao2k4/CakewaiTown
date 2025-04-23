@@ -7,8 +7,11 @@ import SubItem from './SubItem';
 import { useState } from 'react';
 import { RootState } from '~/redux/store';
 import { Item } from '~/types';
-
-function ListItems({ list }) {
+interface ListItemsProps {
+  list: Item[],
+  onCloseDrawer: () => void 
+}
+function ListItems({ list, onCloseDrawer }: ListItemsProps) {
     const dispatch = useDispatch()
     const router = useRouter()
     const user = useSelector((state: RootState) => state.auth.login.currentUser)
@@ -25,9 +28,10 @@ function ListItems({ list }) {
         setOriginalList(originalList)
         if (itemsToUpdate.length > 0) {
           await Promise.all(
-            itemsToUpdate.map((item) => updateCartItem(user!.access_token, instance!, item))
+            itemsToUpdate.map((item : Item) => updateCartItem(user!.access_token, instance!, item))
           );
         }
+        onCloseDrawer();
         router.push('/cart');
       } catch (err) {
         console.error("Failed to update cart items", err);

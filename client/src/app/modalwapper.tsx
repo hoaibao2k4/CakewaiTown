@@ -26,7 +26,7 @@ export const AddToCartContext = createContext<SomeContextType | null>(null);
 
 export default function ModalWrapper({children} : {children: ReactNode}) {
   const [showCart, setShowCart] = useState(false);
-  const [cartContent, setCartContent] = useState(null);
+  const [cartContent, setCartContent] = useState<Item | null>(null);
   const [successPopup, setSuccessPopup] = useState(false);
   const [isExpiry, setIsExpiry] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
@@ -37,8 +37,8 @@ export default function ModalWrapper({children} : {children: ReactNode}) {
   const dispatch = useDispatch();
   //const router = useRouter();
 
-  const handleAddToCartPopup = useCallback(() => {
-    //setCartContent(cake);
+  const handleAddToCartPopup = useCallback((cake : Item ) => {
+    setCartContent(cake);
     setShowCart(true);
   }, []);
 
@@ -75,7 +75,7 @@ export default function ModalWrapper({children} : {children: ReactNode}) {
         }
       }
     }
-  }, [user, dispatch]);
+  }, [user, dispatch, isExpiry]);
 
   useEffect(() => {
     const handleScroll = () => {

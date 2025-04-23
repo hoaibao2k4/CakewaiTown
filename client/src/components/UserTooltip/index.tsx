@@ -1,7 +1,7 @@
 "use client";
 import { Dropdown, Tooltip } from "flowbite-react";
-import avatar from "../../../public/assets/default_avt.jpg";
 import Link from "next/link";
+import Image from "next/image";
 export function DropdownLib({ label, items, props }) {
   return (
     <Dropdown {...props} label={label} dismissOnClick={false}>
@@ -56,10 +56,12 @@ export function UserTooltip({ onClick, currentUser }) {
         </div>
       }
     >
-      <img
-        src={currentUser?.profile_picture || avatar}
+      <Image
+        src={currentUser?.profile_picture || '/assets/default_avt.jpg'}
         alt="User account"
         className="h-7 w-7 rounded-full border-2"
+        width={7}
+        height={7}
       />
     </Tooltip>
   );

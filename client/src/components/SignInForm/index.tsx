@@ -9,7 +9,6 @@ import Head from "next/head";
 import { GoogleIcon } from "../../../public/assets/icons";
 import { loginUser } from "~/redux/apiRequest";
 import { BE_BASE_URL } from "~/services/axios";
-
 const SignInForm = () => {
   const [hidden, setHidden] = useState(true);
   const [email, setEmail] = useState("");

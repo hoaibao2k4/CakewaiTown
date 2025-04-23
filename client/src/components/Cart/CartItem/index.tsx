@@ -1,3 +1,4 @@
+"use client";
 import { CloseIcon } from "../../../../public/assets/icons";
 import { removeCartItem, updateCartItem } from "~/api/apiCart";
 import { removeFromCart } from "~/redux/cartSlice";
@@ -19,10 +20,10 @@ interface CartItemProps {
   //   price: number;
   // };
   item: Item;
-  key: number;
+  index: number;
 }
 
-const CartItem = ({ item, key }: CartItemProps) => {
+const CartItem = ({ item, index }: CartItemProps) => {
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.auth.login.currentUser);
   const [quantity, setQuantity] = useState(item.buy_quantity);
@@ -49,12 +50,11 @@ const CartItem = ({ item, key }: CartItemProps) => {
   const handleUpdate = async (item: CartItemProps["item"]) => {
     if (item.buy_quantity !== quantity) {
       const updatedQuantity = quantity;
-
       // Gọi API trước
       const updatedItem = {
         product_id: item.product_id,
         variant: item.variant,
-        quantity: updatedQuantity,
+        buy_quantity: updatedQuantity,
       };
 
       item = {
@@ -62,25 +62,24 @@ const CartItem = ({ item, key }: CartItemProps) => {
         buy_quantity: updatedQuantity,
       };
       if (user && instance) {
-      const result = await updateCartItem(user.access_token, instance, item);
-      if (result) {
-        dispatch({
-          type: "cart/updateItem",
-          payload: updatedItem,
-        });
-      } else {
-        console.error("Failed to update cart item");
+        const result = await updateCartItem(user.access_token, instance, item);
+        if (result) {
+          dispatch({
+            type: "cart/updateItem",
+            payload: updatedItem,
+          });
+        } else {
+          console.error("Failed to update cart item");
+        }
       }
     }
-    }
   };
-
   useEffect(() => {
     if (quantity !== item.buy_quantity) setQuantity(item.buy_quantity);
   }, [item.buy_quantity]);
 
   return (
-    <tr key={key} className="items-center">
+    <tr key={index} className="items-center">
       <td className="text-center align-middle">
         <CloseIcon
           className="hover:cursor-pointer"
@@ -89,11 +88,15 @@ const CartItem = ({ item, key }: CartItemProps) => {
       </td>
       <td className="lg:m-[20px] p-5 my-1 flex lg:flex-row flex-col items-center justify-center gap-[20px] space-x-4 text-center align-middle">
         <div className="flex-shrink-0">
-          <Image
-            src={item.image_link}
-            alt=""
-            className="lg:w-[180px] lg:h-[180px] md:w-[120px] md:h-[120px] w-[60px] h-[60px]"
-          />
+          {item.image_link && (
+            <Image
+              src={item.image_link}
+              alt="Banh ngot Sai Thanh"
+              className="lg:w-[180px] lg:h-[180px] md:w-[120px] md:h-[120px] w-[60px] h-[60px]"
+              width={180}
+              height={180}
+            />
+          )}
         </div>
         <div className="flex lg:flex-col">
           <label htmlFor="name-of-cake" className="text-center lg:block hidden">
@@ -117,11 +120,9 @@ const CartItem = ({ item, key }: CartItemProps) => {
             -
           </button>
           <input
-            type="text"
             value={quantity}
-            onChange={(e) => e.target.value}
+            onChange={(e) => setQuantity(Number(e.target.value) || 1)}
             className="lg:w-11 w-8 p-2 lg:p-3 border-b border-t border-primary text-center text-xs"
-            disabled
           />
           <button
             className="lg:w-11 w-8 p-1 lg:p-2 rounded-br-lg rounded-tr-lg border border-primary"
