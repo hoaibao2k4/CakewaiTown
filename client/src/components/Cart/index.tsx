@@ -45,7 +45,7 @@ const Cart = () => {
               </thead>
               <tbody className="px-[var(--Number,] pb-[0px)] w-[1106px] items-center pt-[20px]">
                 {list?.map((item, index) => (
-                  <CartItem item={item} key={index}/>
+                  <CartItem item={item} key={index} index={index}/>
                 ))}
               </tbody>
               {show && (

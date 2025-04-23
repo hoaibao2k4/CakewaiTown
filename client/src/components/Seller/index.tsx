@@ -79,7 +79,7 @@ function Seller({ params }) {
           alt=""
           width={500}
           height={500}
-          layout="responsive"
+          style={{ width: '100%', height: 'auto' }}
           className="mx-auto h-auto max-w-[300px] rounded-br-[5rem] rounded-tl-[5rem] shadow-2xl lg:max-w-[500px]"
         />
         <div className="my-8 justify-center gap-4 text-primary lg:my-0 lg:ml-20 lg:flex lg:flex-col">

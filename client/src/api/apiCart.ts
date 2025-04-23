@@ -4,7 +4,7 @@ import { Invoice } from "~/types";
 
 export const getCart = async (token: string, instance: AxiosInstance) => {
   try {
-    const res = await instance.get("/api/protected/cart", {
+    const res = await instance.get("/api/protected/cart/", {
       headers: { Authorization: `Bearer ${token}` },
     });
     return res.data;

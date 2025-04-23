@@ -56,7 +56,10 @@ const cartSlice = createSlice({
           item.product_id === product_id && item.variant === variant,
       );
       if (item) {
-        item.buy_quantity = buy_quantity; 
+        item.buy_quantity = buy_quantity;
+      }
+      else {
+        console.log("Khong tim thay item")
       }
     }
   },

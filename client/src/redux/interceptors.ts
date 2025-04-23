@@ -77,7 +77,6 @@ export const createInstance = (
   // Interceptor cho response
   newInstance.interceptors.response.use(
     (response: AxiosResponse) => {
-      console.log("Response", response.data);
       return response.data;
     },
     (error: AxiosError) => {

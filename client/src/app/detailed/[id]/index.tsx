@@ -15,13 +15,13 @@ import { RootState } from "~/redux/store";
 import { CreateCake, Item, ProductVariant } from "~/types";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-function DetailedCake({id}) {
+function DetailedCake({ id }) {
   const [cake, setCake] = useState<CreateCake | null>(null);
   const [alikeCake, setAlikeCake] = useState<CreateCake[]>([]);
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState<ProductVariant | null>(null);
   const searchParam = useSearchParams();
-  const categoryName = searchParam.get('category')
+  const categoryName = searchParam.get("category");
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error("useContext must be used within AddToCartProvider");
@@ -37,28 +37,27 @@ function DetailedCake({id}) {
       instance = createInstance(user, dispatch, loginSuccess);
     })();
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch cake by ID
+        if (id) {
+          const result = await getCakeById(id);
+          const cakeData = result.data;
+          setCake(cakeData);
+          console.log("Fetching OK");
+  
+          // Fetch similar cakes
+          if (cakeData?.product_type_id) {
+            const alikeResult = await getCake(cakeData.product_type_id);
+            setAlikeCake(alikeResult.data);
+          }
+        }
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      }
+    };
     if (id) fetchData();
   }, [id]);
-  const fetchData = async () => {
-    try {
-      // Fetch cake by ID
-      if (id) {
-        const result = await getCakeById(id);
-        const cakeData = result.data;
-        setCake(cakeData);
-        console.log("Fetching OK");
-
-        // Fetch similar cakes
-        if (cakeData?.product_type_id) {
-          const alikeResult = await getCake(cakeData.product_type_id);
-          setAlikeCake(alikeResult.data);
-        }
-      }
-    } catch (err) {
-      console.error("Error fetching data:", err);
-    }
-  };
-
   const handleAddToCart = async (cake) => {
     if (!user) {
       router.push("/authentic/signin");
@@ -130,24 +129,24 @@ function DetailedCake({id}) {
       image_link: cake.image_link,
       buy_quantity: quantity,
     };
-    console.log(newItem)
+    console.log(newItem);
     //router.push("/payment", { state: { newItem } });
   };
 
   const selectVariant = (value) => {
     setSelected(value);
   };
-    const message =
-      cake?.product_variant && cake?.product_variant.length > 1
-        ? "Vui lòng chọn kích thước"
-        : `${
-            cake?.product_variant &&
-            cake?.product_variant[0].price.toLocaleString("vi-VN")
-          } VND`;
-    const size =
-      cake?.product_variant && cake?.product_variant.length > 1
-        ? "Kích thước"
-        : "";
+  const message =
+    cake?.product_variant && cake?.product_variant.length > 1
+      ? "Vui lòng chọn kích thước"
+      : `${
+          cake?.product_variant &&
+          cake?.product_variant[0].price.toLocaleString("vi-VN")
+        } VND`;
+  const size =
+    cake?.product_variant && cake?.product_variant.length > 1
+      ? "Kích thước"
+      : "";
   return (
     <div className="mt-16 w-full bg-white">
       <div className="mx-[5rem]">
@@ -161,13 +160,16 @@ function DetailedCake({id}) {
           </div>
         </div>
         <div className="my-10 flex flex-col gap-5 md:flex-row">
-          <Image
-            src={cake?.image_link || ""}
-            alt={cake?.product_name || ""}
-            className="rounded-xl md:h-[350px] md:w-[350px] lg:h-[450px] lg:w-[450px]"
-            width={450}
-            height={450}
-          />
+          {cake?.image_link && (
+            <Image
+              src={cake.image_link}
+              alt={cake.product_name || "Cake image"}
+              className="rounded-xl md:h-[350px] md:w-[350px] lg:h-[450px] lg:w-[450px]"
+              width={450}
+              height={450}
+              priority
+            />
+          )}
           <div className="flex flex-col justify-center">
             <h2 className="pb-4 text-4xl font-bold capitalize">
               {cake?.product_name ?? undefined}
@@ -183,7 +185,8 @@ function DetailedCake({id}) {
               {size}{" "}
             </h4>
             <div className={`flex items-center gap-4`}>
-              {cake?.product_variant && cake?.product_variant?.length> 1 &&
+              {cake?.product_variant &&
+                cake?.product_variant?.length > 1 &&
                 cake?.product_variant?.map(
                   (variant, index) =>
                     variant.variant_features && (
@@ -201,7 +204,6 @@ function DetailedCake({id}) {
             </div>
             <h4 className="my-4 text-2xl font-semibold">Số lượng</h4>
             <div className="flex">
-       {/* eslint-disable-next-line @typescript-eslint/no-unused-expressions */}
               <button
                 className="h-10 w-10 rounded-bl-lg rounded-tl-lg border border-primary"
                 onClick={() => quantity > 1 && setQuantity(quantity - 1)}
@@ -230,7 +232,7 @@ function DetailedCake({id}) {
               </button>
 
               <button
-                onClick={() =>cake &&  handleBuyNow(cake)}
+                onClick={() => cake && handleBuyNow(cake)}
                 className="h-[40px] w-[220px] rounded-lg border bg-primary font-semibold text-slate-100 md:h-[40px] md:w-[180px] md:text-lg lg:h-[65px] lg:w-[260px] lg:text-2xl"
               >
                 Mua ngay

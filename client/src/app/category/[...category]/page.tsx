@@ -44,7 +44,7 @@ export async function generateMetadata(props :  {params : Params}) {
       description,
       url: `https://cakewaitown/category/${category}`,
       type: "website",
-      siteName: "Tiệm Bánh Ngọt",
+      siteName: "Tiệm Bánh Ngọt Sài Thành",
       //images: [{ url: image, width: 1200, height: 630, alt: title }]
     },
     twitter: {
@@ -58,7 +58,7 @@ export async function generateMetadata(props :  {params : Params}) {
 
 export default async function CategoryPage(props : { params: Params }) {
   const params = await props.params
-  const category = params.category
+  const category = params.category && params.category[0]
   return (
     <main>
       <Categories params={category} />

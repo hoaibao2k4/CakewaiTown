@@ -189,7 +189,7 @@ function Header() {
               open={open}
             >
               {list?.length > 0 ? (
-                <ListItems list={list} />
+                <ListItems list={list} onCloseDrawer={() => setOpen(false)}/>
               ) : (
                 <>
                   <h1 className="m-6">Thông tin giỏ hàng sẽ xuất hiện ở đây</h1>
