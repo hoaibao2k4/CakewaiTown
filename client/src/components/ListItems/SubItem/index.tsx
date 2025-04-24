@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Item } from "~/types";
@@ -9,7 +10,6 @@ interface SubItemProps {
 function SubItem({item, index} : SubItemProps) {
     const [quantity, setQuantity] = useState<number>(item.buy_quantity)
     const dispatch = useDispatch()
-
   return (
     <div key={index}>
       <div className="flex gap-6">
@@ -29,7 +29,7 @@ function SubItem({item, index} : SubItemProps) {
                   payload: {
                     product_id: item.product_id,
                     variant: item.variant,
-                    quantity,
+                    buy_quantity: quantity,
                   },
                 })
               }
@@ -51,7 +51,7 @@ function SubItem({item, index} : SubItemProps) {
                   payload: {
                     product_id: item.product_id,
                     variant: item.variant,
-                    quantity: quantity,
+                    buy_quantity: quantity,
                   },
                 });
               }}
