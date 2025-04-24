@@ -77,7 +77,6 @@ const CartItem = ({ item, index }: CartItemProps) => {
   useEffect(() => {
     if (quantity !== item.buy_quantity) setQuantity(item.buy_quantity);
   }, [item.buy_quantity]);
-
   return (
     <tr key={index} className="items-center">
       <td className="text-center align-middle">
