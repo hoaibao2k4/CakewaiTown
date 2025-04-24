@@ -98,7 +98,7 @@ const SignUpForm: React.FC = () => {
   );
 
   const handleGoogleLogin = useCallback(() => {
-    router.push(`${BE_BASE_URL}/api/public/google/login`);
+    router.push(`${BE_BASE_URL}api/public/google/login`);
   }, [router]);
 
   return (
