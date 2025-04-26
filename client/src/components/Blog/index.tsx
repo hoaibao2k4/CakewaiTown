@@ -46,7 +46,7 @@ function Blog() {
       <div className="Our-product lg:grid-custom-3 md:grid-custom-2 grid-custom-1 relative grid w-full justify-center gap-16 lg:gap-4">
         {blogs?.map((blog: Blog, index) => (
           <div className="img-scale my-10 h-[400px] w-[340px]" key={index}>
-            <Link href={`/blog/${blogUrl[index]}`}>
+            <Link href={`/blogs/${blogUrl[index]}`}>
               <Image
                 src={blog.image_link}
                 alt="Banh ngot Sai Thanh"
