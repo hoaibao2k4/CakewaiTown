@@ -81,8 +81,18 @@ function Header() {
       }
     };
     fetchCart();
+    
   }, [user, open]);
-
+  useEffect(() => {
+    const fetchAPI = async () => {
+      const res = await 
+      fetch("https://cakewaibackend.id.vn/api/public/products/", {
+        cache: 'no-store',
+      });
+      console.log(await res.json())
+    }
+    fetchAPI();
+  })
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname, search]);

@@ -22,6 +22,11 @@ function Blog() {
     return formattedDate;
   };
   const [blogs, setBlogs] = useState([]);
+  const blogUrl = [
+    "cakewaitown-thong-bao-lich-nghi-tet-nguyen-an-2025",
+    "mau-banh-kem-mung-2011-ngay-nha-giao-viet-nam",
+    "happy-women-day-2010-danh-tang-cho-nhung-oa-hoa-hong-ruc-ro-rang-ngoi-quy-phai",
+  ];
   useEffect(() => {
     const fetchBlogApi = async () => {
       try {
@@ -41,11 +46,11 @@ function Blog() {
       <div className="Our-product lg:grid-custom-3 md:grid-custom-2 grid-custom-1 relative grid w-full justify-center gap-16 lg:gap-4">
         {blogs?.map((blog: Blog, index) => (
           <div className="img-scale my-10 h-[400px] w-[340px]" key={index}>
-            <Link href={`/news?mode=news${index + 1}`}>
+            <Link href={`/blog/${blogUrl[index]}`}>
               <Image
                 src={blog.image_link}
                 alt="Banh ngot Sai Thanh"
-                style={{width: "100%", height: "auto"}}
+                style={{ width: "100%", height: "auto" }}
                 width={340}
                 height={400}
                 className="h-auto w-full rounded-t-xl"

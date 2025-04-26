@@ -84,9 +84,9 @@ function Card({
       <div className="h-[200px] rounded-b-xl bg-secondary pb-4 pt-2">
         <div className="mx-3">
           <Link href={{pathname: `/detailed/${id}`, query: {category: categoryName}}}>
-            <h3 className="h-[56px] text-xl font-semibold hover:text-slate-200">
+            <h1 className="h-[56px] text-xl font-semibold hover:text-slate-200">
               {product_name}
-            </h3>
+            </h1>
           </Link>
           <div className="w-full">
             <div className="flex justify-between">
