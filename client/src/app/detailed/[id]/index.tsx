@@ -171,9 +171,9 @@ function DetailedCake({ id }) {
             />
           )}
           <div className="flex flex-col justify-center">
-            <h2 className="pb-4 text-4xl font-bold capitalize">
+            <h1 className="pb-4 text-4xl font-bold capitalize">
               {cake?.product_name ?? undefined}
-            </h2>
+            </h1>
             <span
               className={`text-xl font-semibold text-primary md:text-2xl lg:text-3xl`}
             >
