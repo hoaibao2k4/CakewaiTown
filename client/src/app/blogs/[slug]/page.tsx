@@ -530,7 +530,59 @@ export const newsfeedData = [
   `
 },
 
+{
+  id: "news19",
+  image: "/images/images_new/news19.png",
+  date: "2025-04-27",
+  title: "CakewaiTown chính thức hợp tác cùng VnuEats!",
+  description: "Sự hợp tác này là bước tiến mới giúp CakewaiTown đến gần hơn với các tín đồ bánh ngọt trong khu vực Làng Đại học, đồng thời kết nối chúng mình với cộng đồng ẩm thực trẻ năng động và sành ăn.",
+  author: "CakewaiTown",
+  contentHtml: `
+<div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    🎉 CakewaiTown chính thức hợp tác cùng VnuEats! 🎉
+  </h2>
 
+  <Image src="/images/images_new/news19.png" alt="CakewaiTown hợp tác với VnuEats" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Bạn đã từng nghe đến <strong>VnuEats</strong> chưa? 👀 Đây là cộng đồng review ẩm thực đáng tin cậy dành riêng cho khu vực <strong>Làng Đại học Thủ Đức</strong>, nơi bạn có thể dễ dàng tìm kiếm, đánh giá và đặt món ngon chỉ trong vài cú click!
+  </p>
+
+  <p class="mt-4">
+    Và giờ đây, <strong>CakewaiTown</strong> rất vui mừng thông báo: <span class="text-purple-600 font-semibold">chúng mình đã chính thức có mặt trên VnuEats!</span> Từ giờ, bạn có thể nhanh chóng khám phá các mẫu bánh xinh xắn, đọc đánh giá thực tế từ cộng đồng, và đặt bánh cực kỳ tiện lợi!
+  </p>
+
+  <div class="bg-purple-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-purple-600">
+      🤝 Sự hợp tác mang lại điều gì?
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🌟 Dễ dàng tìm kiếm và tham khảo menu bánh tại CakewaiTown.</li>
+      <li>🌟 Đọc nhận xét chân thực từ những khách hàng đã trải nghiệm.</li>
+      <li>🌟 Đặt bánh nhanh chóng chỉ trong vài bước đơn giản.</li>
+    </ul>
+  </div>
+
+  <p class="mt-6 text-center font-semibold text-lg">
+    Cùng CakewaiTown và VnuEats lan tỏa thêm nhiều khoảnh khắc ngọt ngào nhé!
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Truy cập ngay: <a href="https://vnueats.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://vnueats.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương trong từng chiếc bánh!</p>
+  </div>
+</div>
+`
+},
 ];
 
 // Format ngày tháng
