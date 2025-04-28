@@ -18,13 +18,21 @@ const toSlug = (title: string) =>
 
 const newsfeedData_onpage = [
   {
-    id: "news18",
-    image: "/images/images_new/news18.png",
-    date: "2025-04-24",
-    title: "Bánh Kisses Trà Bá Tước & Việt Quất – Khi Thanh Mát Gặp Ngọt Ngào",
-    description: "Bánh Kisses là sự hòa quyện tinh tế giữa hương trà Bá Tước dịu nhẹ và vị chua ngọt của kem việt quất. Một chiếc bánh quyến rũ từ hình thức đến hương vị, dành cho người yêu phong cách thanh lịch.",
+    id: "news19",
+    image: "/images/images_new/news19.png",
+    date: "2025-04-27",
+    title: "CakewaiTown chính thức hợp tác cùng VnuEats!",
+    description: "Sự hợp tác này là bước tiến mới giúp CakewaiTown đến gần hơn với các tín đồ bánh ngọt trong khu vực Làng Đại học, đồng thời kết nối chúng mình với cộng đồng ẩm thực trẻ năng động và sành ăn.",
     author: "CakeWaiTown",
-},  
+}, 
+{
+  id: "news18",
+  image: "/images/images_new/news18.png",
+  date: "2025-04-24",
+  title: "Bánh Kisses Trà Bá Tước & Việt Quất – Khi Thanh Mát Gặp Ngọt Ngào",
+  description: "Bánh Kisses là sự hòa quyện tinh tế giữa hương trà Bá Tước dịu nhẹ và vị chua ngọt của kem việt quất. Một chiếc bánh quyến rũ từ hình thức đến hương vị, dành cho người yêu phong cách thanh lịch.",
+  author: "CakeWaiTown",
+},   
 {
   id: "news17",
   image: "/images/images_new/news17.png",
