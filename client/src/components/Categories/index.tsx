@@ -11,8 +11,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useRef, useState } from "react";
-import { getCake, searchCakes, sortCakes } from "~/api/apiCakes";
+import {  useRef, useState } from "react";
+import {  getCake, searchCakes, sortCakes } from "~/api/apiCakes";
 import { toast } from "react-toastify";
 function Categories({ params }) {
   const { cakes, categoryName, setCakes, getTypeOfCakes, categories } =
@@ -21,7 +21,7 @@ function Categories({ params }) {
   const [selectedLabel, setSelectedLabel] = useState<string>("3");
   const [prompt, setPrompt] = useState("");
   const ref = useRef<HTMLInputElement>(null);
-  const handleChange = async (event : SelectChangeEvent<string>) => {
+  const handleChange = async (event: SelectChangeEvent<string>) => {
     setSelectedLabel(event.target.value);
     const order =
       event.target.value === "1"
@@ -42,7 +42,6 @@ function Categories({ params }) {
       console.log(err);
     }
   };
-
   const handleSearch = async () => {
     const res = await searchCakes(prompt);
     if (res) setCakes(res);
@@ -54,13 +53,7 @@ function Categories({ params }) {
     }
     ref.current?.blur();
   };
-  // const handleEnterPress = async (e) => {
-  //   if (e.key === "Enter") {
-  //     const res = await searchCakes(prompt);
-  //     setCakes(res);
-  //     ref.current?.blur();
-  //   }
-  // };
+
   const label = "Bộ lọc";
   const items = [
     { id: 1, value: "Giá từ thấp đến cao" },
@@ -168,9 +161,9 @@ function Categories({ params }) {
                 image_link={cake.image_link}
                 description={cake.description}
                 product_name={cake.product_name}
-                categoryName={categoryName}
                 price={cake.product_variant[0].price}
                 cake={cake}
+                slug={cake.slug || "No-slug"}
               />
             ))}
           </div>

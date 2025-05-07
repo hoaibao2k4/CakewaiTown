@@ -11,4 +11,5 @@ export  interface CreateCake {
     description: string;
     product_type_id: string;
     product_variant: ProductVariant[];
+    slug?: string,
   }

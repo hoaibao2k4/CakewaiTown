@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { getCake, getCakeById } from "~/api/apiCakes";
+import { getCake, getCakeBySlug } from "~/api/apiCakes";
 import Card from "~/components/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "~/redux/cartSlice";
@@ -13,15 +13,12 @@ import { addCartItem } from "~/api/apiCart";
 import { toast } from "react-toastify";
 import { RootState } from "~/redux/store";
 import { CreateCake, Item, ProductVariant } from "~/types";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-function DetailedCake({ id }) {
+function DetailedCake({ slug }) {
   const [cake, setCake] = useState<CreateCake | null>(null);
   const [alikeCake, setAlikeCake] = useState<CreateCake[]>([]);
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState<ProductVariant | null>(null);
-  const searchParam = useSearchParams();
-  const categoryName = searchParam.get("category");
   const context = useContext(AddToCartContext);
   if (!context) {
     throw new Error("useContext must be used within AddToCartProvider");
@@ -40,15 +37,14 @@ function DetailedCake({ id }) {
     const fetchData = async () => {
       try {
         // Fetch cake by ID
-        if (id) {
-          const result = await getCakeById(id);
-          const cakeData = result.data;
-          setCake(cakeData);
+        if (slug) {
+          const result = await getCakeBySlug(slug);
+          setCake(result);
           console.log("Fetching OK");
   
           // Fetch similar cakes
-          if (cakeData?.product_type_id) {
-            const alikeResult = await getCake(cakeData.product_type_id);
+          if (result?.product_type_id) {
+            const alikeResult = await getCake(result.product_type_id);
             setAlikeCake(alikeResult.data);
           }
         }
@@ -56,8 +52,8 @@ function DetailedCake({ id }) {
         console.error("Error fetching data:", err);
       }
     };
-    if (id) fetchData();
-  }, [id]);
+    if (slug) fetchData();
+  }, [slug]);
   const handleAddToCart = async (cake) => {
     if (!user) {
       router.push("/authentic/signin");
@@ -99,7 +95,6 @@ function DetailedCake({ id }) {
       console.error("Lỗi khi thêm vào giỏ hàng:", error);
     }
   };
-
   const handleBuyNow = (cake: CreateCake) => {
     if (!user) {
       router.push("/authentic/signin");
@@ -257,8 +252,8 @@ function DetailedCake({ id }) {
               image_link={cake?.image_link}
               id={cake?._id || ""}
               price={cake?.product_variant[0]?.price}
-              categoryName={categoryName!}
               cake={cake}
+              slug={slug}
             />
           ))}
         </div>

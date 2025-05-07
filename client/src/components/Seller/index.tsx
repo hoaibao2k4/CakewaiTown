@@ -24,7 +24,7 @@ function Seller({ params }) {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-  const { cakes, categoryName } = useCake(params);
+  const { cakes } = useCake(params);
   return (
     <div className="best-seller w-full">
       <div className="mx-10 my-10 flex flex-col items-center text-primary lg:mx-28 lg:my-20 lg:flex-row">
@@ -67,8 +67,8 @@ function Seller({ params }) {
               description={cake.description}
               id={cake._id ?? ""}
               price={cake.product_variant[0].price}
-              categoryName={categoryName}
               cake={cake}
+              slug={cake.slug!}
             />
           ))}
         </Carousel>
