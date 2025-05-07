@@ -10,6 +10,18 @@ export const getCakeById = (id: string) => {
   return response.get(`/api/public/product/${id}`);
 };
 
+export const getCakeBySlug = async (slug :string) => {
+  try {
+    const res = await response.get(`/api/public/product/detail/${slug}`)
+    return res.data
+  }
+  catch (err: unknown) {
+    if (axios.isAxiosError(err)){
+      return err.message || err.code
+    }
+  }
+}
+
 export const getAllCakes = () => {
   return response.get("/api/public/products/");
 };
@@ -19,7 +31,8 @@ export const createCake = (
   image_link: string,
   description: string,
   product_type_id: string,
-  product_variant: ProductVariant[]
+  product_variant: ProductVariant[],
+  slug: string
 ) => {
   const data: CreateCake = {
     product_name: product_name,
@@ -29,6 +42,7 @@ export const createCake = (
     product_variant: Array.isArray(product_variant)
       ? product_variant
       : [product_variant],
+    slug: slug
   };
   return response.post("/api/public/product", data);
 };
@@ -43,7 +57,8 @@ export const updateCake = (
   image_link: string,
   description: string,
   product_type_id: string,
-  product_variant: ProductVariant[]
+  product_variant: ProductVariant[],
+  slug: string
 ) => {
   const data: CreateCake = {
     _id,
@@ -52,6 +67,7 @@ export const updateCake = (
     description,
     product_type_id,
     product_variant: product_variant,
+    slug: slug
   };
   return response.put(`/api/public/product/${_id}`, data);
 };

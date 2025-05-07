@@ -23,17 +23,16 @@ import { Roboto } from "next/font/google";
 const roboto = Roboto({
   subsets: ["vietnamese"],
   weight: ["100", "300", "400", "500", "700"],
-  variable: "--font-roboto"
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
-  title:
-    "CakewaiTown - Bánh ngọt làng đại học",
+  title: "CakewaiTown - Bánh ngọt làng đại học",
   description:
     "CakewaiTown một trang web trực tuyến về thương hiệu bánh ngọt uy tín được xây dựng dựa trên sự giao thoa giữa phong cách Á - Âu. Phục vụ đa dạng mẫu mã, hỗ trợ chuyên nghiệp tận tâm",
   robots: "index, follow",
   keywords:
-    "CakewaiTown, Cakewai, Cakewai Town, bánh ngọt, bakery, bánh mềm mịn, đặt bánh online, khuyến mãi, bánh sinh nhật, minicakes, bánh mì, bánh mặn, bữa ăn nhẹ",
+    "CakewaiTown, Cakewai, Cakewai Town, bánh ngọt làng đại học, banh ngot lang dai hoc, am thuc lang dai hoc, bánh ngọt, bakery, bánh mềm mịn, đặt bánh online, khuyến mãi, bánh sinh nhật, minicakes, bánh mì, bánh mặn, bữa ăn nhẹ",
   openGraph: {
     title: "CakewaiTown - Bánh ngọt làng đại học",
     description:
@@ -42,15 +41,16 @@ export const metadata: Metadata = {
     siteName: "Cakewai Town",
     type: "website",
     locale: "vi_VN",
-    images: [{
-      url: "https://cakewaitown.com/images/images_new/thum.png",
-      width: 1200,
-      height: 630,
-      alt: "CakewaiTown tưng bừng khai trương chi nhánh Võ Văn Ngân",
-    },
-  ],
+    images: [
+      {
+        url: "https://cakewaitown.com/images/images_new/thum.png",
+        width: 1200,
+        height: 630,
+        alt: "CakewaiTown tưng bừng khai trương chi nhánh Võ Văn Ngân",
+      },
+    ],
   },
-  
+
   alternates: {
     canonical: "https://cakewaitown.com",
   },
@@ -73,9 +73,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/icons/flavicon.svg" />
       </head>
-      <body
-        className={`${roboto.className} antialiased`}
-      >
+      <body className={`${roboto.className} antialiased`}>
         <ReduxProvider>
           <ModalWrapper>
             <Header />

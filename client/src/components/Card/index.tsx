@@ -21,7 +21,7 @@ interface CardProps {
   description: string;
   price: number;
   id: string;
-  categoryName: string;
+  slug: string
 }
 function Card({
   image_link,
@@ -30,8 +30,8 @@ function Card({
   price,
   index,
   id,
-  categoryName,
   cake,
+  slug
 }: CardProps) {
   const context = useContext(AddToCartContext);
   if (!context) {
@@ -74,8 +74,7 @@ function Card({
     <div key={index} className="img-scale m-5 h-[480px] w-[280px]">
       <Link
         href={{
-          pathname: `/detailed/${id}`,
-          query: { category: categoryName },
+          pathname: `/detailed/${slug}`,
         }}
       >
         <Image
@@ -90,8 +89,7 @@ function Card({
         <div className="mx-3">
           <Link
             href={{
-              pathname: `/detailed/${id}`,
-              query: { category: categoryName },
+              pathname: `/detailed/${slug}`,
             }}
           >
             <h1 className="h-[56px] text-xl font-semibold hover:text-slate-200">
