@@ -44,7 +44,7 @@ export async function generateMetadata(props :  {params : Params}) {
       description,
       url: `https://cakewaitown/category/${category}`,
       type: "website",
-      siteName: "Tiệm Bánh Ngọt Sài Thành",
+      siteName: "Danh sách bánh",
       //images: [{ url: image, width: 1200, height: 630, alt: title }]
     },
     twitter: {
