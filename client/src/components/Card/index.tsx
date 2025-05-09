@@ -69,7 +69,7 @@ function Card({
       router.push("/authentic/signin");
     }
   };
-
+console.log(id)
   return (
     <div key={index} className="img-scale m-5 h-[480px] w-[280px]">
       <Link
