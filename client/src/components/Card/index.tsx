@@ -115,7 +115,7 @@ function Card({
           </span>
           <div className="mt-2 flex justify-between gap-2 text-xs font-semibold">
             <Link
-              href={{ pathname: `/detailed/${id}` }}
+              href={{ pathname: `/detailed/${slug}` }}
               className="basis-2/5 rounded bg-primary px-4 py-[6px] text-center text-slate-100"
             >
               Xem chi tiết
