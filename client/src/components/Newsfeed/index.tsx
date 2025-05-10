@@ -17,6 +17,30 @@ const toSlug = (title: string) =>
     .replace(/-+$/, "");
 
 const newsfeedData_onpage = [
+        {
+    id: "news22",
+    image: "/images/images_new/news22.png",
+  date: "2025-05-12",
+  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây ",
+  description: "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
+  author: "Gia Mẫn",
+}, 
+      {
+    id: "news21",
+    image: "/images/images_new/news21.png",
+  date: "2025-05-11",
+  title: "Mua Bánh Sinh Nhật In Hình Theo Yêu Cầu",
+  description: "Giờ đây bạn có thể mua bánh sinh nhật in hình theo yêu cầu tại CakewaiTown! Với công nghệ AI hiện đại, chúng tôi giúp bạn tạo ra những chiếc bánh sinh nhật độc đáo, in hình cá nhân, thú cưng hoặc khoảnh khắc yêu thích, mang dấu ấn riêng của bạn.",
+    author: "CakeWaiTown",
+}, 
+    {
+    id: "news20",
+    image: "/images/images_new/news20.png",
+    date: "2025-05-10",
+    title: "Bánh ngọt Làng Đại Học",
+    description: "Tin vui cho sinh viên KTX khu A và khu B: CakewaiTown đã có mặt tại Làng Đại Học, mang đến những chiếc bánh ngọt thơm ngon cùng dịch vụ giao hàng nhanh, giúp bạn dễ dàng thưởng thức chỉ trong 30 phút.",
+    author: "CakeWaiTown",
+}, 
   {
     id: "news19",
     image: "/images/images_new/news19.png",
@@ -121,6 +145,7 @@ const newsfeedData_onpage = [
         description: "CakewaiTown cung cấp: Bánh sinh nhật, bánh minicake, bánh sự kiện, tiệc buffet bánh ngọt, tiệc bánh ngọt khai trương, bánh coockies,... liên hệ hotline để được tư...",
         author: "Gia Mẫn",
     },
+    
 
 
   

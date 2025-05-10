@@ -583,6 +583,171 @@ export const newsfeedData = [
 </div>
 `
 },
+{
+  id: "news20",
+  image: "/images/images_new/news20.png",
+  date: "2025-05-10",
+  title: "Bánh ngọt Làng Đại Học",
+  description: "Tin vui cho sinh viên KTX khu A và khu B: CakewaiTown đã có mặt tại Làng Đại Học, mang đến những chiếc bánh ngọt thơm ngon cùng dịch vụ giao hàng nhanh, giúp bạn dễ dàng thưởng thức chỉ trong 30 phút.",
+  author: "CakewaiTown",
+  contentHtml: `
+<div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    🎉 CakewaiTown chính thức phục vụ tại Làng Đại Học! 🎉
+  </h2>
+
+  <Image src="/images/images_new/news20.png" alt="Bánh ngọt CakewaiTown tại Làng Đại Học " width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Tin vui dành cho các bạn sinh viên <strong>KTX khu A</strong>, <strong>KTX khu B</strong> và toàn bộ khu vực <strong>Làng Đại Học Thủ Đức</strong>: từ nay, bạn có thể dễ dàng đặt những chiếc bánh ngọt thơm ngon của <strong>CakewaiTown</strong> mà không cần đi đâu xa!
+  </p>
+
+  <p class="mt-4">
+    Chúng tôi mang đến đa dạng các loại bánh: bánh sinh nhật, bánh mousse, su kem, bánh trà Bá Tước & việt quất, bánh giỏ quýt… Tất cả đều được làm mới mỗi ngày, đảm bảo hương vị tươi ngon và hình thức bắt mắt.
+  </p>
+
+  <div class="bg-purple-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-purple-600">
+      🚚 Giao hàng nhanh – Chỉ từ 30 phút!
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>⚡ Giao bánh tận tay tại <strong>KTX khu A</strong>, <strong>KTX khu B</strong>, Làng Đại Học.</li>
+      <li>⚡ Đặt hàng online nhanh gọn, không mất thời gian chờ đợi.</li>
+      <li>⚡ Đảm bảo chất lượng bánh mềm, tươi mới khi đến tay khách hàng.</li>
+    </ul>
+  </div>
+
+  <p class="mt-6 text-center font-semibold text-lg">
+    Bạn đang tìm kiếm “bánh ngọt làng đại học” hay “mua bánh ngọt ở khu A hoặc khu B”? Đừng quên CakewaiTown nhé!
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Đặt bánh ngay hôm nay tại: <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Mang vị ngọt đến từng khoảnh khắc sinh viên!</p>
+  </div>
+</div>
+`
+},
+{
+  id: "news21",
+  image: "/images/images_new/news21.png",
+  date: "2025-05-11",
+  title: "Mua Bánh Sinh Nhật In Hình Theo Yêu Cầu",
+  description: "Giờ đây bạn có thể mua bánh sinh nhật in hình theo yêu cầu tại CakewaiTown! Với công nghệ AI hiện đại, chúng tôi giúp bạn tạo ra những chiếc bánh sinh nhật độc đáo, in hình cá nhân, thú cưng hoặc khoảnh khắc yêu thích, mang dấu ấn riêng của bạn.",
+  author: "CakewaiTown",
+  contentHtml: `
+<div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    🎂 Mua Bánh Sinh Nhật In Hình Theo Yêu Cầu – Công Nghệ AI Độc Quyền Tại CakewaiTown! 🎂
+  </h2>
+
+  <Image src="/images/images_new/news21.png" alt="Bánh sinh nhật in hình theo yêu cầu CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Bạn muốn sở hữu một chiếc bánh sinh nhật thật độc đáo, mang dấu ấn cá nhân? 💡 Tại <strong>CakewaiTown</strong>, chúng tôi mang đến dịch vụ <strong>mua bánh sinh nhật in hình theo yêu cầu</strong> – giúp bạn biến những bức ảnh yêu thích thành tác phẩm ngọt ngào!
+  </p>
+
+  <p class="mt-4">
+    Với công nghệ AI tiên tiến, khách hàng chỉ cần tải lên hình ảnh (ảnh bản thân, thú cưng, bạn bè, khoảnh khắc đáng nhớ…), hệ thống của chúng tôi sẽ tự động xử lý, tạo mẫu thiết kế bánh và gửi bản xem trước cho bạn duyệt. Sau khi xác nhận, đội ngũ CakewaiTown sẽ bắt tay thực hiện chiếc bánh hoàn hảo nhất!
+  </p>
+
+  <div class="bg-purple-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-purple-600">
+      ✨ Vì sao nên chọn bánh sinh nhật in hình tại CakewaiTown?
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>📸 In hình theo yêu cầu – không giới hạn ý tưởng.</li>
+      <li>🤖 Công nghệ AI hiện đại – tạo mẫu chính xác, đẹp mắt.</li>
+      <li>🎨 Đa dạng phong cách trang trí: dễ thương, sang trọng, sáng tạo.</li>
+      <li>⚡ Đặt nhanh – giao hàng tận nơi đúng hẹn.</li>
+    </ul>
+  </div>
+
+  <p class="mt-6 text-center font-semibold text-lg">
+    Dù là sinh nhật, kỷ niệm, hay bất kỳ dịp đặc biệt nào – hãy để CakewaiTown cùng bạn tạo nên những chiếc bánh không thể quên!
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Đặt bánh ngay hôm nay tại: <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Mang yêu thương gửi gắm qua từng chiếc bánh!</p>
+  </div>
+</div>
+`
+},
+{
+  id: "news22",
+  image: "/images/images_new/news22.png",
+  date: "2025-05-12",
+  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây ",
+  description: "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
+  author: "Gia Mẫn",
+  contentHtml: `
+<div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    🥖 Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây – Trải Nghiệm Ngon Đúng Điệu Tại CakewaiTown 🥖
+  </h2>
+
+  <Image src="/images/images_new/news22.png" alt="Bánh mì Pháp chuẩn vị CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Nếu bạn đang tìm kiếm <strong>cửa hàng bán bánh mì Pháp chuẩn vị gần đây</strong>, hãy đến ngay <strong>CakewaiTown</strong> – nơi nổi tiếng với những chiếc bánh mì baguette giòn rụm, thơm phức, được làm thủ công từ công thức truyền thống Pháp.
+  </p>
+  <Image src="/images/images_new/eur_2.png" alt="Bánh mì Pháp chuẩn vị CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+  <Image src="/images/images_new/eur_4.png" alt="Bánh mì Pháp chuẩn vị CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+  <p class="mt-4">
+    Chúng tôi sử dụng nguyên liệu chất lượng cao: bột mì Pháp, men tự nhiên và bơ nhập khẩu, để tạo ra lớp vỏ giòn tan, ruột mềm mịn, mang đúng hương vị bánh mì Paris chính gốc. Mỗi ổ bánh ra lò đều được kiểm soát kỹ lưỡng, đảm bảo vị ngon hoàn hảo từ hình thức đến chất lượng.
+  </p>
+
+
+  <div class="bg-purple-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-purple-600">
+      💡 Vì sao nên chọn bánh mì Pháp tại CakewaiTown?
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🇫🇷 Công thức chuẩn Pháp – nguyên liệu nhập khẩu.</li>
+      <li>🔥 Nướng bánh hàng ngày – luôn nóng giòn khi giao.</li>
+      <li>🚀 Giao hàng nhanh – phục vụ tận nơi cho khu vực gần bạn.</li>
+      <li>💖 Đa dạng lựa chọn: bánh mì sandwich, baguette, croissant…</li>
+    </ul>
+  </div>
+
+  <p class="mt-6 text-center font-semibold text-lg">
+    Một chiếc bánh mì ngon không chỉ là món ăn, mà còn là trải nghiệm tinh tế của văn hóa ẩm thực!
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Ghé ngay <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a> để đặt bánh mì Pháp chuẩn vị gần bạn nhé!
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương qua từng chiếc bánh!</p>
+  </div>
+</div>
+`
+},
+
+
 ];
 
 // Format ngày tháng
