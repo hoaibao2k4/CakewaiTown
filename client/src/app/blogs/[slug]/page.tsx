@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from 'next/head';
 import type { Metadata } from "next";
+import slugify from "slugify";
 
 
 export const newsfeedData = [
@@ -694,7 +695,7 @@ export const newsfeedData = [
   id: "news22",
   image: "/images/images_new/news22.png",
   date: "2025-05-12",
-  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây ",
+  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây",
   description: "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
   author: "Gia Mẫn",
   contentHtml: `
@@ -756,13 +757,12 @@ export const newsfeedData = [
 //     return date.toLocaleDateString("vi-VN", { year: "numeric", month: "short", day: "numeric" });
 // };
 export const toSlug = (title: string) =>
-  title
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9 ]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+$/, "");
+  slugify(title, {
+    lower: true,
+    locale: "vi", 
+    strict: true, 
+    trim: true,
+  });
 // 🟢 Hàm tạo danh sách đường dẫn tĩnh
 export async function generateStaticParams() {
   return newsfeedData.map((news) => ({
