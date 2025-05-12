@@ -5,23 +5,23 @@ import Image from "next/image";
 import Head from "next/head";
 import * as React from 'react';
 import { Pagination, Stack } from "@mui/material";
+import slugify from "slugify";
 
 
-const toSlug = (title: string) =>
-  title
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9 ]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+$/, "");
+export const toSlug = (title: string) =>
+  slugify(title, {
+    lower: true,
+    locale: "vi", 
+    strict: true, 
+    trim: true,
+  });
 
 const newsfeedData_onpage = [
         {
     id: "news22",
     image: "/images/images_new/news22.png",
   date: "2025-05-12",
-  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây ",
+  title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây",
   description: "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
   author: "Gia Mẫn",
 }, 
