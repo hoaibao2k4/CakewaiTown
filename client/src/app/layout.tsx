@@ -75,6 +75,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/assets/icons/flavicon.svg" />
+        <meta name="p:domain_verify" content="ea3f9abd15e3766f3e62b9070a6d46ea" />
       </head>
       <body className={`${roboto.className} antialiased`}>
         <ReduxProvider>
