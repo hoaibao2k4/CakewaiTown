@@ -12,4 +12,3 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: 'https://cakewaitown.com/sitemap.xml',
   }
 }
-``
