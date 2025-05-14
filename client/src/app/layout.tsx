@@ -50,6 +50,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  other: {
+    "p:domain_verify": "ea3f9abd15e3766f3e62b9070a6d46ea",
+  },
 
   alternates: {
     canonical: "https://cakewaitown.com",
