@@ -27,10 +27,12 @@ function Seller({ params }) {
   const { cakes } = useCake(params);
   return (
     <div className="best-seller w-full">
+      <h1 className="text-5xl text-primary text-center font-bold pt-6">Bánh Ngọt Làng Đại Học</h1>
       <div className="mx-10 my-10 flex flex-col items-center text-primary lg:mx-28 lg:my-20 lg:flex-row">
-        <h1 className="text-center text-3xl font-bold md:text-4xl lg:basis-1/2 lg:text-4xl">
+        
+        <h2 className="text-center text-3xl font-bold md:text-4xl lg:basis-1/2 lg:text-4xl">
           Sản phẩm bán chạy...
-        </h1>
+        </h2>
         <div className="my-1 h-1 w-28 border-b-2 border-primary lg:my-0 lg:rotate-90 lg:pr-8"></div>
         <p className="text-base font-medium lg:basis-1/2 lg:text-lg">
           Chúng tôi tự hào giới thiệu những tác phẩm được yêu thích nhất của

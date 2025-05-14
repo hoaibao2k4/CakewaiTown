@@ -40,9 +40,9 @@ function Blog() {
   }, []);
   return (
     <div className="Hot-event pb-[20rem] pt-4">
-      <h1 className="text-center text-3xl font-bold text-primary lg:text-5xl">
+      <h2 className="text-center text-3xl font-bold text-primary lg:text-5xl">
         Sự kiện nổi bật
-      </h1>
+      </h2>
       <div className="Our-product lg:grid-custom-3 md:grid-custom-2 grid-custom-1 relative grid w-full justify-center gap-16 lg:gap-4">
         {blogs?.map((blog: Blog, index) => (
           <div className="img-scale my-10 h-[400px] w-[340px]" key={index}>

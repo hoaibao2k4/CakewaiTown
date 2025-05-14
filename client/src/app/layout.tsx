@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "CakewaiTown một trang web trực tuyến về thương hiệu bánh ngọt uy tín được xây dựng dựa trên sự giao thoa giữa phong cách Á - Âu. Phục vụ đa dạng mẫu mã, hỗ trợ chuyên nghiệp tận tâm",
   robots: "index, follow",
   keywords:
-    "CakewaiTown, Cakewai, Cakewai Town, bánh ngọt làng đại học, banh ngot lang dai hoc, am thuc lang dai hoc, bánh ngọt, bakery, bánh mềm mịn, đặt bánh online, khuyến mãi, bánh sinh nhật, minicakes, bánh mì, bánh mặn, bữa ăn nhẹ",
+    "CakewaiTown, Cakewai, Cakewai Town, bánh ngọt làng đại học, banh ngot lang dai hoc, làng đại học, bánh ngọt, bakery, bánh mềm mịn, đặt bánh online, khuyến mãi, bánh sinh nhật, minicakes, bánh mì, bánh mặn, bữa ăn nhẹ",
   openGraph: {
     title: "CakewaiTown - Bánh ngọt làng đại học",
     description:
