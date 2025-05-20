@@ -16,10 +16,11 @@ export const toSlug = (title: string) =>
   });
 
 const newsfeedData_onpage = [
+  
   {
     id: "news29",
     image: "/images/images_new/news29.png",
-    date: "2025-05-20",
+    date: "2025-05-24",
     title:
       "Bánh kem chợ Nhân Văn - Sự lựa chọn hàng đầu của sinh viên làng đại học",
     description:
@@ -29,12 +30,37 @@ const newsfeedData_onpage = [
   {
     id: "news28",
     image: "/images/images_new/news28.png",
-    date: "2025-05-20",
+    date: "2025-05-23",
     title: "Muốn mua bánh ngọt tại KTX Khu A? Đã có Cakewai Town lo",
     description:
       "Nhận biết được nhu cầu cũng như sự ủng hộ của sinh viên làng đại học, chúng tôi quyết định khai trương chi nhánh mới ngay tại KTX Khu A để phục vụ các bạn một cách tốt nhất!",
     author: "Hoài Bảo",
   },
+  {
+  id: "news25",
+  image: "/images/images_new/news25.png",
+  date: "2025-05-22",
+  title: "Top các bánh cháu yêu mừng thọ Ông Bà",
+  description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
+  author: "CakewaiTown",
+}, 
+            {
+    id: "news24",
+    image: "/images/images_new/news24.png",
+  date: "2025-05-21",
+  title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
+  description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
+  author: "CakewaiTown",
+}, 
+          {
+    id: "news23",
+    image: "/images/images_new/news23.png",
+  date: "2025-05-20",
+  title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
+  description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
+  author: "CakewaiTown",
+}, 
+
   {
     id: "news22",
     image: "/images/images_new/news22.png",
