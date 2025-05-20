@@ -17,6 +17,30 @@ export const toSlug = (title: string) =>
   });
 
 const newsfeedData_onpage = [
+            {
+  id: "news25",
+  image: "/images/images_new/news25.png",
+  date: "2025-05-22",
+  title: "Top các bánh cháu yêu mừng thọ Ông Bà",
+  description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
+  author: "CakewaiTown",
+}, 
+            {
+    id: "news24",
+    image: "/images/images_new/news24.png",
+  date: "2025-05-21",
+  title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
+  description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
+  author: "CakewaiTown",
+}, 
+          {
+    id: "news23",
+    image: "/images/images_new/news23.png",
+  date: "2025-05-20",
+  title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
+  description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
+  author: "CakewaiTown",
+}, 
         {
     id: "news22",
     image: "/images/images_new/news22.png",
