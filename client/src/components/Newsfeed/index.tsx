@@ -16,7 +16,27 @@ export const toSlug = (title: string) =>
   });
 
 const newsfeedData_onpage = [
-            {
+  
+  {
+    id: "news29",
+    image: "/images/images_new/news29.png",
+    date: "2025-05-24",
+    title:
+      "Bánh kem chợ Nhân Văn - Sự lựa chọn hàng đầu của sinh viên làng đại học",
+    description:
+      "Bánh kem chợ Nhân Văn của Cakewai Town luôn thu hút hàng ngàn lượt mua mỗi tháng, luôn trong tình trạng không đủ bán. Đó là vì sao?",
+    author: "Hoài Bảo",
+  },
+  {
+    id: "news28",
+    image: "/images/images_new/news28.png",
+    date: "2025-05-23",
+    title: "Muốn mua bánh ngọt tại KTX Khu A? Đã có Cakewai Town lo",
+    description:
+      "Nhận biết được nhu cầu cũng như sự ủng hộ của sinh viên làng đại học, chúng tôi quyết định khai trương chi nhánh mới ngay tại KTX Khu A để phục vụ các bạn một cách tốt nhất!",
+    author: "Hoài Bảo",
+  },
+  {
   id: "news25",
   image: "/images/images_new/news25.png",
   date: "2025-05-22",
@@ -41,25 +61,6 @@ const newsfeedData_onpage = [
   author: "CakewaiTown",
 }, 
 
-  {
-    id: "news29",
-    image: "/images/images_new/news29.png",
-    date: "2025-05-20",
-    title:
-      "Bánh kem chợ Nhân Văn - Sự lựa chọn hàng đầu của sinh viên làng đại học",
-    description:
-      "Bánh kem chợ Nhân Văn của Cakewai Town luôn thu hút hàng ngàn lượt mua mỗi tháng, luôn trong tình trạng không đủ bán. Đó là vì sao?",
-    author: "Hoài Bảo",
-  },
-  {
-    id: "news28",
-    image: "/images/images_new/news28.png",
-    date: "2025-05-20",
-    title: "Muốn mua bánh ngọt tại KTX Khu A? Đã có Cakewai Town lo",
-    description:
-      "Nhận biết được nhu cầu cũng như sự ủng hộ của sinh viên làng đại học, chúng tôi quyết định khai trương chi nhánh mới ngay tại KTX Khu A để phục vụ các bạn một cách tốt nhất!",
-    author: "Hoài Bảo",
-  },
   {
     id: "news22",
     image: "/images/images_new/news22.png",

@@ -1232,14 +1232,13 @@ export const newsfeedData = [
   </div>
 </div>
 `
-}
+},
 
-`,
-  },
+
   {
     id: "news28",
     image: "/images/images_new/news28.png",
-    date: "2025-05-20",
+    date: "2025-05-23",
     title: "Muốn mua bánh ngọt tại KTX Khu A? Đã có Cakewai Town lo",
     description:
       "Nhận biết được nhu cầu cũng như sự ủng hộ của sinh viên làng đại học, chúng tôi quyết định khai trương chi nhánh mới ngay tại KTX Khu A để phục vụ các bạn một cách tốt nhất!",
@@ -1299,7 +1298,7 @@ export const newsfeedData = [
   {
     id: "news29",
     image: "/images/images_new/news29.png",
-    date: "2025-05-20",
+    date: "2025-05-24",
     title:
       "Bánh kem chợ Nhân Văn - Sự lựa chọn hàng đầu của sinh viên làng đại học",
     description:
@@ -1400,7 +1399,7 @@ export async function generateMetadata({
   return {
     title: `${news.title} - CakewaiTown`,
     description: news.description,
-    keywords: news.keywords ?? [],
+    keywords: news?.keywords ?? [],
     openGraph: {
       title: news.title,
       description: news.description,
@@ -1415,7 +1414,6 @@ export async function generateMetadata({
       images: [`${news.image}`],
     },
     metadataBase,
-    keywords: news?.keywords,
   };
 }
 
