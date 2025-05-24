@@ -16,7 +16,7 @@ export const toSlug = (title: string) =>
   });
 
 const newsfeedData_onpage = [
-  
+
   {
     id: "news29",
     image: "/images/images_new/news29.png",
@@ -37,29 +37,45 @@ const newsfeedData_onpage = [
     author: "Hoài Bảo",
   },
   {
-  id: "news25",
-  image: "/images/images_new/news25.png",
-  date: "2025-05-22",
-  title: "Top các bánh cháu yêu mừng thọ Ông Bà",
-  description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
-  author: "CakewaiTown",
-}, 
-            {
+    id: "news27",
+    image: "/images/images_new/news27.png",
+    date: "2025-05-24",
+    title: " Top những bánh ngọt ít calo tại CakewaiTown",
+    description: "Khám phá các loại bánh ngọt ít calo tại CakewaiTown, bao gồm Passion Mousse Cheesecake, Tiramisu Mâm Xôi, High Fiber Bread và nhiều loại bánh ngon lành mạnh khác.",
+    author: "Phước Lộc",
+  },
+  {
+    id: "news26",
+    image: "/images/images_new/news26.png",
+    date: "2025-05-24",
+    title: "Sự khác nhau giữa bánh mì và bánh mặn",
+    description: "Bánh mì và bánh mặn có gì khác nhau? Tìm hiểu chi tiết về đặc điểm, cách chế biến và công dụng của hai loại bánh phổ biến này.",
+    author: "Phước Lộc",
+  },
+  {
+    id: "news25",
+    image: "/images/images_new/news25.png",
+    date: "2025-05-22",
+    title: "Top các bánh cháu yêu mừng thọ Ông Bà",
+    description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
+    author: "CakewaiTown",
+  },
+  {
     id: "news24",
     image: "/images/images_new/news24.png",
-  date: "2025-05-21",
-  title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
-  description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
-  author: "CakewaiTown",
-}, 
-          {
+    date: "2025-05-21",
+    title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
+    description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
+    author: "CakewaiTown",
+  },
+  {
     id: "news23",
     image: "/images/images_new/news23.png",
-  date: "2025-05-20",
-  title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
-  description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
-  author: "CakewaiTown",
-}, 
+    date: "2025-05-20",
+    title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
+    description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
+    author: "CakewaiTown",
+  },
 
   {
     id: "news22",
