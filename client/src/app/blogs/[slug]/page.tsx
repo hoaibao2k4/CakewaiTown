@@ -14,10 +14,9 @@ export const newsfeedData = [
     keywords: [
       "thông báo nghỉ tết nguyên đán",
       "cakewaitown nghỉ lễ",
-      "bánh kem tết 2025"
+      "bánh kem tết 2025",
     ],
-    contentHtml:
-      `
+    contentHtml: `
           <div class="text-center text-black ">
             <div class="my-5">CakewaiTown: Thông Báo Lịch Nghỉ Tết Nguyên Đán 2025.</div>
             <div>Kính Chúc Quý Khách Hàng Năm Mới An Khang Và Thịnh Vượng.</div>
@@ -43,10 +42,9 @@ export const newsfeedData = [
       "bánh ngọt tặng giáo viên",
       "bánh kem tri ân thầy cô",
       "cakewaitown bánh 20/11",
-      "quà tặng 20/11 độc đáo"
+      "quà tặng 20/11 độc đáo",
     ],
-    contentHtml:
-      `   
+    contentHtml: `   
           <div class="text-black">
             <h2 class="my-5">"Không thầy đố mày làm nên"</h2>
             <h2 class="my-5">
@@ -100,7 +98,7 @@ export const newsfeedData = [
       "bánh mừng ngày phụ nữ Việt Nam",
       "cakewaitown bánh 20/10",
       "bánh tặng chị em công ty",
-      "bánh kem tinh tế cho ngày lễ"
+      "bánh kem tinh tế cho ngày lễ",
     ],
     contentHtml: `
           <div class="text-black">
@@ -152,7 +150,7 @@ export const newsfeedData = [
       "cheesecake vị chanh dây",
       "bánh mousse ngon ở Thủ Đức",
       "cakewaitown passion mousse",
-      "bánh mousse lạnh trái cây"
+      "bánh mousse lạnh trái cây",
     ],
     contentHtml: `
           <div class="text-black">
@@ -266,7 +264,7 @@ export const newsfeedData = [
       "bánh brownie slab cake",
       "bánh Madeira cake",
       "bánh Berry Cream Cheese Bun",
-      "bánh Âu đa văn hóa"
+      "bánh Âu đa văn hóa",
     ],
     contentHtml: `
           <div class="text-black">
@@ -318,7 +316,7 @@ export const newsfeedData = [
       "bánh minicake TP.HCM",
       "đặt bánh sự kiện CakewaiTown",
       "bánh cookies, macaron, su kem",
-      "tiệc bánh ngọt chuyên nghiệp"
+      "tiệc bánh ngọt chuyên nghiệp",
     ],
     contentHtml: `
                 <div class="text-black">
@@ -355,7 +353,7 @@ export const newsfeedData = [
       "bánh kem Thủ Đức",
       "đặt bánh sinh nhật Thủ Đức",
       "cửa hàng bánh ngọt mới Thủ Đức",
-      "bánh ngọt khai trương khuyến mãi"
+      "bánh ngọt khai trương khuyến mãi",
     ],
     contentHtml: `
         <div class="text-black">
@@ -408,7 +406,7 @@ export const newsfeedData = [
       "bánh ngọt cho ngày lễ tình nhân",
       "bánh kem Valentine 2025",
       "đặt bánh Valentine online",
-      "giảm giá 50% bánh Valentine"
+      "giảm giá 50% bánh Valentine",
     ],
     contentHtml: `
     <div class = 'text-black'>
@@ -449,8 +447,10 @@ export const newsfeedData = [
     id: "news15",
     image: "/images/images_new/news15.png",
     date: "2025-04-21",
-    title: "Núng Na Núng Nính Cùng Entremet – Tinh Hoa Bánh Mousse Pháp Tại CakewaiTown",
-    description: "Entremet là một dòng bánh mousse nhiều lớp có nguồn gốc từ nền ẩm thực Pháp. Loại bánh này nổi bật với cấu trúc mềm mịn, từng lớp mousse được kết hợp hài hòa cùng lớp gương bóng bên ngoài. Tất cả hòa quyện thành một trải nghiệm tan chảy ngay khi chạm lưỡi – đầy quyến rũ và khó quên.",
+    title:
+      "Núng Na Núng Nính Cùng Entremet – Tinh Hoa Bánh Mousse Pháp Tại CakewaiTown",
+    description:
+      "Entremet là một dòng bánh mousse nhiều lớp có nguồn gốc từ nền ẩm thực Pháp. Loại bánh này nổi bật với cấu trúc mềm mịn, từng lớp mousse được kết hợp hài hòa cùng lớp gương bóng bên ngoài. Tất cả hòa quyện thành một trải nghiệm tan chảy ngay khi chạm lưỡi – đầy quyến rũ và khó quên.",
     author: "CakewaiTown",
     keywords: [
       "Entremet",
@@ -523,7 +523,8 @@ export const newsfeedData = [
     image: "/images/images_new/news16.png",
     date: "2025-04-22",
     title: "Bánh Giỏ Quýt – Hương Vị Truyền Thống Đầy Tươi Mát",
-    description: "Mang trong mình hương vị đặc trưng từ quả quýt tươi, bánh giỏ quýt là sự kết hợp tinh tế giữa lớp vỏ mềm mịn và nhân quýt ngọt thanh, tạo nên món bánh đậm chất truyền thống nhưng vẫn đầy cuốn hút.",
+    description:
+      "Mang trong mình hương vị đặc trưng từ quả quýt tươi, bánh giỏ quýt là sự kết hợp tinh tế giữa lớp vỏ mềm mịn và nhân quýt ngọt thanh, tạo nên món bánh đậm chất truyền thống nhưng vẫn đầy cuốn hút.",
     author: "CakewaiTown",
     keywords: [
       "Bánh giỏ quýt",
@@ -542,7 +543,7 @@ export const newsfeedData = [
       "Bánh giỏ quýt ngon",
       "Bánh giỏ quýt cao cấp",
       "Món bánh mùa xuân",
-      "Bánh ngon tươi sạch"
+      "Bánh ngon tươi sạch",
     ],
     contentHtml: `
 
@@ -583,14 +584,15 @@ export const newsfeedData = [
       <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
     </div>
   </div>
-  `
+  `,
   },
   {
     id: "news17",
     image: "/images/images_new/news17.png",
     date: "2025-04-23",
     title: "Su Kem Hạt Phỉ – Ngọt Ngọt Và Bùi Bùi Đến Từ Sự Tinh Tế",
-    description: "Su kem hạt phỉ là món bánh quyến rũ với lớp vỏ su giòn và phần nhân kem hạt phỉ thơm bùi, béo ngậy. Một lựa chọn hoàn hảo cho những ai yêu thích vị bánh truyền thống nhưng đầy tinh tế.",
+    description:
+      "Su kem hạt phỉ là món bánh quyến rũ với lớp vỏ su giòn và phần nhân kem hạt phỉ thơm bùi, béo ngậy. Một lựa chọn hoàn hảo cho những ai yêu thích vị bánh truyền thống nhưng đầy tinh tế.",
     author: "CakewaiTown",
     keywords: [
       "Su kem hạt phỉ",
@@ -612,7 +614,7 @@ export const newsfeedData = [
       "Bánh hạt phỉ thơm bùi",
       "Bánh ngọt truyền thống",
       "Tiệc trà bánh ngọt",
-      "Bánh kem cho dịp lễ"
+      "Bánh kem cho dịp lễ",
     ],
     contentHtml: `
 
@@ -649,14 +651,15 @@ export const newsfeedData = [
       <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
     </div>
   </div>
-  `
+  `,
   },
   {
     id: "news18",
     image: "/images/images_new/news18.png",
     date: "2025-04-24",
     title: "Bánh Kisses Trà Bá Tước & Việt Quất – Khi Thanh Mát Gặp Ngọt Ngào",
-    description: "Bánh Kisses là sự hòa quyện tinh tế giữa hương trà Bá Tước dịu nhẹ và vị chua ngọt của kem việt quất. Một chiếc bánh quyến rũ từ hình thức đến hương vị, dành cho người yêu phong cách thanh lịch.",
+    description:
+      "Bánh Kisses là sự hòa quyện tinh tế giữa hương trà Bá Tước dịu nhẹ và vị chua ngọt của kem việt quất. Một chiếc bánh quyến rũ từ hình thức đến hương vị, dành cho người yêu phong cách thanh lịch.",
     author: "CakewaiTown",
     keywords: [
       "Bánh Kisses",
@@ -678,7 +681,7 @@ export const newsfeedData = [
       "Bánh việt quất ngon",
       "Bánh kem thơm ngon",
       "CakewaiTown bánh ngọt",
-      "Bánh kem cho tiệc trà"
+      "Bánh kem cho tiệc trà",
     ],
     contentHtml: `
 
@@ -715,7 +718,7 @@ export const newsfeedData = [
       <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Nơi mỗi chiếc bánh là một câu chuyện ngọt ngào!</p>
     </div>
   </div>
-  `
+  `,
   },
 
   {
@@ -723,7 +726,8 @@ export const newsfeedData = [
     image: "/images/images_new/news19.png",
     date: "2025-04-27",
     title: "CakewaiTown chính thức hợp tác cùng VnuEats!",
-    description: "Sự hợp tác này là bước tiến mới giúp CakewaiTown đến gần hơn với các tín đồ bánh ngọt trong khu vực Làng Đại học, đồng thời kết nối chúng mình với cộng đồng ẩm thực trẻ năng động và sành ăn.",
+    description:
+      "Sự hợp tác này là bước tiến mới giúp CakewaiTown đến gần hơn với các tín đồ bánh ngọt trong khu vực Làng Đại học, đồng thời kết nối chúng mình với cộng đồng ẩm thực trẻ năng động và sành ăn.",
     author: "CakewaiTown",
     keywords: [
       "CakewaiTown",
@@ -745,7 +749,7 @@ export const newsfeedData = [
       "Cửa hàng bánh CakewaiTown",
       "Bánh ngọt Sài Gòn",
       "CakewaiTown liên hệ",
-      "CakewaiTown cơ sở Thủ Đức"
+      "CakewaiTown cơ sở Thủ Đức",
     ],
     contentHtml: `
 
@@ -792,14 +796,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương trong từng chiếc bánh!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news20",
     image: "/images/images_new/news20.png",
     date: "2025-05-10",
     title: "Bánh ngọt Làng Đại Học",
-    description: "Tin vui cho sinh viên KTX khu A và khu B: CakewaiTown đã có mặt tại Làng Đại Học, mang đến những chiếc bánh ngọt thơm ngon cùng dịch vụ giao hàng nhanh, giúp bạn dễ dàng thưởng thức chỉ trong 30 phút.",
+    description:
+      "Tin vui cho sinh viên KTX khu A và khu B: CakewaiTown đã có mặt tại Làng Đại Học, mang đến những chiếc bánh ngọt thơm ngon cùng dịch vụ giao hàng nhanh, giúp bạn dễ dàng thưởng thức chỉ trong 30 phút.",
     author: "CakewaiTown",
     keywords: [
       "Bánh ngọt Làng Đại Học",
@@ -821,7 +826,7 @@ export const newsfeedData = [
       "CakewaiTown địa chỉ Thủ Đức",
       "Bánh ngọt cho sinh viên",
       "Bánh ngọt giao nhanh TP Thủ Đức",
-      "Bánh ngọt khu A khu B"
+      "Bánh ngọt khu A khu B",
     ],
     contentHtml: `
 
@@ -868,14 +873,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Mang vị ngọt đến từng khoảnh khắc sinh viên!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news21",
     image: "/images/images_new/news21.png",
     date: "2025-05-11",
     title: "Mua Bánh Sinh Nhật In Hình Theo Yêu Cầu",
-    description: "Giờ đây bạn có thể mua bánh sinh nhật in hình theo yêu cầu tại CakewaiTown! Với công nghệ AI hiện đại, chúng tôi giúp bạn tạo ra những chiếc bánh sinh nhật độc đáo, in hình cá nhân, thú cưng hoặc khoảnh khắc yêu thích, mang dấu ấn riêng của bạn.",
+    description:
+      "Giờ đây bạn có thể mua bánh sinh nhật in hình theo yêu cầu tại CakewaiTown! Với công nghệ AI hiện đại, chúng tôi giúp bạn tạo ra những chiếc bánh sinh nhật độc đáo, in hình cá nhân, thú cưng hoặc khoảnh khắc yêu thích, mang dấu ấn riêng của bạn.",
     author: "CakewaiTown",
     keywords: [
       "Bánh sinh nhật in hình",
@@ -897,7 +903,7 @@ export const newsfeedData = [
       "Bánh sinh nhật sáng tạo",
       "Công nghệ AI làm bánh sinh nhật",
       "Bánh sinh nhật phong cách cá nhân",
-      "Bánh sinh nhật giao nhanh"
+      "Bánh sinh nhật giao nhanh",
     ],
     contentHtml: `
 
@@ -945,14 +951,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Mang yêu thương gửi gắm qua từng chiếc bánh!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news22",
     image: "/images/images_new/news22.png",
     date: "2025-05-12",
     title: "Cửa Hàng Bán Bánh Mì Pháp Chuẩn Vị Gần Đây",
-    description: "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
+    description:
+      "Bạn đang tìm cửa hàng bán bánh mì Pháp chuẩn vị gần đây? Đến ngay CakewaiTown để thưởng thức những chiếc bánh mì baguette giòn tan, đậm chất Pháp, được làm thủ công với công thức truyền thống!",
     author: "Gia Mẫn",
     keywords: [
       "bánh mì Pháp",
@@ -967,7 +974,7 @@ export const newsfeedData = [
       "bánh mì ngon TP HCM",
       "CakewaiTown bánh mì",
       "đặt bánh mì online",
-      "bánh mì giao hàng tận nơi"
+      "bánh mì giao hàng tận nơi",
     ],
     contentHtml: `
 
@@ -1017,14 +1024,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương qua từng chiếc bánh!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news23",
     image: "/images/images_new/news23.png",
     date: "2025-05-20",
     title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
-    description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
+    description:
+      "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
     author: "CakewaiTown",
     keywords: [
       "bánh giỏ quýt",
@@ -1039,7 +1047,7 @@ export const newsfeedData = [
       "cách làm bánh quýt đơn giản",
       "bánh quýt thơm ngon",
       "bánh quýt mềm mịn",
-      "bánh giỏ quýt siêu xịn"
+      "bánh giỏ quýt siêu xịn",
     ],
     contentHtml: `
 <div class="text-black">
@@ -1088,14 +1096,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 Gửi trọn yêu thương trong từng chiếc bánh bạn tự tay làm!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news24",
     image: "/images/images_new/news24.png",
     date: "2025-05-21",
     title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
-    description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
+    description:
+      "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
     author: "CakewaiTown",
     keywords: [
       "bảo quản bánh kem",
@@ -1110,7 +1119,7 @@ export const newsfeedData = [
       "bảo quản bánh kem ngon",
       "bánh kem không bị kiến đậu",
       "bí quyết bảo quản bánh kem",
-      "bảo quản bánh kem CakewaiTown"
+      "bảo quản bánh kem CakewaiTown",
     ],
     contentHtml: `
 <div class="text-black">
@@ -1156,14 +1165,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 Gửi trọn yêu thương trong từng chiếc bánh – và từng mẹo nhỏ bạn cần biết!</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news25",
     image: "/images/images_new/news25.png",
     date: "2025-05-22",
     title: "Top các bánh cháu yêu mừng thọ Ông Bà",
-    description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
+    description:
+      "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
     author: "CakewaiTown",
     keywords: [
       "bánh cookies mừng thọ",
@@ -1181,7 +1191,7 @@ export const newsfeedData = [
       "bánh ruốc thịt cay",
       "bánh chanh dây thơm ngon",
       "bánh cream cheese mềm mịn",
-      "bánh biscotti trái cây hạt"
+      "bánh biscotti trái cây hạt",
     ],
     contentHtml: `
 <div class="text-black">
@@ -1231,14 +1241,15 @@ export const newsfeedData = [
     <p class="mt-2 text-amber-600 font-semibold">💛 Gửi trọn yêu thương trong từng chiếc bánh – đặc biệt là những chiếc bánh dành cho người bạn yêu quý nhất.</p>
   </div>
 </div>
-`
+`,
   },
   {
     id: "news26",
     image: "/images/images_new/news26.png",
     date: "2025-05-24",
     title: "Sự khác nhau giữa bánh mì và bánh mặn",
-    description: "Bánh mì và bánh mặn có gì khác nhau? Tìm hiểu chi tiết về đặc điểm, cách chế biến và công dụng của hai loại bánh phổ biến này.",
+    description:
+      "Bánh mì và bánh mặn có gì khác nhau? Tìm hiểu chi tiết về đặc điểm, cách chế biến và công dụng của hai loại bánh phổ biến này.",
     author: "Phước Lộc",
     contentHtml: `
   <div class="text-black">
@@ -1327,14 +1338,16 @@ export const newsfeedData = [
   </div>
 </div>
 `,
-    keywords: "phân biệt bánh mì và bánh mặn, so sánh bánh mì với bánh mặn, bánh mì là gì, bánh mặn là gì, đặc điểm của bánh mặn, đặc điểm của bánh mì"
+    keywords:
+      "phân biệt bánh mì và bánh mặn, so sánh bánh mì với bánh mặn, bánh mì là gì, bánh mặn là gì, đặc điểm của bánh mặn, đặc điểm của bánh mì",
   },
   {
     id: "news27",
     image: "/images/images_new/news27.png",
     date: "2025-05-24",
     title: " Top những bánh ngọt ít calo tại CakewaiTown",
-    description: "Khám phá các loại bánh ngọt ít calo tại CakewaiTown, bao gồm Passion Mousse Cheesecake, Tiramisu Mâm Xôi, High Fiber Bread và nhiều loại bánh ngon lành mạnh khác.",
+    description:
+      "Khám phá các loại bánh ngọt ít calo tại CakewaiTown, bao gồm Passion Mousse Cheesecake, Tiramisu Mâm Xôi, High Fiber Bread và nhiều loại bánh ngon lành mạnh khác.",
     author: "Phước Lộc",
     contentHtml: `
     <div class="text-black">
@@ -1396,7 +1409,8 @@ export const newsfeedData = [
   </div>
 </div>
 `,
-    keywords: "bánh ít calo, bánh ngọt healthy, bánh mousse, bánh cheesecake ít béo, CakewaiTown, bánh ngọt giảm cân"
+    keywords:
+      "bánh ít calo, bánh ngọt healthy, bánh mousse, bánh cheesecake ít béo, CakewaiTown, bánh ngọt giảm cân",
   },
 
   {
@@ -1518,6 +1532,362 @@ export const newsfeedData = [
 `,
     keywords:
       "mụa banh kem cho nhan van, banh kem ngon o cho nhan van, Bánh kem chợ Nhân Văn, banh kem cho sinh vien o cho nhan van",
+  },
+  {
+    id: "news30",
+    image: "/images/images_new/news30.png",
+    date: "2025-05-30",
+    title:
+      "Đặt Bánh Liên Hoan Cuối Năm Cho Công Ty - Gửi Gắm Lời Tri Ân Qua Từng Vị Ngọt",
+    description:
+      "Những dịp cuối năm, người ta thường loay hoay tất bật chuẩn bị đón năm mới. Song. chúng ta cũng không nên quên rằng ăn mừng cuối năm cũng rất quan trọng, đánh dấu một năm làm việc thành công!",
+    author: "Hoài Bảo",
+    contentHtml: `<div class="text-black">
+  <h1 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    🎉 Đặt Bánh Liên Hoan Cuối Năm Cho Công Ty – Gửi Gắm Lời Tri Ân Qua Từng Vị Ngọt 🎉
+  </h1>
+
+  <Image src="/images/images_new/news20.png" alt="Bánh liên hoan cuối năm cho công ty" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Mỗi dịp <strong>liên hoan cuối năm</strong>, chiếc bánh ngọt không chỉ là món tráng miệng, mà còn là <strong>biểu tượng tinh thần</strong>, thay lời cảm ơn gửi đến tập thể đã đồng hành trong suốt một năm vừa qua.
+  </p>
+
+  <p class="mt-4">
+    Việc <strong>đặt bánh liên hoan cuối năm cho công ty</strong> không còn đơn thuần là một thói quen – đó là cách để gắn kết, tri ân và tạo nên kỷ niệm đáng nhớ trong bữa <strong>tiệc tất niên</strong>.
+  </p>
+
+  <div class="bg-purple-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-purple-600">
+      🎯 Vì sao nên đặt bánh cho tiệc liên hoan cuối năm?
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>✅ Tạo điểm nhấn cho bữa tiệc: Chiếc bánh giúp khoảnh khắc tổng kết trở nên trang trọng và đáng nhớ hơn.</li>
+      <li>✅ Truyền tải thông điệp tri ân: Trang trí bánh bằng thông điệp “Cảm ơn vì đã đồng hành” hoặc logo công ty.</li>
+      <li>✅ Gắn kết tập thể: Cùng nhau cắt bánh, chia sẻ ngọt ngào – là lúc nhìn lại hành trình đã qua.</li>
+    </ul>
+  </div>
+
+  <Image src="/images/images_new/news30.png" alt="Các mẫu bánh ngọt cho tiệc liên hoan cuối năm" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="bg-yellow-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-yellow-600">
+      🍰 Những mẫu bánh phù hợp cho tiệc tất niên công ty
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🎂 Bánh cỡ lớn 2-3 tầng: Sang trọng, phù hợp công ty đông người.</li>
+      <li>🍰 Bánh vuông hoặc chữ nhật: Dễ chia phần, tiện lợi.</li>
+      <li>🧁 Cupcake theo bộ: Dễ bày trí, phù hợp buổi tiệc nhỏ.</li>
+      <li>💬 Gợi ý trang trí: logo công ty, biểu tượng năm mới, hoa văn kim tuyến, thông điệp tri ân.</li>
+    </ul>
+  </div>
+
+  <div class="bg-blue-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-blue-600">
+      📌 Lưu ý khi đặt bánh liên hoan cuối năm
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>📅 Đặt sớm ít nhất 3-5 ngày, nhất là giai đoạn cao điểm cuối năm.</li>
+      <li>📍 Chọn tiệm bánh uy tín, có kinh nghiệm phục vụ công ty.</li>
+      <li>🧾 Yêu cầu hóa đơn / biên nhận rõ ràng nếu công ty cần xuất chi.</li>
+      <li>🎁 Có thể kèm thiệp chúc mừng hoặc hộp quà mini.</li>
+    </ul>
+  </div>
+
+  <Image src="/images/mockup-cakewaitown-company-cakes.png" alt="Đặt bánh cuối năm CakewaiTown" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="bg-green-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-green-600">
+      🏆 Gợi ý địa chỉ đặt bánh uy tín cho công ty
+    </h3>
+    <p class="mt-3">
+      <strong>CakewaiTown</strong> – Chuyên bánh cho sự kiện và tiệc cuối năm:
+    </p>
+    <ul class="mt-2 list-disc list-inside space-y-2">
+      <li>✨ Giao bánh tận nơi tại TP.HCM</li>
+      <li>✨ Có hơn 30 mẫu bánh chuyên cho tiệc công ty</li>
+      <li>✨ Nhận trang trí logo riêng, viết thông điệp cá nhân hóa</li>
+      <li>✨ Giá tốt cho đơn hàng số lượng lớn</li>
+    </ul>
+
+    <p class="mt-4">📞 Hotline: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>🌐 Website: <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">cakewaitown.com</a></p>
+  </div>
+
+  <div class="mt-6 text-center font-semibold text-lg text-purple-700">
+    Một chiếc bánh ngọt nhỏ, nhưng mang trong mình ý nghĩa to lớn – là món quà tri ân, là kết thúc đẹp cho hành trình đã qua, và là khởi đầu cho một năm mới đầy hy vọng.
+  </div>
+
+  <p class="mt-4 text-center">
+    👉 <strong>Liên hệ đặt bánh ngay hôm nay</strong> để bữa tiệc của bạn thêm trọn vẹn và ngọt ngào nhé!
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương qua từng chiếc bánh!</p>
+  </div>
+</div>
+`,
+    keywords: "dat banh tiec lien hoan, dat banh kem, dat banh kem cho cong ty",
+  },
+  {
+    id: "news31",
+    image: "/images/images_new/news31.png",
+    date: "2025-05-30",
+    title: "Siêu hot 2025 - Mẫu bánh kem tiệc cưới đã có ở Cakewai Town",
+    description:
+      "Sau bao ngày mong ngóng từ CakewaiFan, chúng tôi vừa ra mắt mẫu bánh kem dành riêng cho tiệc cưới hỏi, mang dấu ấn riêng của tiệc cưới.",
+    author: "Hoài Bảo",
+    contentHtml: `<div class="text-black">
+  <h1 class="text-2xl font-bold text-center text-pink-500 mb-4">
+    🎊 Siêu hot 2025 – Mẫu Bánh Kem Tiệc Cưới Đẹp Lung Linh Đã Có Mặt Tại Cakewai Town 🎊
+  </h1>
+
+  <Image src="/images/images_new/news11.png" alt="Bánh kem tiệc cưới tại Cakewai Town" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Ngày cưới là một trong những khoảnh khắc thiêng liêng và đáng nhớ nhất cuộc đời, và không thể thiếu trong bữa tiệc hạnh phúc ấy chính là <strong>bánh kem tiệc cưới</strong> – biểu tượng cho sự ngọt ngào, viên mãn và khởi đầu hạnh phúc.
+  </p>
+
+  <p class="mt-4">
+    Tại <strong>Cakewai Town</strong>, chúng tôi tự hào ra mắt bộ sưu tập <strong>bánh kem tiệc cưới 2025</strong>, mang đến cho các cặp đôi những lựa chọn hiện đại, tinh tế và đầy ý nghĩa trong ngày trọng đại.
+  </p>
+
+  <div class="bg-pink-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-pink-600">
+      💍 Vì sao chiếc bánh kem cho đám cưới lại quan trọng?
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>✅ Là điểm nhấn sang trọng trong không gian <strong>tiệc cưới</strong></li>
+      <li>✅ Thể hiện cá tính, phong cách của cô dâu – chú rể qua thiết kế riêng biệt</li>
+      <li>✅ Gắn kết khoảnh khắc “cắt bánh” cùng nhau – biểu tượng cho sự sẻ chia trọn đời</li>
+      <li>✅ Tạo điểm nhấn hình ảnh ấn tượng cho album cưới và video ngày trọng đại</li>
+    </ul>
+  </div>
+
+  <Image src="/images/images_new/news31.png" alt="Mẫu bánh kem đám cưới 2025" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="bg-white border border-pink-300 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-pink-600">
+      🎂 Mẫu Bánh Kem Tiệc Cưới 2025 Gây Sốt Tại Cakewai Town
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🌸 <strong>Bánh cưới trang trí hoa tươi</strong> – nhẹ nhàng, tinh tế, mang hơi thở thiên nhiên</li>
+      <li>💎 <strong>Bánh kem tone trắng – vàng ánh kim</strong> – sang trọng, phù hợp tiệc cưới nhà hàng</li>
+      <li>🎀 <strong>Bánh cưới pastel nhiều tầng</strong> – dịu dàng, lý tưởng cho concept cưới ngoài trời</li>
+      <li>🎨 <strong>Bánh cưới viết tên cô dâu – chú rể</strong> kèm thông điệp cá nhân hóa</li>
+    </ul>
+  </div>
+
+  <p class="mt-6 text-lg">
+    Khi <strong>đặt bánh kem tiệc cưới</strong>, hãy lưu ý:
+  </p>
+  <ul class="list-disc list-inside space-y-2">
+    <li>📆 Đặt trước ít nhất 5 – 7 ngày để đảm bảo thiết kế đúng yêu cầu</li>
+    <li>🏷️ Chọn kích cỡ bánh phù hợp số lượng khách mời</li>
+    <li>🎁 Có thể yêu cầu trang trí tên, ngày cưới hoặc biểu tượng riêng</li>
+    <li>🧁 Kết hợp bánh lớn và cupcake để tiện chia phần</li>
+  </ul>
+
+  <p class="mt-6 text-center font-semibold text-lg">
+    💗 Đặt bánh cưới đẹp – bắt trọn khoảnh khắc yêu thương 💗
+  </p>
+
+  <p class="mt-4">
+    Tại <strong>Cakewai Town</strong>, chúng tôi cam kết mang đến những mẫu <strong>bánh kem tiệc cưới</strong> không chỉ đẹp về hình thức mà còn chất lượng vượt trội:
+  </p>
+
+  <ul class="list-disc list-inside space-y-2">
+    <li>✔️ Miễn phí tư vấn mẫu bánh theo phong cách cưới</li>
+    <li>✔️ Giao bánh đúng giờ, đúng địa điểm tại TP.HCM</li>
+    <li>✔️ Chất lượng bánh mềm – xốp – ngọt thanh – an toàn cho sức khỏe</li>
+    <li>✔️ Nhận làm bánh theo concept cá nhân hóa riêng cho mỗi cặp đôi</li>
+  </ul>
+
+  <p class="mt-4 text-center">
+    👉 Xem thêm và đặt mẫu bánh cưới tại <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">Cakewai Town</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-pink-600 font-semibold">💝 Cakewai Town – Gửi trọn ngọt ngào vào ngày trọng đại của bạn!</p>
+  </div>
+</div>
+`,
+    keywords:
+      "mau banh kem tiec cuoi, banh kem ngay cuoi, tiec cuoi, banh kem, dat banh cho tiec cuoi",
+  },
+  {
+    id: "news32",
+    image: "/images/images_new/news32.png",
+    date: "2025-05-30",
+    title: "Đặt bánh kem đám hỏi - Tại sao không?",
+    description:
+      "Nhiều người thường quan tâm đến tiệc cưới mà hay bỏ qua đám hỏi - một truyền thống tốt đẹp của chúng ta. Đám hỏi thường sẽ không hoành tráng như tiệc cưới, tuy nhiên cũng cần phải có sự chuẩn bị chỉn chu cho nó.",
+    author: "Hoài Bảo",
+    contentHtml: `<div class="text-black mt-10">
+  <h2 class="text-2xl font-bold text-center text-rose-500 mb-4">
+    💒 Đặt Bánh Kem Đám Hỏi – Tại Sao Không?
+  </h2>
+
+  <Image src="/images/images_new/news21.png" alt="Bánh kem đám hỏi đẹp" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Nếu <strong>đám cưới</strong là đích đến, thì <strong>đám hỏi</strong> chính là cột mốc đầu tiên khẳng định mối quan hệ gắn kết giữa hai bên gia đình. Và giờ đây, bên cạnh trầu cau, mâm quả, thì <strong>bánh kem đám hỏi</strong> đang trở thành điểm nhấn được nhiều cặp đôi lựa chọn để làm nổi bật buổi lễ trang trọng này.
+  </p>
+
+  <div class="bg-rose-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-rose-600">
+      🎁 Bánh Kem Đám Hỏi – Món Quà Ngọt Ngào Cho Ngày Trọng Đại
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>💖 Tô điểm thêm sự trang trọng cho bàn lễ gia tiên</li>
+      <li>🌹 Là lời chúc ngọt ngào đến cặp đôi chuẩn bị bước vào cuộc sống hôn nhân</li>
+      <li>📸 Tạo thêm góc chụp hình độc đáo trong không gian <strong>ngày đám hỏi</strong></li>
+      <li>🎊 Gắn kết hai gia đình bằng hình ảnh chia sẻ và thưởng thức bánh kem cùng nhau</li>
+    </ul>
+  </div>
+
+  <p class="mt-6">
+    Không chỉ dành riêng cho <strong>lễ cưới</strong>, bánh kem giờ đây còn được “thiết kế riêng” cho lễ đính hôn với những mẫu <strong>bánh kem đám hỏi</strong> mang vẻ đẹp thanh nhã, nhẹ nhàng nhưng không kém phần sang trọng. Những tông màu như hồng pastel, đỏ đô hay trắng – vàng kim được ưu ái sử dụng để biểu trưng cho sự hòa hợp và may mắn.
+  </p>
+
+  <Image src="/images/images_new/news32.png" alt="Mẫu bánh kem đám hỏi sang trọng" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="bg-white border border-rose-300 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-rose-600">
+      🌸 Gợi Ý Mẫu Bánh Kem Đám Hỏi Được Ưa Chuộng 2025
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🎀 <strong>Bánh kem hoa cưới mini</strong> – dành cho buổi lễ gia đình ấm cúng</li>
+      <li>💌 <strong>Bánh có chữ “Lễ Đính Hôn” và tên hai bạn</strong> – đầy ý nghĩa</li>
+      <li>💗 <strong>Bánh đôi trái tim</strong> – biểu tượng gắn kết tình yêu</li>
+      <li>🌺 <strong>Bánh kết hợp mâm quả</strong> – sáng tạo, tiện lợi và trang trọng</li>
+    </ul>
+  </div>
+
+  <p class="mt-6">
+    Khi <strong>đặt bánh kem đám hỏi</strong> tại <strong>Cakewai Town</strong>, bạn có thể:
+  </p>
+
+  <ul class="list-disc list-inside space-y-2">
+    <li>📝 Thiết kế mẫu bánh theo phong cách & gam màu phù hợp với tone trang trí</li>
+    <li>📦 Chọn kích cỡ phù hợp với số lượng người tham dự</li>
+    <li>📷 In ảnh, chữ hoặc biểu tượng tình yêu trực tiếp lên bánh</li>
+    <li>🚚 Giao tận nơi đúng giờ trong khu vực TP.HCM và lân cận</li>
+  </ul>
+
+  <p class="mt-6 text-lg text-center font-semibold">
+    🍰 Đặt bánh kem đám hỏi – Không chỉ là xu hướng, mà là lựa chọn đầy tinh tế 💝
+  </p>
+
+  <p class="mt-4">
+    Hãy để <strong>Cakewai Town</strong> đồng hành cùng bạn trong từng khoảnh khắc trọng đại, từ <strong>đám hỏi</strong> đến <strong>lễ cưới</strong>. Chúng tôi không chỉ tạo ra những chiếc bánh đẹp mà còn là món quà mang đầy tình cảm và sự trân trọng.
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Đặt ngay tại: <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">Cakewai Town</p>
+    <p>🏡 Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>🏡 Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-rose-600 font-semibold">🎉 Cakewai Town – Đưa ngọt ngào đến từng nghi lễ yêu thương!</p>
+  </div>
+</div>
+`,
+    keywords:
+      "dat banh hoi, banh kem dam hoi, tiec dam hoi, le ket hon, dat banh",
+  },
+  {
+    id: "news33",
+    image: "/images/images_new/news33.png",
+    date: "2025-05-30",
+    title:
+      "Bánh sinh nhật giao trong ngày khu vực Thủ Đức? Uy tín tạo niềm tin",
+    description:
+      "Với thời đại công nghệ hiện nay, việc làm hài lòng khách hàng luôn được các nhà kinh doanh đặt lên hàng đầu. Và Cakewai Town luôn chú trọng điều đó, vì vậy bánh sinh nhật đặt tại Cakewai Town sẽ giao hỏa tốc ngay trong ngày đến tay khách hàng",
+    author: "Hoài Bảo",
+    contentHtml: `<div class="text-black mt-10">
+  <h2 class="text-2xl font-bold text-center text-rose-500 mb-4">
+    🎂 Bánh Sinh Nhật Giao Trong Ngày Khu Vực Thủ Đức? Uy Tín Tạo Niềm Tin
+  </h2>
+
+  <Image src="/images/images_new/news12.png" alt="Bánh sinh nhật giao trong ngày ở Thủ Đức" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="text-lg text-center">
+    Bạn cần <strong>đặt bánh sinh nhật giao trong ngày</strong> ở khu vực <strong>Thủ Đức</strong>? Gấp rút nhưng vẫn muốn có chiếc bánh tươi ngon, thiết kế đẹp và giao đúng giờ? <strong>Cakewai Town</strong> chính là nơi bạn có thể tin tưởng tuyệt đối.
+  </p>
+
+  <div class="bg-rose-100 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-rose-600">
+      🚚 Giao Bánh Sinh Nhật Tận Nơi – Gấp Mấy Cũng Có
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>⚡ Đặt gấp – giao nhanh chỉ từ 2 giờ trong ngày</li>
+      <li>🎨 Nhiều mẫu bánh sinh nhật sẵn có: đơn giản, cute, sang trọng</li>
+      <li>🍓 Bánh luôn tươi mới, làm mới trong ngày, không đông lạnh</li>
+      <li>📍 Phục vụ nhanh chóng khu vực Thủ Đức – Linh Trung – Bình Thọ – Tam Phú</li>
+    </ul>
+  </div>
+
+  <p class="mt-6">
+    Với hệ thống <strong>cửa hàng bánh sinh nhật tại Thủ Đức</strong>, chúng tôi đáp ứng mọi nhu cầu gấp rút: <strong>đặt bánh sinh nhật giao trong ngày</strong> cho người thân, bạn bè, đồng nghiệp. Dù là buổi trưa bất chợt nhận ra hôm nay là sinh nhật ai đó – chúng tôi cũng luôn sẵn sàng phục vụ.
+  </p>
+
+  <Image src="/images/images_new/news33.png" alt="Giao bánh sinh nhật tận nơi Thủ Đức" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="bg-white border border-rose-300 p-4 rounded-lg mt-6">
+    <h3 class="text-xl font-semibold text-center text-rose-600">
+      💡 Những Lý Do Nên Chọn Cakewai Town
+    </h3>
+    <ul class="mt-3 list-disc list-inside space-y-2">
+      <li>🧁 Bánh làm thủ công – mỗi chiếc bánh là một tác phẩm riêng</li>
+      <li>🕒 Giao nhanh nội khu Thủ Đức trong 1–3 giờ</li>
+      <li>👨‍🍳 Đội ngũ làm bánh chuyên nghiệp, hỗ trợ tư vấn tận tình</li>
+      <li>📦 Đóng gói kỹ, giữ bánh nguyên vẹn đến tay</li>
+    </ul>
+  </div>
+
+  <p class="mt-6">
+    Những dịp đặc biệt không nên chờ đợi – vì vậy dịch vụ <strong>giao bánh sinh nhật tận nơi trong ngày</strong> của chúng tôi ra đời để bạn luôn có thể gửi đi một lời chúc ngọt ngào dù chỉ còn vài giờ chuẩn bị.
+  </p>
+
+  <p class="mt-4 font-semibold text-center text-lg">
+    🎁 Đặt bánh sinh nhật giao trong ngày – Món quà ngọt ngào, nhanh chóng và đầy ý nghĩa!
+  </p>
+
+  <p class="mt-4">
+    Đừng lo lắng khi cần <strong>đặt bánh gấp trong ngày</strong>, hãy để <strong>Cakewai Town</strong> đồng hành cùng bạn. Hơn 95% khách hàng quay lại bởi sự uy tín, đúng hẹn và chất lượng bánh tuyệt vời.
+  </p>
+
+  <p class="mt-4 text-center">
+    👉 Đặt ngay tại: <a href="https://cakewaitown.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://cakewaitown.com</a>
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">Cakewai Town</p>
+    <p>🏡 Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>🏡 Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-rose-600 font-semibold">🎂 Giao nhanh – Ngọt ngào – Đúng hẹn – Chọn Cakewai là đúng!</p>
+  </div>
+</div>
+`,
+    keywords:
+      "dat banh giao trong ngay, dat banh sinh nhat giao trong ngay, giao hoa toc, ship nhanh chong, dat banh giao nhanh thu duc",
   },
 ];
 
