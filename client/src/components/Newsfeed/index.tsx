@@ -16,7 +16,45 @@ export const toSlug = (title: string) =>
   });
 
 const newsfeedData_onpage = [
-  
+  {
+    id: "news33",
+    image: "/images/images_new/news33.png",
+    date: "2025-05-30",
+    title:
+      "Bánh sinh nhật giao trong ngày khu vực Thủ Đức? Uy tín tạo niềm tin",
+    description:
+      "Với thời đại công nghệ hiện nay, việc làm hài lòng khách hàng luôn được các nhà kinh doanh đặt lên hàng đầu. Và Cakewai Town luôn chú trọng điều đó, vì vậy bánh sinh nhật đặt tại Cakewai Town sẽ giao hỏa tốc ngay trong ngày đến tay khách hàng",
+    author: "Hoài Bảo",
+  },
+  {
+    id: "news32",
+    image: "/images/images_new/news32.png",
+    date: "2025-05-30",
+    title: "Đặt bánh kem đám hỏi - Tại sao không?",
+    description:
+      "Nhiều người thường quan tâm đến tiệc cưới mà hay bỏ qua đám hỏi - một truyền thống tốt đẹp của chúng ta. Đám hỏi thường sẽ không hoành tráng như tiệc cưới, tuy nhiên cũng cần phải có sự chuẩn bị chỉn chu cho nó.",
+    author: "Hoài Bảo",
+  },
+  {
+    id: "news31",
+    image: "/images/images_new/news31.png",
+    date: "2025-05-30",
+    title: "Siêu hot 2025 - Mẫu bánh kem tiệc cưới đã có ở Cakewai Town",
+    description:
+      "Sau bao ngày mong ngóng từ CakewaiFan, chúng tôi vừa ra mắt mẫu bánh kem dành riêng cho tiệc cưới hỏi, mang dấu ấn riêng của tiệc cưới.",
+    author: "Hoài Bảo",
+  },
+  {
+    id: "news30",
+    image: "/images/images_new/news30.png",
+    date: "2025-05-30",
+    title:
+      "Đặt Bánh Liên Hoan Cuối Năm Cho Công Ty - Gửi Gắm Lời Tri Ân Qua Từng Vị Ngọt",
+    description:
+      "Những dịp cuối năm, người ta thường loay hoay tất bật chuẩn bị đón năm mới. Song. chúng ta cũng không nên quên rằng ăn mừng cuối năm cũng rất quan trọng, đánh dấu một năm làm việc thành công!",
+    author: "Hoài Bảo",
+  },
+
   {
     id: "news29",
     image: "/images/images_new/news29.png",
@@ -37,29 +75,32 @@ const newsfeedData_onpage = [
     author: "Hoài Bảo",
   },
   {
-  id: "news25",
-  image: "/images/images_new/news25.png",
-  date: "2025-05-22",
-  title: "Top các bánh cháu yêu mừng thọ Ông Bà",
-  description: "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
-  author: "CakewaiTown",
-}, 
-            {
+    id: "news25",
+    image: "/images/images_new/news25.png",
+    date: "2025-05-22",
+    title: "Top các bánh cháu yêu mừng thọ Ông Bà",
+    description:
+      "Bánh cookies mừng thọ là món quà đầy ý nghĩa, mang theo tình cảm chân thành và lời chúc sức khỏe, trường thọ gửi đến ông bà trong ngày đặc biệt.",
+    author: "CakewaiTown",
+  },
+  {
     id: "news24",
     image: "/images/images_new/news24.png",
-  date: "2025-05-21",
-  title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
-  description: "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
-  author: "CakewaiTown",
-}, 
-          {
+    date: "2025-05-21",
+    title: "Top 3 cách hiệu quả bảo quản bánh kem khỏi “ruồi bu kiến đậu”",
+    description:
+      "Bạn vừa mua một chiếc bánh kem xinh xắn nhưng lại lo lắng vì thời tiết nóng và côn trùng? Cùng CakewaiTown khám phá 3 mẹo cực đơn giản để giữ bánh luôn thơm ngon, sạch sẽ!",
+    author: "CakewaiTown",
+  },
+  {
     id: "news23",
     image: "/images/images_new/news23.png",
-  date: "2025-05-20",
-  title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
-  description: "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
-  author: "CakewaiTown",
-}, 
+    date: "2025-05-20",
+    title: "Hướng dẫn làm bánh giỏ quýt tại nhà",
+    description:
+      "Bánh giỏ quýt với vị ngọt thanh của quýt và lớp vỏ mềm mịn sẽ là món bánh tuyệt vời để bạn tự tay thực hiện tại nhà. Cùng CakewaiTown vào bếp nhé!",
+    author: "CakewaiTown",
+  },
 
   {
     id: "news22",
