@@ -1243,6 +1243,175 @@ export const newsfeedData = [
 </div>
 `,
   },
+  {
+    id: "news26",
+    image: "/images/images_new/news26.png",
+    date: "2025-05-24",
+    title: "Sự khác nhau giữa bánh mì và bánh mặn",
+    description:
+      "Bánh mì và bánh mặn có gì khác nhau? Tìm hiểu chi tiết về đặc điểm, cách chế biến và công dụng của hai loại bánh phổ biến này.",
+    author: "Phước Lộc",
+    contentHtml: `
+  <div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    Bánh mì và Bánh mặn khác nhau như thế nào?
+  </h2>
+  <img src="/images/images_new/news26.png" alt="So sánh bánh mì và bánh mặn" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <div class="space-y-4 text-justify leading-relaxed">
+    <p>
+      <strong>Bánh mì</strong> và <strong>bánh mặn</strong> là hai loại bánh phổ biến trong ẩm thực Việt Nam. Tuy nhiên, không phải ai cũng hiểu rõ sự khác biệt giữa chúng. Hãy cùng CakewaiTown tìm hiểu chi tiết về hai loại bánh này để lựa chọn món phù hợp với khẩu vị của bạn nhé!
+    </p>
+
+    <h3 class="text-xl font-semibold text-purple-600 mt-6">Bánh Mì Là Gì?</h3>
+    <p>
+      Bánh mì là loại bánh làm từ bột mì, men nở, nước và muối. Sau khi nhào và ủ, bánh được nướng ở nhiệt độ cao để tạo lớp vỏ giòn đặc trưng. Bên trong mềm xốp, bánh mì thường được dùng kèm với nhiều loại nhân như pate, thịt, trứng, rau củ…
+    </p>
+    <ul class="list-disc list-inside ml-4">
+      <li>Nguyên liệu chính: bột mì, men nở, nước, muối</li>
+      <li>Cách chế biến: nướng ở nhiệt độ cao</li>
+      <li>Sử dụng: thường dùng làm món chính, ăn sáng</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-purple-600 mt-6">Bánh Mặn Là Gì?</h3>
+    <p>
+      Bánh mặn là thuật ngữ chỉ các loại bánh có nhân hoặc vị mặn. Loại bánh này có thể làm từ nhiều loại bột khác nhau như bột mì, bột gạo, bột năng… Cách chế biến đa dạng: hấp, chiên hoặc nướng. Bánh mặn thường dùng làm món ăn nhẹ hoặc ăn vặt.
+    </p>
+    <ul class="list-disc list-inside ml-4">
+      <li>Nguyên liệu đa dạng: bột mì, bột gạo, trứng, nhân mặn</li>
+      <li>Cách chế biến: hấp, chiên, nướng</li>
+      <li>Sử dụng: món ăn vặt, ăn chơi</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-purple-600 mt-6">Bảng So Sánh Bánh Mì Và Bánh Mặn</h3>
+    <div class="overflow-x-auto">
+      <table class="table-auto border border-gray-300 w-full text-sm text-left mt-2">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-4 py-2">Tiêu chí</th>
+            <th class="border px-4 py-2">Bánh mì</th>
+            <th class="border px-4 py-2">Bánh mặn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">Nguyên liệu chính</td>
+            <td class="border px-4 py-2">Bột mì, men nở</td>
+            <td class="border px-4 py-2">Bột mì, bột gạo, trứng, nhân mặn</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Cách chế biến</td>
+            <td class="border px-4 py-2">Nướng</td>
+            <td class="border px-4 py-2">Hấp, chiên, nướng</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Hương vị</td>
+            <td class="border px-4 py-2">Vị nhạt, ăn kèm nhân</td>
+            <td class="border px-4 py-2">Có vị mặn từ nhân</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Công dụng</td>
+            <td class="border px-4 py-2">Món chính</td>
+            <td class="border px-4 py-2">Món phụ, ăn vặt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-xl font-semibold text-purple-600 mt-6">Nên Chọn Bánh Mì Hay Bánh Mặn?</h3>
+    <p>
+      Việc lựa chọn giữa bánh mì và bánh mặn phụ thuộc vào nhu cầu sử dụng của bạn. Nếu bạn cần một bữa ăn chính, bánh mì với nhân đầy đủ dinh dưỡng là lựa chọn tuyệt vời. Nếu muốn một món nhẹ nhàng, dễ ăn, bánh mặn sẽ làm hài lòng bạn.
+    </p>
+
+    <p>
+      Dù là bánh mì hay bánh mặn, mỗi loại bánh đều mang hương vị và nét đặc trưng riêng, góp phần làm phong phú thêm nền ẩm thực Việt.
+    </p>
+  </div>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương qua từng chiếc bánh!</p>
+  </div>
+</div>
+`,
+    keywords:
+      "phân biệt bánh mì và bánh mặn, so sánh bánh mì với bánh mặn, bánh mì là gì, bánh mặn là gì, đặc điểm của bánh mặn, đặc điểm của bánh mì",
+  },
+  {
+    id: "news27",
+    image: "/images/images_new/news27.png",
+    date: "2025-05-24",
+    title: " Top những bánh ngọt ít calo tại CakewaiTown",
+    description:
+      "Khám phá các loại bánh ngọt ít calo tại CakewaiTown, bao gồm Passion Mousse Cheesecake, Tiramisu Mâm Xôi, High Fiber Bread và nhiều loại bánh ngon lành mạnh khác.",
+    author: "Phước Lộc",
+    contentHtml: `
+    <div class="text-black">
+  <h2 class="text-2xl font-bold text-center text-purple-500 mb-4">
+    Top những loại bánh ngọt ít calo cực hot tại CakewaiTown
+  </h2>
+  <Image src="/images/images_new/news27.png" alt="Top bánh ngọt ít calo" width="600px" class="mx-auto block my-5 w-full max-w-[600px]" />
+
+  <p class="mb-4">
+    Với xu hướng ăn uống lành mạnh ngày càng phổ biến, việc lựa chọn các loại bánh ngọt ít calo nhưng vẫn ngon miệng là điều mà nhiều thực khách quan tâm. Dưới đây là những lựa chọn bánh ngọt ít calo tại <strong>CakewaiTown</strong> – vừa đẹp mắt, vừa tốt cho sức khỏe.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">1. Bánh kem cam sữa chua mật ong</h3>
+  <p class="mb-4">
+    Với lớp mousse sữa chua nhẹ nhàng kết hợp cùng cam tươi và mật ong nguyên chất, chiếc bánh này không chỉ thanh mát mà còn ít béo, ít đường. Sự cân bằng giữa vị chua và ngọt giúp giảm cảm giác thèm ăn mà vẫn thưởng thức được vị ngon khó cưỡng.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">2. Passion Mousse Cheesecake</h3>
+  <p class="mb-4">
+    Với lớp mousse chanh dây mát lạnh phủ trên nền bánh phô mai mềm mịn, bánh Passion Mousse Cheesecake không sử dụng quá nhiều đường hoặc kem béo, giúp giảm thiểu lượng calo đáng kể. Đây là lựa chọn lý tưởng cho người đang ăn kiêng.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">3. Bánh Tiramisu Mâm Xôi</h3>
+  <p class="mb-4">
+    Vị béo nhẹ của kem mascarpone được cân bằng với độ chua tự nhiên từ mâm xôi tươi, tạo nên chiếc bánh Tiramisu mâm xôi thanh mát, ít ngọt. Tiramisu phiên bản này được làm ít đường hơn so với truyền thống, phù hợp cho thực đơn ít calo.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">4. Apple and Vanilla Tea Cake</h3>
+  <p class="mb-4">
+    Một chiếc bánh đơn giản nhưng đầy dinh dưỡng, làm từ táo tươi và vani, sử dụng ít bơ và đường. Đây là lựa chọn hoàn hảo cho những ai yêu thích bánh trái cây mà vẫn muốn kiểm soát lượng calo nạp vào.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">5. High Fiber Bread</h3>
+  <p class="mb-4">
+    Không phải là bánh ngọt truyền thống, nhưng High Fiber Bread vẫn có thể kết hợp cùng mứt trái cây ít đường hoặc bơ hạnh nhân để trở thành món tráng miệng lý tưởng cho người ăn kiêng. Với lượng chất xơ cao và calo thấp, bánh này rất phù hợp cho người kiểm soát cân nặng.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">6. Su Kem Hạt Phỉ (Hazelnut Cream Puff)</h3>
+  <p class="mb-4">
+    Dù là bánh su, nhưng phiên bản này tại CakewaiTown sử dụng lớp kem hạt phỉ ít béo và không quá ngọt. Nhỏ gọn, nhẹ nhàng và ít calo – đây là món ăn vặt hoàn hảo cho những ai vừa muốn ăn ngon, vừa muốn khỏe mạnh.
+  </p>
+
+  <h3 class="text-xl font-semibold text-purple-600 mt-6 mb-2">7. Fruits and Nuts Biscotti</h3>
+  <p class="mb-4">
+    Bánh biscotti nướng giòn với trái cây khô và các loại hạt, không dùng bơ hoặc dầu, chứa rất ít calo. Đây là lựa chọn tuyệt vời cho người đang ăn clean hoặc theo chế độ low-carb.
+  </p>
+
+  <p class="mt-6">
+    Dù đang trong quá trình giảm cân hay chỉ đơn giản là muốn có một chế độ ăn uống lành mạnh hơn, bạn hoàn toàn có thể yên tâm thưởng thức những chiếc bánh ít calo nhưng vẫn ngon miệng tại CakewaiTown. Hãy ghé qua và trải nghiệm sự khác biệt!
+  </p>
+
+  <div class="mt-6 text-center text-base">
+    <p class="font-semibold">CakewaiTown</p>
+    <p>✨ Cơ sở 1: 371 Đ. Đoàn Kết, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>✨ Cơ sở 2: 123 Đ. Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức, TP. HCM</p>
+    <p>📞 Liên hệ: <a href="tel:+84966888888" class="text-blue-600">+84 966 888888</a></p>
+    <p>📩 Email: <a href="mailto:cakewaitown@gmail.com" class="text-blue-600">cakewaitown@gmail.com</a></p>
+    <p class="mt-2 text-amber-600 font-semibold">💛 CakewaiTown – Gửi gắm yêu thương qua từng chiếc bánh!</p>
+  </div>
+</div>
+`,
+    keywords:
+      "bánh ít calo, bánh ngọt healthy, bánh mousse, bánh cheesecake ít béo, CakewaiTown, bánh ngọt giảm cân",
+  },
 
   {
     id: "news28",
