@@ -253,7 +253,7 @@ function DetailedCake({ slug }) {
               id={cake?._id || ""}
               price={cake?.product_variant[0]?.price}
               cake={cake}
-              slug={slug}
+              slug={cake.slug || ""}
             />
           ))}
         </div>
