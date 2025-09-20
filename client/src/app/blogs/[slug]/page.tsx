@@ -1903,7 +1903,7 @@ export const toSlug = (title: string) =>
     strict: true,
     trim: true,
   });
-// 🟢 Hàm tạo danh sách đường dẫn tĩnh
+//  Hàm tạo danh sách đường dẫn tĩnh
 export async function generateStaticParams() {
   return newsfeedData.map((news) => ({
     slug: toSlug(news.title),
@@ -1951,7 +1951,7 @@ export async function generateMetadata({
   };
 }
 
-// 🟢 Server Component (thay cho getStaticProps)
+// Server Component (thay cho getStaticProps)
 export default async function NewsDetail({
   params,
 }: {
